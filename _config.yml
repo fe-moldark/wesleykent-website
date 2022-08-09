@@ -40,6 +40,7 @@ remote_theme: chrisrhymes/bulma-clean-theme
 plugins:
   - jekyll-feed
   - remote_theme
+  - jekyll-redirect-from
 
 
 defaults:
@@ -50,7 +51,7 @@ defaults:
     values:
       author: "Wesley Kent"
       layout: post
-      hero_image: /home/wesleyvm1/WesleyKentBlog/assets/default.png
+      hero_image: /assets/default.png
       show_sidebar: true
       
 # Pagination settings
