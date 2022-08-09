@@ -1,0 +1,75 @@
+---
+layout: post
+title:  TryHackMe - Mr. Robot
+date:   2022-05-01 00:00:00 -0600
+categories: THM
+intro: To start off, hands down the best show ever made. Now onto the box - there are three separate flags to find for this challenge. You'll see a few times where I go off on trails that prove to not be useful, but I still think it's important to document the process as a whole. Let's begin with an nmap scan, host discovery disabled
+--- 
+
+# TryHackMe - Mr. Robot
+
+To start off, hands down the best show ever made. Now onto the box - there are three separate flags to find for this challenge. You'll see a few times where I go off on trails that prove to not be useful, but I still think it's important to document the process as a whole. Let's begin with an nmap scan, host discovery disabled:<br>
+<p align="center"><img width="800" src="/assets/blog/THM-Mr-Robot/nmap.png"></p> 
+Seeing port 80 is open, let's run gobuster in the background. I used the `common.txt` and small directory list you see below from SecLists for this scan:<br>
+<p align="center"><img width="850" src="/assets/blog/THM-Mr-Robot/gobuster.png"></p> 
+While this runs, let's check out the site itself. We are met with what appears to be a linux terminal running within the browser:<br>
+<p align="center"><img width="800" src="/assets/blog/THM-Mr-Robot/title screen.png"></p> 
+All of the above commands you can run did not prove useful, at least to me. Perhaps there are multiple ways to pwn this box and I didn't see whatever they had here.
+<br><br>
+"Join" does prompt a message from Elliot and the option to enter our email address for "further information". I used a throwaway e-mail and never received anything, so I'm unsure if this was meant as a misdirect or not.
+<br><br>
+While I waited to see if an email ever actually arrived (like I said - it didn't), I checked out some of the gobuster findings. One that stands out is wp-login - hydra loves web portals after all. Let's capture the request in burpsuite:<br>
+<p align="center"><img width="850" src="/assets/blog/THM-Mr-Robot/burp.png"></p> 
+Before that, however, from the gobuster scan I did come across the following page:<br>
+<p align="center"><img width="600" src="/assets/blog/THM-Mr-Robot/cheeky.png"></p> 
+After looking through the other files for a minute, the `/robots` file reveals the following:<br>
+<p align="center"><img width="800" src="/assets/blog/THM-Mr-Robot/first flag1.png"></p> 
+And sure enough we can navigate to that location:<br>
+<p align="center"><img width="800" src="/assets/blog/THM-Mr-Robot/first flag2.png"></p> 
+First flag out of three, making progress, albeit slowly. There is also a file to download above the key. Now we can try using this as our new password list (or even as a user login?), however we are still missing a username to run against. Some default ideas are root, admin, fsociety, elliot, darlene, etc. but nothing that can be brute forced quickly. So I scoured every other directory, and the sub directories within each directory that I could as well as looking at the source code of each web page available. This ended up taking quite a long time and unfortunately did not provide anything useful.
+<br><br>
+Meanwhile, the background was running a hydra brute force as seen below. It was looking for a 302 redirect as a successful login, no false positives from the onset so I think the syntax of it is setup correctly:<br>
+<p align="center"><img width="850" src="/assets/blog/THM-Mr-Robot/hydra.png"></p> 
+(Goes without saying, but I tested the default login credentials for WordPress and got nothing, still thought I should mention it however).
+<br><br>
+From navigating around it appears WordPress is running version 4.3.1. This can be an avenue to go down with searchsploit later on if nothing else pops up. `/Image` brings us to a blog site with some entry fields - could be of interest later for potentially uploading reverse shells.
+<br><br>
+We are insulted yet again...<br>
+<p align="center"><img width="800" src="/assets/blog/THM-Mr-Robot/insult.png"></p> 
+Navigating around the rest of the directory list and common list from gobuster reveals a few files we can download or view, but ultimately nothing helpful comes from that.
+<br><br>
+All that being said, the login page must be the next foothold. Going back there, there is one error they made in their error handling with logins - they indicate when a username does not exist _or_ a message for when the password of a _user_ is incorrect. It took more tries than I care to admit before I even noticed the different error messages, but we live and learn. We can see that "elliot" is in fact a valid username on this system.
+<br><br>
+Running "sort" on the file we got initially made me realize a) there are hundreds of thousands of lines in this file, and b) there are a ton of duplicate entries - as in over 800,000 of them, which means our brute force would be running for days on end. Not ideal. If you're running this yourself you'll see what I mean very quickly. To save the output of unique lines only, I did the following:<br>
+<p align="center"><img width="450" src="/assets/blog/THM-Mr-Robot/sort by uniqueness.png"></p> 
+You can see how much this shrinks the file, and consequently the time for a brute force. After adjusting my initial hydra attack to use `elliot` instead of `fsociety` with the modified list and still a relatively long wait, we eventually see the following:<br>
+<p align="center"><img width="850" src="/assets/blog/THM-Mr-Robot/got the password for ellito.png"></p> 
+For those familiar with the show, that is Elliot's employer number, but what really matters is we have a successful login. On a web browser we are redirected to the `wp-admin` page, formally a redirect to `wp-login`.
+<br><br>
+On this site we see there are plugins that we can not only enable, but directly edit:<br>
+<p align="center"><img width="800" src="/assets/blog/THM-Mr-Robot/plugins.png"></p> 
+Now there is a lot to be said about exploiting plugins specifically, however in this case using a generic php reverse shell did the trick - literally the first result from a quick google search "using a php plugin to start a reverse shell" worked. Leverage the Internet's resources...
+<br><br>
+This code is practically the exact same you would see for when uploading a file of a reverse shell, just modified to work with my local machine (my tun0 address since I am using openvpn). Nothing fancy, I edited in my local IP and custom port and it ended up looking as simple as this:<br>
+<p align="center"><img width="800" src="/assets/blog/THM-Mr-Robot/custom code.png"></p> 
+After saving the plugin and then running the netcat listener, I immediately got the following shell:<br>
+<p align="center"><img width="700" src="/assets/blog/THM-Mr-Robot/reverse shell.png"></p> 
+And we're in - we finally have a workable shell for the web server, now onto the second flag.
+<br><br>
+While we can access the directory for `/home/robot`, we do not have permissions to view the file for the flag. I forgot to screenshot this but I also upgraded my shell with the ol' faithful `python -c 'import pty;pty.spawn("/bin/bash")'` command. (Knowing that as well as the perl shell command will prove useful for future CTFs, trust me). There is another file that we _can_ read here - `password.raw-md5`.
+<br><br>
+Taking the hash to an online cracking tool I get the following output:<br>
+<p align="center"><img width="850" src="/assets/blog/THM-Mr-Robot/hashonline.png"></p> 
+John could've easily cracked this, but I went with an online tool for simplicity and speed's sake, in other words I was feeling lazy. Now I can switch users to the `robot` user to view the second flag:<br>
+<p align="center"><img width="600" src="/assets/blog/THM-Mr-Robot/second flag.png"></p> 
+And just like that the second flag is ours. The third flag is no doubt in the `/root` folder, however a quick `sudo -l` unfortunately doesn't give anything useful:<br>
+<p align="center"><img width="600" src="/assets/blog/THM-Mr-Robot/cant.png"></p> 
+Since we can't run anything with sudo, let's try looking for what files have SUID permissions that we can run:<br>
+<p align="center"><img width="850" src="/assets/blog/THM-Mr-Robot/find what can run.png"></p> 
+If you've seen any of my other posts you know that gtfobins is a great resource in these situations. After combing through these one by one, the first one I found an exploit with was the `/usr/local/bin/nmap` (another might exist, this was the first that I saw):<br>
+<p align="center"><img width="750" src="/assets/blog/THM-Mr-Robot/gtfobins.png"></p> 
+This spawns a workable root shell, and we can guess the filename of the third flag to read it in the `/root` directory:<br>
+<p align="center"><img width="600" src="/assets/blog/THM-Mr-Robot/final flag.png"></p> 
+And after obtaining the third flag the box has been successfully pwned. This took me a few hours to work through due to spending too much time on the various directories and files from the gobuster scan which proved less than useful, however I still got through it. Nothing too crazy about this CTF in my opinion, but a lot of different skills needed and a good work through. Cheers,<br><br>
+Wes<br>
+

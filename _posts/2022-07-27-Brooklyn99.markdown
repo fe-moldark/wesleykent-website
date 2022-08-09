@@ -1,0 +1,26 @@
+---
+layout: post
+title:  TryHackMe - Brooklyn Nine Nine
+date:   2022-07-27 00:00:00 -0600
+categories: THM
+intro: As well as being an amusing TV show, the "Brooklyn Nine Nine" CTF proved to be a very straight forward exploit, but still good as a refresher. Let's begin with our nmap scan
+--- 
+
+# TryHackMe - Brooklyn Nine Nine
+
+As well as being an amusing TV show, the "Brooklyn Nine Nine" CTF proved to be a very straight forward exploit, but still good as a refresher. Let's begin with our nmap scan:<br>
+<p align="center"><img width="800" src="/assets/blog/THM-Brooklyn99/nmap.png"></p> 
+We can access some files via an anonymous ftp login:<br>
+<p align="center"><img width="800" src="/assets/blog/THM-Brooklyn99/ftp.png"></p> 
+This note from Amy tells us Jake has a weak password meaning hydra can likely brute force it. Let's run a hydra attack on the ssh port. Initially I got nothing from the using 'Jake' as the user, but 'jake' gives us a working password:<br>
+<p align="center"><img width="850" src="/assets/blog/THM-Brooklyn99/hydra.png"></p> 
+From our ssh login we find three users in the `/home` directory, and within the holt directory is the first flag. We do not have root permissions, but we can find a way around that. Let's see what we can run:<br>
+<p align="center"><img width="800" src="/assets/blog/THM-Brooklyn99/sudo l.png"></p> 
+A quick search on gtfobins shows a possible exploit:<br>
+<p align="center"><img width="800" src="/assets/blog/THM-Brooklyn99/gtfo.png"></p> 
+We can run this as `sudo`, type in the `!/bin/sh`, and promptly get our root shell as seen below:<br>
+<p align="center"><img width="600" src="/assets/blog/THM-Brooklyn99/flag.png"></p> 
+And we have our root flag. Exploiting this machine was very simple and quite short in my opinion, but it's never bad to work on the fundamentals. Cheers,<br><br>
+Wes<br>
+
+

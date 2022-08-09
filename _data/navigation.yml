@@ -1,0 +1,40 @@
+- name: CTF Exploits
+  link: /blog/
+  
+- name: Tips and Tricks
+  link: /tipsandtricks/
+  dropdown:
+    - name: Brute forcing
+      link: /tipsandtricks/bruteforcing/
+    - name: Privilege Escalation
+      link: /tipsandtricks/privilegeescalation/
+    - name: Web Stuff
+      link: /tipsandtricks/webstuff/
+    - name: Using Nmap
+      link: /tipsandtricks/usingnmap/
+    - name: Steganography
+      link: /tipsandtricks/steganography/
+    - name: Default payloads and msfconsole
+      link: /tipsandtricks/defaultpayloads/
+    - name: The Basics
+      link: /tipsandtricks/thebasics/
+
+- name: Resources
+  link: /resources/
+  dropdown:
+    - name: Useful links
+      link: /resources/usefullinks
+    - name: Fresh Install
+      link: /resources/freshinstall
+
+- name: Raspberry Pi Projects
+  link: /raspberrypi/
+  
+- name: FE Moldark
+  link: /femoldark/
+  
+- name: Contact
+  link: /contact/
+
+- name: About
+  link: /about/

@@ -1,0 +1,40 @@
+---
+layout: post
+title:  TryHackMe - Simple SMTP Exploit
+date:   2022-02-17 00:00:00 -0600
+categories: THM
+intro: This simple exploit is also apart of the cyber defense series, and focuses on Simple Mail Transfer Protocol on the THM site.
+--- 
+
+# Simple SMTP Exploit
+
+As you might've guessed, Simple Mail Transfer Protocol or SMTP deals with the sending emails. Since we already know this box deals with SMTP and we know what the default port for it is, let's try a targeted scan for time's sake:<br>
+<p align="center"><img width="700" src="/assets/blog/THM-SMTP/nmap scan.png"></p> 
+Thankfully the TryHackMe guys kept SMTP running over its default port.
+<br><br>
+Starting up msfconsole we can quickly locate a `smtp_version` script to give a go:<br>
+<p align="center"><img width="700" src="/assets/blog/THM-SMTP/msfconsole.png"></p> 
+Let's go ahead and use option 0 (the only option) and then `show options`. We need to configure the `rhosts` and `rport` to the box' IP and the port running SMTP. After running the exploit, we see the following from our auxiliary scan:<br>
+<p align="center"><img width="700" src="/assets/blog/THM-SMTP/msfconsole2.png"></p> 
+For the TryHackMe lesson it asks for the system mail name, which we can see is `polosmtp.home` from the scan above. Funnily enough, I realized we already got this information from our initial nmap scan running with the `-sC` and `-sV` flags.
+<br><br>
+It then asks for the MTA, or Message Transfer Agent, whose purpose is in its very name, just for the SMTP protocol. This answer can also be found from the auxiliary scan.
+<br><br>
+This next part requires us to enumerate the users. I first tried this with an nmap script called `smtp-enum-users.nse` hoping it would be as simple as that, but didn't get anything from it. Msfconsole does have a similar script it can run, however, called `smtp_enum`.
+<br><br>
+After loading that up in the console, we need to set a few options including choosing a wordlist if we don't like or don't want their default. If you don't already have SecLists by danielmiessler downloaded, it is a must. Under `/SecLists/Usernames` there are a lot of useful options to chose from.
+<br><br>
+After everything is properly configured, go ahead and run this next auxiliary. You should get back the following:<br>
+<p align="center"><img width="800" src="/assets/blog/THM-SMTP/second msfconsole script.png"></p> 
+You'll see the SMTP server running a user with the very original and very secure name of `administrator`. Now that we have a username, let's see what we can do in terms of gaining access via ssh.
+
+As I've used hydra in previous posts I won't get too much detail about it, but understanding the syntax is important. Let's get the hydra command set up and running:<br>
+<p align="center"><img width="800" src="/assets/blog/THM-SMTP/hydra ssh.png"></p> 
+This should eventually reveal valid login credentials that we can use to ssh into this machine:<br>
+<p align="center"><img width="650" src="/assets/blog/THM-SMTP/final image.png"></p> 
+And we can get the flag as easy as that. Cheers,<br><br>
+Wes<br>
+
+
+
+

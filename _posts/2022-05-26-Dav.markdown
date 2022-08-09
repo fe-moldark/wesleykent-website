@@ -1,0 +1,38 @@
+---
+layout: post
+title:  TryHackMe - Dav
+date:   2022-05-26 00:00:00 -0600
+categories: THM
+intro: Relatively staright forward exploit that requires just a bit of research. Web oriented CTF.
+--- 
+
+# TryHackMe - Dav
+
+Let's begin with an nmap scan:<br>
+<p align="center"><img width="800" src="/assets/blog/THM-Dav/nmap.png"></p> 
+Knowing port 80 is open and this a web server, let's run gobuster against it:<br>
+<p align="center"><img width="800" src="/assets/blog/THM-Dav/useless gobuster.png"></p> 
+Now, this particular list provided nothing for me (although I'm sure another list might've worked), however I also ran a specific nmap scan on port 80 running the vuln script:<br>
+<p align="center"><img width="800" src="/assets/blog/THM-Dav/script vuln.png"></p> 
+And this `/webdav/` page prompts a login. Initial instinct is to turn to hydra and not knowing any hint of a username from anything on the webpage or the source code, I defaulted to `admin` for the username and the `rockyou.txt` wordlist for the password. That looked like the following:<br>
+<p align="center"><img width="800" src="/assets/blog/THM-Dav/hydra.png"></p> 
+Now, so far that hasn't worked and was taking a long time and I got bored waiting after 5 minutes. So, very possibly admin isn't the username or maybe it is but the password is something obscure. I checked for default login credentials for this `/webdav/` and found `jigsaw:jigsaw` which didn't work, however the 3rd / 4th web result gave me `wampp:xampp` which did end up working. It bring us to this directory:<br>
+<p align="center"><img width="600" src="/assets/blog/THM-Dav/good login.png"></p> 
+And this password file will give us what appears to be a hash. Using `hash-identifier` we get the following:<br>
+<p align="center"><img width="800" src="/assets/blog/THM-Dav/hash pw.png"></p> 
+Now to run john against it:<br>
+<p align="center"><img width="800" src="/assets/blog/THM-Dav/attempt.png"></p> 
+As you can see I saved the hash to a file but John wasn't able to crack it with the `Raw-MD5` format. Turning to online cracking tools provides nothing as well, and it's also not clear where we could even use this for a second login location. So, what else is exploitable about this? Well, we do have a working login:pass and access to a web directory, sounds like a good time to try and upload a reverse shell. I'll be using my default .php script for this - if you have ParrotOS/Kali Linux installed you should have a number of default reverse shells you can already use on your machine. Now to upload, some research leads to a useful StackOverflow post on how this can works:<br>
+<p align="center"><img width="800" src="/assets/blog/THM-Dav/curl.png"></p> 
+Normally I've used curl to get data instead of uploading it, but giving it a try results in:<br>
+<p align="center"><img width="850" src="/assets/blog/THM-Dav/success upload.png"></p> 
+It appears to work, and sure enough it has populated on the web server. Now to setup a netcat listener and we can run the script from the web page. Sure enough the listener lights up:<br>
+<p align="center"><img width="800" src="/assets/blog/THM-Dav/netcat.png"></p> 
+Easily get the first flag:<br>
+<p align="center"><img width="800" src="/assets/blog/THM-Dav/user flag.png"></p> 
+Running `sudo -l` reveals we can run `/bin/cat` as root, so let's reference gtfobins for an exploit to escalate our privileges. Now - instead of defaulting to looking to gtfobins we can just realize that a) the flag is likely a `.txt` file named "flag", or "root", etc, and b) cat means just that - we can really just use cat to read the file if we can correctly guess the filename. And getting the root flag is as simple as follows:<br>
+<p align="center"><img width="850" src="/assets/blog/THM-Dav/root.png"></p> 
+Sure enough, I luckily guessed it the first time around and the box has been pwned. Cheers,<br><br>
+Wes<br>
+
+

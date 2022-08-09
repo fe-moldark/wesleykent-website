@@ -1,0 +1,37 @@
+---
+layout: post
+title:  TryHackMe - Simple NFS Exploit
+date:   2022-02-17 00:00:00 -0600
+categories: THM
+intro: This simple CTF delves into NFS, or Network File System. NFS is probably best described as a way to locally browse through another systems directories and files after connecting to another system via "mounting". On to the box, our initial nmap scan reveals the following service running over port 2049
+--- 
+
+# Simple NFS Exploit
+
+This simple CTF delves into NFS, or Network File System. NFS is probably best described as a way to locally browse through another systems directories and files after connecting to another system via mounting them. On to the box, our initial nmap scan reveals the following service running over port 2049:<br>
+<p align="center"><img width="700" src="/assets/blog/THM-NFS/nmap scan and nfs port.png"></p>
+To view the shares over this port, I used:<br>
+<p align="center"><img width="575" src="/assets/blog/THM-NFS/show mount and mkdir tmp mount.png"></p>
+Note the "/home" share from our scan.<br><br>
+Since we will be locally hosting these files we do not want to keep them here permanently, just for our exploitation of the box, so I mounted them in the `/tmp` directory:<br>
+<p align="center"><img width="650" src="/assets/blog/THM-NFS/mount to local machine.png"></p>
+The -t tells us what device (here what protocol really), followed by the `IP:SHARE`, and the `/tmp/mount` is the directory we have created on our local machine.<br><br>
+It will take a second, but eventually the files load and we can navigate through them.<br>
+<p align="center"><img width="750" src="/assets/blog/THM-NFS/dir.png"></p>
+We find the folder "cappucino" with a notable subdirectory, `.ssh`.
+<br><br>
+Inside there we find a useful `rsa_id`, let's go ahead and copy that to a more permanent location.
+<br><br>
+As I've gone over in previous posts, go ahead and chmod the file with 600 permissions and then we'll use it to attempt to ssh back into the target machine:<br>
+<p align="center"><img width="750" src="/assets/blog/THM-NFS/files id_rsa and ssh into box.png"></p>
+Alright, we've got a foothold now, but we still to escalate our privileges to complete this CTF. TryHackMe steps in here and provides a useful bash script, it can be found on github by user polo-sec at  "writing/Security Challenge Walkthroughs/Networks 2/bash".<br>
+<br>
+To use this script we will need to download it first, and then copy it to the NFS share:<br>
+<p align="center"><img width="750" src="/assets/blog/THM-NFS/copy to share for esclation.png"></p>
+Here we now see our bash file in the mount share and we can confirm it is there on the target machine through our ssh login as well.<br>
+To run the exploit we will need to change our permissions with `sudo chown root bash`, as well as `chmod +s bash` and `chmod +x bash`. This will change our script to executable, and once complete we can attempt to run the exploit from our ssh login:<br>
+<p align="center"><img width="600" src="/assets/blog/THM-NFS/run script to escalate.png"></p>
+It works, and now we can navigate through the box as a whole and under `/root` we find our expected root flag:<br>
+<p align="center"><img width="750" src="/assets/blog/THM-NFS/finalll.png"></p>
+And the box has been pwned. Cheers,<br><br>
+Wes<br>

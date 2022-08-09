@@ -1,0 +1,31 @@
+---
+layout: post
+title:  TryHackMe - Simple Telnet Exploit
+date:   2022-02-16 00:00:00 -0600
+categories: THM
+intro: The following is a short and simple exploit involving telnet.
+---
+
+# TryHackMe - Simple Telnet Exploit 
+
+This will be a very short post compared to some of the others, but worth going over for the practice.<br>
+To begin, let's start with our nmap scan, host discovery disabled:<br>
+<p align="center"><img width="700" src="/assets/blog/THM-Telnet/initial scan.png"></p>
+Eventually... we find a port open, 8012, which we can now enumerate further:<br>
+<p align="center"><img width="700" src="/assets/blog/THM-Telnet/scanning 8012.png"></p>
+From this we get these references to "SKIDY'S" (possibly a username?) and "BACKDOOR", possibly a way to gain remote access similar to what we saw in the last post with the SMB share containing information on SSH login information.
+<br><br>
+We know this isn't running on a standard port and it is likely running telnet. Knowing the basic syntax for telnet (`telnet IP PORT`) we can access the telnet service running on this host. There isn't much to see there except for knowing that the commands we can run are done through `.RUN COMMAND`. To test whether or not we can run system commands we can attempt to ping our local machine by setting up a listener:<br>
+`sudo tcpdump ip proto \\icmp -i tun0`<br><br>
+And on the target machine run: `.RUN ping IP -c 1`
+<br><br>
+At this point we should see the following:<br>
+<p align="center"><img width="750" src="/assets/blog/THM-Telnet/capture ping1.png"></p>
+And we can see we get the response on our local machine.<br><br>
+Knowing this, we can attempt to set up a reverse shell on the target and gain access that way. To do this, we will use an exploit from msfvenom and start a netcat listener on a port of our choosing. We'll configure our reverse shell with msfvenom:<br>
+<p align="center"><img width="750" src="/assets/blog/THM-Telnet/msfvenom.png"></p>
+The `lhost` being our `tun0` address (if using openvpn like I am) and the port to whatever we want.<br><br>
+We set up netcat on our local machine to listen on port 4444 and after using the `.RUN` on the outputted command from msfconsole (last line on the above image) on our target, we should see the reverse shell up and running.<br>
+<p align="center"><img width="600" src="/assets/blog/THM-Telnet/netcat to shell and flag.png"></p>
+And the flag is already in the current working directory, easy day. We could likely get a more powerful shell running with python, however this task didn't require any further exploitation. Cheers,<br><br>
+Wes<br>

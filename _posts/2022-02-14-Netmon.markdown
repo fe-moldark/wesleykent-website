@@ -1,0 +1,51 @@
+---
+layout: post
+title:  HackTheBox - Netmon
+date:   2022-02-14 00:00:00 -0600
+categories: HTB
+intro: This CTF proves relatively straightforward, but there are a few interesting things about it. This is also one of the few HackTheBox CTFs I did, the vast majority are with TryHackMe. Let's begin with our nmap scan
+---
+
+# HackTheBox - Netmon
+
+This CTF proves relatively straightforward, but there are a few interesting things about it. This is also one of the few HackTheBox CTFs I did, the vast majority are with TryHackMe. Let's begin with our nmap scan, the flags are running default scripts, looking for service versions and outputs the results of our scan for later use.<br>
+
+<p align="center"><img width="750" src="/assets/blog/HTB-Netmon/one.webp"></p>
+From the scan a couple of thoughts about the open ports:<br>
+- Port 21 / FTP: Anonymous login is allowed, so that will be apart of our enumeration phase
+- Port 80 / HTTP: Will need to check out the webpage and see if the source code provides anything, run gobuster or dirb to try and enumerate any other pages from the host
+- Searchsploit for the PRTG/18.1.37.13946 as we see from the scan. We also know the target machine running Windows Server 2008 R2
+<br><br>
+
+Beginning with port 21, we can login as "anonymous" and no password is needed:
+<p align="center"><img width="600" src="/assets/blog/HTB-Netmon/two.webp"></p>
+
+This allows us some access to search through the directories and find what we can. While the administrator folder is blocked off (meaning we will at likely need some form of privilege escalation later on), we can find, and `get`, the user flag from the Public directory:<br>
+<p align="center"><img width="550" src="/assets/blog/HTB-Netmon/three.webp"></p>
+After we `get` the file we should see it on our local machine and be able to view it:
+<p align="center"><img width="600" src="/assets/blog/HTB-Netmon/four.webp"></p>
+For now it doesn't seem that we can get much more out of the ftp server, so let's see what port 80 can offer.
+<p align="center"><img width="850" src="/assets/blog/HTB-Netmon/five.webp"></p>
+After running a basic vuln scan against port 80 a few options appear, but nothing that ends up working. Also, both dirb and gobuster scans gave us nothing due to a 'status code' error that I couldn't get past, so nothing proved useful on that front.
+<br><br>
+We can still view the webpage itself, however, and while we are able to access the site, it simply shows itself as a login site for the "PRTG Network Monitor" we saw in our initial scan.
+<br>
+Since the web page itself hasn't proved useful, searchsploit is a good next step:
+<p align="center"><img width="850" src="/assets/blog/HTB-Netmon/six.webp"></p>
+This references some exploits we initially saw on our basic vuln scan, and the 'Remote Code Execution' option which sounds ideal for our situation. Msfconsole / metasploit has this exploit:<br>
+<p align="center"><img width="850" src="/assets/blog/HTB-Netmon/seven.webp"></p>
+As we try and run this, the default user/pass does not work so we know that we are going to need some updated credentials or find an alternate route to exploit. I've already searched through the site's source code and didn't find anything and dirb/gobuster was no help. A quick google search confirms the default credentials msfconsole supplied are correct, meaning that they have been changed. The only other thing that we have access to is the anonymous ftp connection that allows us to browse some of their local files and see what else might pop up:
+<p align="center"><img width="600" src="/assets/blog/HTB-Netmon/eight.webp"></p>
+I tried getting access to some log files, access was denied, same for the Documents and Settings folder among others.<br>
+We are able to navigate around and find multiple files referencing the PRTG network monitor that we can `get` to our local machine similar to the user flag. Within the hidden ProgramData folder there is a directory called 'PRTG Network Monitor':<br>
+<p align="center"><img width="600" src="/assets/blog/HTB-Netmon/nine.webp"></p>
+Inside this folder we find an old .bak file we can get to our machine.<br>
+On our local machine we can search through these files for known login credentials (the username) and the surrounding lines with the `-C7` flag:<br>
+<p align="center"><img width="600" src="/assets/blog/HTB-Netmon/ten.webp"></p>
+Here we find a potential password that we can use to try and use through the msfconsole exploit we tried previously.<br><br>
+The escalation process from here is very straight forward, we simply pull up the exploit we tried previously with the newly discovered password. Once we configure our lhost, rhosts and password we can attempt to exploit:<br>
+<p align="center"><img width="700" src="/assets/blog/HTB-Netmon/eleven.webp"></p>
+And now we have our meterpreter shell running. We can create a shell if wanted, but we can already navigate to the administrator folder where we find the root flag:<br>
+<p align="center"><img width="600" src="/assets/blog/HTB-Netmon/twelve.webp"></p>
+And after all this we have both flags for this CTF. Cheers,<br><br>
+Wes<br>
