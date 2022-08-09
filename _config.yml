@@ -39,6 +39,7 @@ remote_theme: chrisrhymes/bulma-clean-theme
 
 plugins:
   - jekyll-feed
+  - remote_theme
 
 
 defaults:
