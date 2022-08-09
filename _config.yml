@@ -34,7 +34,9 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  fe-moldark
 
 # Build settings
-theme: bulma-clean-theme
+# theme: bulma-clean-theme
+remote_theme: chrisrhymes/bulma-clean-theme
+
 plugins:
   - jekyll-feed
 
