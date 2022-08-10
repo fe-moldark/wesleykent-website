@@ -47,7 +47,7 @@ Simply put, it's a Pi3 B+ hooked up to a 7" display. Script can auto-run from st
 
 # Ongoing Projects
 ### Audio System and USB Injectors
-Having completed the VPN and NAS projects I will likely be taking a break as I study for certifications. The mess pictured below is an old, slightly disassembled audio system that has buttons to play/pause, skip, mute, shuffle and utilizes a rotary encoder for volume control. Fun stuff. My projects for the USB Injector are currently on the far back burner as they will take a good amount of research and learning to get started. As I mentioned I've also got my Pi3 hooked up to my wall for an easier desktop environment, but I often plug that into my extra moonitor to avoid dealing with the smaller 7" monitor.<br>
+Having completed the VPN and NAS projects I will likely be taking a break as I study for certifications. The mess pictured below is an old, slightly disassembled audio system that has buttons to play/pause, skip, mute, shuffle and utilizes a rotary encoder for volume control. Fun stuff. My projects for the USB Injector are currently on the far back burner as they will take a good amount of research and learning to get started. As I mentioned I've also got my Pi3 hooked up to my wall for an easier desktop environment, but I often plug that into my extra monitor to avoid dealing with the smaller 7" monitor.<br>
 <center>
 <img src="/assets/rpi/ongoing.jpg" alt=""><br>
 </center>
