@@ -1,9 +1,9 @@
 ---
 layout: page
 title: The Basics
-subtitle: If you need any help with the basics, such as indexing, locating stuff, anything not directly related to pen testing, but essential to know.
+subtitle: If you need any help with the basics, such as indexing, locating stuff, anything not directly related to pen testing, but essential to know
 image: /home/wesleyvm1/WesleyKentBlog/assets/fe.ico
-description: If you need any help with the basics, such as indexing, locating stuff, anything not directly related to pen testing, but essential to know.
+description: If you need any help with the basics, such as indexing, locating stuff, anything not directly related to pen testing, but essential to know
 permalink: /tipsandtricks/thebasics/
 #hero_image: /assets/fe.ico
 #hero_height: is-fullheight
