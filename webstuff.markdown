@@ -20,7 +20,7 @@ Below is my default web enumration / gobuster scan that I always start with:
 As you can see I'm using one of the lists from SecLists, and you can use more expansive lists (takes more time though) or use more focused lists at specific types of web servers. Other good ones I use are the `common.txt` and `big.txt` in that same directory from SecLists.
 <br><br><br>
 ## Starting a Web Server
-Since most modern web servers come with some version of Python installed and you very often can get access to it because of how much it is used, it comes handy when trying to start a web server. This might to get a more visual representation of a directory within a web server, maybe you want an easy point-and-click method for downloading files, etc. Of course, this scenario implies you do already have access to the server, thought I should mention that.<br><br>
+Since most modern web servers come with some version of Python installed and you very often can get access to it because of how much it is used, it comes handy when trying to start a web server. This might be to get a more visual representation of a directory within a web server, maybe you want an easy point-and-click method for downloading files, etc. Of course, this scenario implies you do already have access to the server, thought I should mention that.<br><br>
 To do this with the more modern version of Python, version 3, execute the following _within_ the directory you will need access to (you won't be able to go "up"):<br>
 `python3 -m http.server` and then navigate to that IP address and port
 <br><br>
