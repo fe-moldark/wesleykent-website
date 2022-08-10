@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+
+
+
+<html
+ dir="ltr"
+ lang="en"
+ >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content=#ffffff>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="shortcut icon" type="image/png"
+           href="/favicon.png" 
+    />
+    <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css">
+    
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Raspberry Pi Projects | Wesley Kent</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Raspberry Pi Projects" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A site dedicated to cybersecurity, pen testing, and personal projects." />
+<meta property="og:description" content="A site dedicated to cybersecurity, pen testing, and personal projects." />
+<link rel="canonical" href="http://localhost:4000/raspberrypi/" />
+<meta property="og:url" content="http://localhost:4000/raspberrypi/" />
+<meta property="og:site_name" content="Wesley Kent" />
+<meta property="og:image" content="http://localhost:4000/home/wesleyvm1/WesleyKentBlog/assets/fe.ico" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/home/wesleyvm1/WesleyKentBlog/assets/fe.ico" />
+<meta property="twitter:title" content="Raspberry Pi Projects" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"A site dedicated to cybersecurity, pen testing, and personal projects.","headline":"Raspberry Pi Projects","image":"http://localhost:4000/home/wesleyvm1/WesleyKentBlog/assets/fe.ico","url":"http://localhost:4000/raspberrypi/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <!-- head scripts --></head>
+
+  <body>
+    <nav class="navbar is-primary " x-data="{ openNav: false }">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item">
+                Wesley Kent
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu" :class="{ 'is-active': openNav }" x-on:click="openNav = !openNav">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu" :class="{ 'is-active': openNav }">
+            <div class="navbar-start">
+                <a href="/" class="navbar-item ">Home</a>
+                
+                
+                    
+                    <a href="/blog/" class="navbar-item ">CTF Exploits</a>
+                    
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable ">
+                        <a href="/tipsandtricks/" class="navbar-link ">Tips and Tricks</a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/tipsandtricks/bruteforcing/" class="navbar-item ">Brute forcing</a>
+                            
+                            <a href="/tipsandtricks/privilegeescalation/" class="navbar-item ">Privilege Escalation</a>
+                            
+                            <a href="/tipsandtricks/webstuff/" class="navbar-item ">Web Stuff</a>
+                            
+                            <a href="/tipsandtricks/usingnmap/" class="navbar-item ">Using Nmap</a>
+                            
+                            <a href="/tipsandtricks/steganography/" class="navbar-item ">Steganography</a>
+                            
+                            <a href="/tipsandtricks/defaultpayloads/" class="navbar-item ">Default payloads and msfconsole</a>
+                            
+                            <a href="/tipsandtricks/thebasics/" class="navbar-item ">The Basics</a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable ">
+                        <a href="/resources/" class="navbar-link ">Resources</a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/resources/usefullinks" class="navbar-item ">Useful links</a>
+                            
+                            <a href="/resources/freshinstall" class="navbar-item ">Fresh Install</a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                    <a href="/raspberrypi/" class="navbar-item is-active">Raspberry Pi Projects</a>
+                    
+                
+                    
+                    <a href="/femoldark/" class="navbar-item ">FE Moldark</a>
+                    
+                
+                    
+                    <a href="/contact/" class="navbar-item ">Contact</a>
+                    
+                
+                    
+                    <a href="/about/" class="navbar-item ">About</a>
+                    
+                
+                
+            </div>
+
+            <div class="navbar-end">
+                
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+    
+        <section class="hero  is-medium  is-bold is-primary" >
+    <div class="hero-body ">
+        <div class="container">
+            <h1 class="title is-2">Raspberry Pi Projects</h1>
+            <p class="subtitle is-3"></p>
+            
+        </div>
+    </div>
+</section>
+    
+    
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-multiline">
+                
+                <div class="column is-12">
+                    
+                    
+                    
+                    
+                    
+<div class="content">
+    <h1 id="custom-retropie">Custom RetroPie</h1>
+<p>This project took a good chunk of time, but now runs RetroPie perfectly, sound included, with a larger case than normal for comfort reasons. I know parts of this design will get some hate for using a) wood for the case, and b) for using a Pi3 instead of a pi zero. At the time using a Pi3 made more sense due to the specific lcd screen I already had and since the case was designed to be larger anyway, a Pi 3 fit easily. As far as using wood, it was a fun way to avoid having to 3d print a small case and allowed me more freedom when designing it. Haven’t had any issues with it overheating yet (going on two years) as the backing provides more than enough ventilation. Currently has over 3 dozen games installed and alleviates boredom when needed - definitely a success.<br /></p>
+<p align="center"><img width="950" src="/assets/rpi/retropie1.jpg" /></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/assets/rpi/retropie2.jpg" alt="" /></td>
+      <td><img src="/assets/rpi/retropie4.jpg" alt="" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /><br /></p>
+
+<h1 id="home-nas-and-vpn-server">Home NAS and VPN Server</h1>
+<p>I finally got my NAS up and running, it uses a simple file sharing service I can use in conjunction with the VPN for remote access, and conveniently works with both my phone and laptop. I might also hook up my home printer to the samba service, although that seems like unnecessary work right now and I would need another raspberry pi to act as a print server. VPN is running PiVPN with wire guard (via freedns).<br /></p>
+<p align="center"><img width="850" src="/assets/rpi/nasvpn.jpg" /></p>
+<p><br /><br /><br /></p>
+
+<h1 id="dashcam">Dashcam</h1>
+<p>This project took just a bit of research and writing the software for the project even as I was assembling the hardware. The first image below, or “Version 1.0” as I call it, with the LCD screen proved too heavy to stay stuck to the windshield when driving over bumpy roads. “Version 2.0” (3rd image) was more lightweight and has only slightly less functionality but still includes the switches and LEDs needed for control and monitoring. Records with a push of a button and a flip of a switch, and provides plenty of room for heat to escape.<br /></p>
+<p align="center"><img width="850" src="/assets/rpi/dash1.jpg" /></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/assets/rpi/dash2test.jpg" alt="" /></td>
+      <td><img src="/assets/rpi/dash3test.jpg" alt="" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /><br /></p>
+
+<h1 id="home-security">Home Security</h1>
+<p>You might be wondering where the security system is - and yes, that is kinda the point. The hardware (a basic pi zero and the Pi NoIR Camera) is hidden inside of an old broken speaker. The camera faces towards my door and is barely noticeable even when you know where to look as it is viewing through a drilled hole in line with the grains in the wood (opposite side of the speaker / desk leg). The Pi is running “MotionEye”, a handy OS for Pi’s that begins recording on motion detection and both saves recordings locally on the pi and remotely uploads them to one of my google drive accounts. All that’s left is to cover up the green LED in the second picture and no one’s the wiser.<br /><br />
+One other note is I have a screen for my VPN (see above) that I wanted to be able to view my security logs with, however the MotionEye OS is, intentionally, very limited even running as root. After being unable to access the saved files on the drive via google credentials, I resorted to running tcdump on the VPN server’s startup (using either .bashrc or rc.local, I forget which), filtering for the specific IP address and for incoming ICMP packets. From there I configured a script that simply pings the VPN whenever a new log is created, and the security logs counter on the VPN screen reflects those counts. Far from a simple solution for such a simple want, but it works.<br />
+<br /><img src="/assets/rpi/security.jpg" alt="" /><br />
+<br /><br /></p>
+
+<h1 id="iss-livestream-at-startup">ISS Livestream at Startup</h1>
+<p>Simply put, it’s a Pi3 B+ hooked up to a 7” display. Script can auto-run from startup after configuring the .bashrc file. It opens a live stream from the International Space Station as seen below, which I think is kinda neat. The screen is also large enough to work for regular desktop scenarios if needed, just a bit small.<br />
+<br /></p>
+<center>
+	<img src="/assets/rpi/isslivestream.jpg" alt="" /><br />
+</center>
+<p><br /><br /></p>
+
+<h1 id="ongoing-projects">Ongoing Projects</h1>
+<h3 id="audio-system-and-usb-injectors">Audio System and USB Injectors</h3>
+<p>Having completed the VPN and NAS projects I will likely be taking a break as I study for certifications. The mess pictured below is an old, slightly disassembled audio system that has buttons to play/pause, skip, mute, shuffle and utilizes a rotary encoder for volume control. Fun stuff. My projects for the USB Injector are currently on the far back burner as they will take a good amount of research and learning to get started. As I mentioned I’ve also got my Pi3 hooked up to my wall for an easier desktop environment, but I often plug that into my extra moonitor to avoid dealing with the smaller 7” monitor.<br /></p>
+<center>
+<img src="/assets/rpi/ongoing.jpg" alt="" /><br />
+</center>
+<p><br /></p>
+
+</div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+        <footer class="footer">
+    <div class="container">
+        
+        
+
+        <div class="content is-small has-text-centered">
+            <p class="">Theme built by <a href="https://www.csrhymes.com">C.S. Rhymes</a></p>
+        </div>
+    </div>
+</footer>
+
+    
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts --></body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+
+
+
+<html
+ dir="ltr"
+ lang="en"
+ >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content=#ffffff>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="shortcut icon" type="image/png"
+           href="/favicon.png" 
+    />
+    <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css">
+    
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>TryHackMe - Mr. Robot | Wesley Kent</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="TryHackMe - Mr. Robot" />
+<meta name="author" content="Wesley Kent" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="TryHackMe - Mr. Robot" />
+<meta property="og:description" content="TryHackMe - Mr. Robot" />
+<link rel="canonical" href="http://localhost:4000/thm/2022/05/01/Mr-Robot.html" />
+<meta property="og:url" content="http://localhost:4000/thm/2022/05/01/Mr-Robot.html" />
+<meta property="og:site_name" content="Wesley Kent" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-05-01T01:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="TryHackMe - Mr. Robot" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Wesley Kent"},"dateModified":"2022-05-01T01:00:00-05:00","datePublished":"2022-05-01T01:00:00-05:00","description":"TryHackMe - Mr. Robot","headline":"TryHackMe - Mr. Robot","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/thm/2022/05/01/Mr-Robot.html"},"url":"http://localhost:4000/thm/2022/05/01/Mr-Robot.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <!-- head scripts --></head>
+
+  <body>
+    <nav class="navbar is-primary " x-data="{ openNav: false }">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item">
+                Wesley Kent
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu" :class="{ 'is-active': openNav }" x-on:click="openNav = !openNav">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu" :class="{ 'is-active': openNav }">
+            <div class="navbar-start">
+                <a href="/" class="navbar-item ">Home</a>
+                
+                
+                    
+                    <a href="/blog/" class="navbar-item ">CTF Exploits</a>
+                    
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable ">
+                        <a href="/tipsandtricks/" class="navbar-link ">Tips and Tricks</a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/tipsandtricks/bruteforcing/" class="navbar-item ">Brute forcing</a>
+                            
+                            <a href="/tipsandtricks/privilegeescalation/" class="navbar-item ">Privilege Escalation</a>
+                            
+                            <a href="/tipsandtricks/webstuff/" class="navbar-item ">Web Stuff</a>
+                            
+                            <a href="/tipsandtricks/usingnmap/" class="navbar-item ">Using Nmap</a>
+                            
+                            <a href="/tipsandtricks/steganography/" class="navbar-item ">Steganography</a>
+                            
+                            <a href="/tipsandtricks/defaultpayloads/" class="navbar-item ">Default payloads and msfconsole</a>
+                            
+                            <a href="/tipsandtricks/thebasics/" class="navbar-item ">The Basics</a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable ">
+                        <a href="/resources/" class="navbar-link ">Resources</a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/resources/usefullinks" class="navbar-item ">Useful links</a>
+                            
+                            <a href="/resources/freshinstall" class="navbar-item ">Fresh Install</a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                    <a href="/raspberrypi/" class="navbar-item ">Raspberry Pi Projects</a>
+                    
+                
+                    
+                    <a href="/femoldark/" class="navbar-item ">FE Moldark</a>
+                    
+                
+                    
+                    <a href="/contact/" class="navbar-item ">Contact</a>
+                    
+                
+                    
+                    <a href="/about/" class="navbar-item ">About</a>
+                    
+                
+                
+            </div>
+
+            <div class="navbar-end">
+                
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+    
+        <section class="hero  is-medium  is-bold is-primary"  style="background: url('/home/wesleyvm1/WesleyKentBlog/assets/default.png') no-repeat center center; background-size: cover;" >
+    <div class="hero-body ">
+        <div class="container">
+            <h1 class="title is-2">TryHackMe - Mr. Robot</h1>
+            <p class="subtitle is-3"></p>
+            
+        </div>
+    </div>
+</section>
+    
+    
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-multiline">
+                
+                <div class="column is-8">
+                    
+                    
+                    
+                    
+                    <div class="content">
+
+    <p>Published: May 1, 2022 by Wesley Kent</p>
+
+    
+
+    <h1 id="tryhackme---mr-robot">TryHackMe - Mr. Robot</h1>
+
+<p>To start off, hands down the best show ever made. Now onto the box - there are three separate flags to find for this challenge. You’ll see a few times where I go off on trails that prove to not be useful, but I still think it’s important to document the process as a whole. Let’s begin with an nmap scan, host discovery disabled:<br /></p>
+<p align="center"><img width="800" src="/assets/blog/THM-Mr-Robot/nmap.png" /></p>
+<p>Seeing port 80 is open, let’s run gobuster in the background. I used the <code class="language-plaintext highlighter-rouge">common.txt</code> and small directory list you see below from SecLists for this scan:<br /></p>
+<p align="center"><img width="850" src="/assets/blog/THM-Mr-Robot/gobuster.png" /></p>
+<p>While this runs, let’s check out the site itself. We are met with what appears to be a linux terminal running within the browser:<br /></p>
+<p align="center"><img width="800" src="/assets/blog/THM-Mr-Robot/title screen.png" /></p>
+<p>All of the above commands you can run did not prove useful, at least to me. Perhaps there are multiple ways to pwn this box and I didn’t see whatever they had here.
+<br /><br />
+“Join” does prompt a message from Elliot and the option to enter our email address for “further information”. I used a throwaway e-mail and never received anything, so I’m unsure if this was meant as a misdirect or not.
+<br /><br />
+While I waited to see if an email ever actually arrived (like I said - it didn’t), I checked out some of the gobuster findings. One that stands out is wp-login - hydra loves web portals after all. Let’s capture the request in burpsuite:<br /></p>
+<p align="center"><img width="850" src="/assets/blog/THM-Mr-Robot/burp.png" /></p>
+<p>Before that, however, from the gobuster scan I did come across the following page:<br /></p>
+<p align="center"><img width="600" src="/assets/blog/THM-Mr-Robot/cheeky.png" /></p>
+<p>After looking through the other files for a minute, the <code class="language-plaintext highlighter-rouge">/robots</code> file reveals the following:<br /></p>
+<p align="center"><img width="800" src="/assets/blog/THM-Mr-Robot/first flag1.png" /></p>
+<p>And sure enough we can navigate to that location:<br /></p>
+<p align="center"><img width="800" src="/assets/blog/THM-Mr-Robot/first flag2.png" /></p>
+<p>First flag out of three, making progress, albeit slowly. There is also a file to download above the key. Now we can try using this as our new password list (or even as a user login?), however we are still missing a username to run against. Some default ideas are root, admin, fsociety, elliot, darlene, etc. but nothing that can be brute forced quickly. So I scoured every other directory, and the sub directories within each directory that I could as well as looking at the source code of each web page available. This ended up taking quite a long time and unfortunately did not provide anything useful.
+<br /><br />
+Meanwhile, the background was running a hydra brute force as seen below. It was looking for a 302 redirect as a successful login, no false positives from the onset so I think the syntax of it is setup correctly:<br /></p>
+<p align="center"><img width="850" src="/assets/blog/THM-Mr-Robot/hydra.png" /></p>
+<p>(Goes without saying, but I tested the default login credentials for WordPress and got nothing, still thought I should mention it however).
+<br /><br />
+From navigating around it appears WordPress is running version 4.3.1. This can be an avenue to go down with searchsploit later on if nothing else pops up. <code class="language-plaintext highlighter-rouge">/Image</code> brings us to a blog site with some entry fields - could be of interest later for potentially uploading reverse shells.
+<br /><br />
+We are insulted yet again…<br /></p>
+<p align="center"><img width="800" src="/assets/blog/THM-Mr-Robot/insult.png" /></p>
+<p>Navigating around the rest of the directory list and common list from gobuster reveals a few files we can download or view, but ultimately nothing helpful comes from that.
+<br /><br />
+All that being said, the login page must be the next foothold. Going back there, there is one error they made in their error handling with logins - they indicate when a username does not exist <em>or</em> a message for when the password of a <em>user</em> is incorrect. It took more tries than I care to admit before I even noticed the different error messages, but we live and learn. We can see that “elliot” is in fact a valid username on this system.
+<br /><br />
+Running “sort” on the file we got initially made me realize a) there are hundreds of thousands of lines in this file, and b) there are a ton of duplicate entries - as in over 800,000 of them, which means our brute force would be running for days on end. Not ideal. If you’re running this yourself you’ll see what I mean very quickly. To save the output of unique lines only, I did the following:<br /></p>
+<p align="center"><img width="450" src="/assets/blog/THM-Mr-Robot/sort by uniqueness.png" /></p>
+<p>You can see how much this shrinks the file, and consequently the time for a brute force. After adjusting my initial hydra attack to use <code class="language-plaintext highlighter-rouge">elliot</code> instead of <code class="language-plaintext highlighter-rouge">fsociety</code> with the modified list and still a relatively long wait, we eventually see the following:<br /></p>
+<p align="center"><img width="850" src="/assets/blog/THM-Mr-Robot/got the password for ellito.png" /></p>
+<p>For those familiar with the show, that is Elliot’s employer number, but what really matters is we have a successful login. On a web browser we are redirected to the <code class="language-plaintext highlighter-rouge">wp-admin</code> page, formally a redirect to <code class="language-plaintext highlighter-rouge">wp-login</code>.
+<br /><br />
+On this site we see there are plugins that we can not only enable, but directly edit:<br /></p>
+<p align="center"><img width="800" src="/assets/blog/THM-Mr-Robot/plugins.png" /></p>
+<p>Now there is a lot to be said about exploiting plugins specifically, however in this case using a generic php reverse shell did the trick - literally the first result from a quick google search “using a php plugin to start a reverse shell” worked. Leverage the Internet’s resources…
+<br /><br />
+This code is practically the exact same you would see for when uploading a file of a reverse shell, just modified to work with my local machine (my tun0 address since I am using openvpn). Nothing fancy, I edited in my local IP and custom port and it ended up looking as simple as this:<br /></p>
+<p align="center"><img width="800" src="/assets/blog/THM-Mr-Robot/custom code.png" /></p>
+<p>After saving the plugin and then running the netcat listener, I immediately got the following shell:<br /></p>
+<p align="center"><img width="700" src="/assets/blog/THM-Mr-Robot/reverse shell.png" /></p>
+<p>And we’re in - we finally have a workable shell for the web server, now onto the second flag.
+<br /><br />
+While we can access the directory for <code class="language-plaintext highlighter-rouge">/home/robot</code>, we do not have permissions to view the file for the flag. I forgot to screenshot this but I also upgraded my shell with the ol’ faithful <code class="language-plaintext highlighter-rouge">python -c 'import pty;pty.spawn("/bin/bash")'</code> command. (Knowing that as well as the perl shell command will prove useful for future CTFs, trust me). There is another file that we <em>can</em> read here - <code class="language-plaintext highlighter-rouge">password.raw-md5</code>.
+<br /><br />
+Taking the hash to an online cracking tool I get the following output:<br /></p>
+<p align="center"><img width="850" src="/assets/blog/THM-Mr-Robot/hashonline.png" /></p>
+<p>John could’ve easily cracked this, but I went with an online tool for simplicity and speed’s sake, in other words I was feeling lazy. Now I can switch users to the <code class="language-plaintext highlighter-rouge">robot</code> user to view the second flag:<br /></p>
+<p align="center"><img width="600" src="/assets/blog/THM-Mr-Robot/second flag.png" /></p>
+<p>And just like that the second flag is ours. The third flag is no doubt in the <code class="language-plaintext highlighter-rouge">/root</code> folder, however a quick <code class="language-plaintext highlighter-rouge">sudo -l</code> unfortunately doesn’t give anything useful:<br /></p>
+<p align="center"><img width="600" src="/assets/blog/THM-Mr-Robot/cant.png" /></p>
+<p>Since we can’t run anything with sudo, let’s try looking for what files have SUID permissions that we can run:<br /></p>
+<p align="center"><img width="850" src="/assets/blog/THM-Mr-Robot/find what can run.png" /></p>
+<p>If you’ve seen any of my other posts you know that gtfobins is a great resource in these situations. After combing through these one by one, the first one I found an exploit with was the <code class="language-plaintext highlighter-rouge">/usr/local/bin/nmap</code> (another might exist, this was the first that I saw):<br /></p>
+<p align="center"><img width="750" src="/assets/blog/THM-Mr-Robot/gtfobins.png" /></p>
+<p>This spawns a workable root shell, and we can guess the filename of the third flag to read it in the <code class="language-plaintext highlighter-rouge">/root</code> directory:<br /></p>
+<p align="center"><img width="600" src="/assets/blog/THM-Mr-Robot/final flag.png" /></p>
+<p>And after obtaining the third flag the box has been successfully pwned. This took me a few hours to work through due to spending too much time on the various directories and files from the gobuster scan which proved less than useful, however I still got through it. Nothing too crazy about this CTF in my opinion, but a lot of different skills needed and a good work through. Cheers,<br /><br />
+Wes<br /></p>
+
+
+</div>
+
+<div class="tags">
+    
+</div>
+
+
+<p><strong>Share</strong></p>
+<div class="buttons ">
+    <a class="button is-medium is-facebook"
+       onclick="window.open('https://www.facebook.com/share.php?u=http://localhost:4000/thm/2022/05/01/Mr-Robot.html');">
+        <span class="icon"><i class="fab fa-facebook fa-lg"></i></span>
+    </a>
+    <a class="button is-medium is-twitter"
+       onclick="window.open('https://twitter.com/intent/tweet?text=http://localhost:4000/thm/2022/05/01/Mr-Robot.html');">
+        <span class="icon"><i class="fab fa-twitter fa-lg"></i></span>
+    </a>
+    <a class="button is-medium is-linkedin"
+       onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/thm/2022/05/01/Mr-Robot.html&title=TryHackMe+-+Mr.+Robot&summary=&source=');">
+        <span class="icon"><i class="fab fa-linkedin fa-lg"></i></span>
+    </a>
+    <a class="button is-medium is-reddit"
+       onclick="window.open('https://reddit.com/submit?url=http://localhost:4000/thm/2022/05/01/Mr-Robot.html');">
+        <span class="icon"><i class="fab fa-reddit fa-lg"></i></span>
+    </a>
+</div>
+
+
+
+
+                </div>
+                
+                <div class="column is-4-desktop is-4-tablet">
+                    <p class="title is-4">Latest Posts</p>
+
+<div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+        <a class="card-header-title" href="/thm/2022/07/27/Brooklyn99.html">TryHackMe - Brooklyn Nine Nine</a>
+    </header>
+    
+    <div class="card-content">
+        <div class="content">
+            
+            
+                <p><h1 id="tryhackme---brooklyn-nine-nine">TryHackMe - Brooklyn Nine Nine</h1>
+</p>
+            
+        </div>
+        <div class="has-text-centered">
+            <a href="/thm/2022/07/27/Brooklyn99.html" class="button is-primary">Read more</a>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: Jul 27, 2022</p>
+    </footer>
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+        <a class="card-header-title" href="/thm/2022/06/11/BreakOutTheCage.html">TryHackMe - Break Out The Cage</a>
+    </header>
+    
+    <div class="card-content">
+        <div class="content">
+            
+            
+                <p><h1 id="tryhackme---break-out-the-cage">TryHackMe - Break Out The Cage</h1>
+</p>
+            
+        </div>
+        <div class="has-text-centered">
+            <a href="/thm/2022/06/11/BreakOutTheCage.html" class="button is-primary">Read more</a>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: Jun 11, 2022</p>
+    </footer>
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+        <a class="card-header-title" href="/thm/2022/05/26/Dav.html">TryHackMe - Dav</a>
+    </header>
+    
+    <div class="card-content">
+        <div class="content">
+            
+            
+                <p><h1 id="tryhackme---dav">TryHackMe - Dav</h1>
+</p>
+            
+        </div>
+        <div class="has-text-centered">
+            <a href="/thm/2022/05/26/Dav.html" class="button is-primary">Read more</a>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: May 26, 2022</p>
+    </footer>
+</div>
+    </div>
+    
+</div>
+
+
+
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+        <footer class="footer">
+    <div class="container">
+        
+        
+
+        <div class="content is-small has-text-centered">
+            <p class="">Theme built by <a href="https://www.csrhymes.com">C.S. Rhymes</a></p>
+        </div>
+    </div>
+</footer>
+
+    
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts --></body>
+</html>

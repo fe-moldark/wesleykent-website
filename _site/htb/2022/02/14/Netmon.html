@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+
+
+
+<html
+ dir="ltr"
+ lang="en"
+ >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content=#ffffff>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="shortcut icon" type="image/png"
+           href="/favicon.png" 
+    />
+    <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css">
+    
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>HackTheBox - Netmon | Wesley Kent</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="HackTheBox - Netmon" />
+<meta name="author" content="Wesley Kent" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="HackTheBox - Netmon" />
+<meta property="og:description" content="HackTheBox - Netmon" />
+<link rel="canonical" href="http://localhost:4000/htb/2022/02/14/Netmon.html" />
+<meta property="og:url" content="http://localhost:4000/htb/2022/02/14/Netmon.html" />
+<meta property="og:site_name" content="Wesley Kent" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-02-14T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="HackTheBox - Netmon" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Wesley Kent"},"dateModified":"2022-02-14T00:00:00-06:00","datePublished":"2022-02-14T00:00:00-06:00","description":"HackTheBox - Netmon","headline":"HackTheBox - Netmon","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/htb/2022/02/14/Netmon.html"},"url":"http://localhost:4000/htb/2022/02/14/Netmon.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <!-- head scripts --></head>
+
+  <body>
+    <nav class="navbar is-primary " x-data="{ openNav: false }">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item">
+                Wesley Kent
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu" :class="{ 'is-active': openNav }" x-on:click="openNav = !openNav">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu" :class="{ 'is-active': openNav }">
+            <div class="navbar-start">
+                <a href="/" class="navbar-item ">Home</a>
+                
+                
+                    
+                    <a href="/blog/" class="navbar-item ">CTF Exploits</a>
+                    
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable ">
+                        <a href="/tipsandtricks/" class="navbar-link ">Tips and Tricks</a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/tipsandtricks/bruteforcing/" class="navbar-item ">Brute forcing</a>
+                            
+                            <a href="/tipsandtricks/privilegeescalation/" class="navbar-item ">Privilege Escalation</a>
+                            
+                            <a href="/tipsandtricks/webstuff/" class="navbar-item ">Web Stuff</a>
+                            
+                            <a href="/tipsandtricks/usingnmap/" class="navbar-item ">Using Nmap</a>
+                            
+                            <a href="/tipsandtricks/steganography/" class="navbar-item ">Steganography</a>
+                            
+                            <a href="/tipsandtricks/defaultpayloads/" class="navbar-item ">Default payloads and msfconsole</a>
+                            
+                            <a href="/tipsandtricks/thebasics/" class="navbar-item ">The Basics</a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable ">
+                        <a href="/resources/" class="navbar-link ">Resources</a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/resources/usefullinks" class="navbar-item ">Useful links</a>
+                            
+                            <a href="/resources/freshinstall" class="navbar-item ">Fresh Install</a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                    <a href="/raspberrypi/" class="navbar-item ">Raspberry Pi Projects</a>
+                    
+                
+                    
+                    <a href="/femoldark/" class="navbar-item ">FE Moldark</a>
+                    
+                
+                    
+                    <a href="/contact/" class="navbar-item ">Contact</a>
+                    
+                
+                    
+                    <a href="/about/" class="navbar-item ">About</a>
+                    
+                
+                
+            </div>
+
+            <div class="navbar-end">
+                
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+    
+        <section class="hero  is-medium  is-bold is-primary"  style="background: url('/home/wesleyvm1/WesleyKentBlog/assets/default.png') no-repeat center center; background-size: cover;" >
+    <div class="hero-body ">
+        <div class="container">
+            <h1 class="title is-2">HackTheBox - Netmon</h1>
+            <p class="subtitle is-3"></p>
+            
+        </div>
+    </div>
+</section>
+    
+    
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-multiline">
+                
+                <div class="column is-8">
+                    
+                    
+                    
+                    
+                    <div class="content">
+
+    <p>Published: Feb 14, 2022 by Wesley Kent</p>
+
+    
+
+    <h1 id="hackthebox---netmon">HackTheBox - Netmon</h1>
+
+<p>This CTF proves relatively straightforward, but there are a few interesting things about it. This is also one of the few HackTheBox CTFs I did, the vast majority are with TryHackMe. Let’s begin with our nmap scan, the flags are running default scripts, looking for service versions and outputs the results of our scan for later use.<br /></p>
+
+<p align="center"><img width="750" src="/assets/blog/HTB-Netmon/one.webp" /></p>
+<p>From the scan a couple of thoughts about the open ports:<br /></p>
+<ul>
+  <li>Port 21 / FTP: Anonymous login is allowed, so that will be apart of our enumeration phase</li>
+  <li>Port 80 / HTTP: Will need to check out the webpage and see if the source code provides anything, run gobuster or dirb to try and enumerate any other pages from the host</li>
+  <li>Searchsploit for the PRTG/18.1.37.13946 as we see from the scan. We also know the target machine running Windows Server 2008 R2
+<br /><br /></li>
+</ul>
+
+<p>Beginning with port 21, we can login as “anonymous” and no password is needed:</p>
+<p align="center"><img width="600" src="/assets/blog/HTB-Netmon/two.webp" /></p>
+
+<p>This allows us some access to search through the directories and find what we can. While the administrator folder is blocked off (meaning we will at likely need some form of privilege escalation later on), we can find, and <code class="language-plaintext highlighter-rouge">get</code>, the user flag from the Public directory:<br /></p>
+<p align="center"><img width="550" src="/assets/blog/HTB-Netmon/three.webp" /></p>
+<p>After we <code class="language-plaintext highlighter-rouge">get</code> the file we should see it on our local machine and be able to view it:</p>
+<p align="center"><img width="600" src="/assets/blog/HTB-Netmon/four.webp" /></p>
+<p>For now it doesn’t seem that we can get much more out of the ftp server, so let’s see what port 80 can offer.</p>
+<p align="center"><img width="850" src="/assets/blog/HTB-Netmon/five.webp" /></p>
+<p>After running a basic vuln scan against port 80 a few options appear, but nothing that ends up working. Also, both dirb and gobuster scans gave us nothing due to a ‘status code’ error that I couldn’t get past, so nothing proved useful on that front.
+<br /><br />
+We can still view the webpage itself, however, and while we are able to access the site, it simply shows itself as a login site for the “PRTG Network Monitor” we saw in our initial scan.
+<br />
+Since the web page itself hasn’t proved useful, searchsploit is a good next step:</p>
+<p align="center"><img width="850" src="/assets/blog/HTB-Netmon/six.webp" /></p>
+<p>This references some exploits we initially saw on our basic vuln scan, and the ‘Remote Code Execution’ option which sounds ideal for our situation. Msfconsole / metasploit has this exploit:<br /></p>
+<p align="center"><img width="850" src="/assets/blog/HTB-Netmon/seven.webp" /></p>
+<p>As we try and run this, the default user/pass does not work so we know that we are going to need some updated credentials or find an alternate route to exploit. I’ve already searched through the site’s source code and didn’t find anything and dirb/gobuster was no help. A quick google search confirms the default credentials msfconsole supplied are correct, meaning that they have been changed. The only other thing that we have access to is the anonymous ftp connection that allows us to browse some of their local files and see what else might pop up:</p>
+<p align="center"><img width="600" src="/assets/blog/HTB-Netmon/eight.webp" /></p>
+<p>I tried getting access to some log files, access was denied, same for the Documents and Settings folder among others.<br />
+We are able to navigate around and find multiple files referencing the PRTG network monitor that we can <code class="language-plaintext highlighter-rouge">get</code> to our local machine similar to the user flag. Within the hidden ProgramData folder there is a directory called ‘PRTG Network Monitor’:<br /></p>
+<p align="center"><img width="600" src="/assets/blog/HTB-Netmon/nine.webp" /></p>
+<p>Inside this folder we find an old .bak file we can get to our machine.<br />
+On our local machine we can search through these files for known login credentials (the username) and the surrounding lines with the <code class="language-plaintext highlighter-rouge">-C7</code> flag:<br /></p>
+<p align="center"><img width="600" src="/assets/blog/HTB-Netmon/ten.webp" /></p>
+<p>Here we find a potential password that we can use to try and use through the msfconsole exploit we tried previously.<br /><br />
+The escalation process from here is very straight forward, we simply pull up the exploit we tried previously with the newly discovered password. Once we configure our lhost, rhosts and password we can attempt to exploit:<br /></p>
+<p align="center"><img width="700" src="/assets/blog/HTB-Netmon/eleven.webp" /></p>
+<p>And now we have our meterpreter shell running. We can create a shell if wanted, but we can already navigate to the administrator folder where we find the root flag:<br /></p>
+<p align="center"><img width="600" src="/assets/blog/HTB-Netmon/twelve.webp" /></p>
+<p>And after all this we have both flags for this CTF. Cheers,<br /><br />
+Wes<br /></p>
+
+</div>
+
+<div class="tags">
+    
+</div>
+
+
+<p><strong>Share</strong></p>
+<div class="buttons ">
+    <a class="button is-medium is-facebook"
+       onclick="window.open('https://www.facebook.com/share.php?u=http://localhost:4000/htb/2022/02/14/Netmon.html');">
+        <span class="icon"><i class="fab fa-facebook fa-lg"></i></span>
+    </a>
+    <a class="button is-medium is-twitter"
+       onclick="window.open('https://twitter.com/intent/tweet?text=http://localhost:4000/htb/2022/02/14/Netmon.html');">
+        <span class="icon"><i class="fab fa-twitter fa-lg"></i></span>
+    </a>
+    <a class="button is-medium is-linkedin"
+       onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/htb/2022/02/14/Netmon.html&title=HackTheBox+-+Netmon&summary=&source=');">
+        <span class="icon"><i class="fab fa-linkedin fa-lg"></i></span>
+    </a>
+    <a class="button is-medium is-reddit"
+       onclick="window.open('https://reddit.com/submit?url=http://localhost:4000/htb/2022/02/14/Netmon.html');">
+        <span class="icon"><i class="fab fa-reddit fa-lg"></i></span>
+    </a>
+</div>
+
+
+
+
+                </div>
+                
+                <div class="column is-4-desktop is-4-tablet">
+                    <p class="title is-4">Latest Posts</p>
+
+<div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+        <a class="card-header-title" href="/thm/2022/07/27/Brooklyn99.html">TryHackMe - Brooklyn Nine Nine</a>
+    </header>
+    
+    <div class="card-content">
+        <div class="content">
+            
+            
+                <p><h1 id="tryhackme---brooklyn-nine-nine">TryHackMe - Brooklyn Nine Nine</h1>
+</p>
+            
+        </div>
+        <div class="has-text-centered">
+            <a href="/thm/2022/07/27/Brooklyn99.html" class="button is-primary">Read more</a>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: Jul 27, 2022</p>
+    </footer>
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+        <a class="card-header-title" href="/thm/2022/06/11/BreakOutTheCage.html">TryHackMe - Break Out The Cage</a>
+    </header>
+    
+    <div class="card-content">
+        <div class="content">
+            
+            
+                <p><h1 id="tryhackme---break-out-the-cage">TryHackMe - Break Out The Cage</h1>
+</p>
+            
+        </div>
+        <div class="has-text-centered">
+            <a href="/thm/2022/06/11/BreakOutTheCage.html" class="button is-primary">Read more</a>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: Jun 11, 2022</p>
+    </footer>
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+        <a class="card-header-title" href="/thm/2022/05/26/Dav.html">TryHackMe - Dav</a>
+    </header>
+    
+    <div class="card-content">
+        <div class="content">
+            
+            
+                <p><h1 id="tryhackme---dav">TryHackMe - Dav</h1>
+</p>
+            
+        </div>
+        <div class="has-text-centered">
+            <a href="/thm/2022/05/26/Dav.html" class="button is-primary">Read more</a>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: May 26, 2022</p>
+    </footer>
+</div>
+    </div>
+    
+</div>
+
+
+
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+        <footer class="footer">
+    <div class="container">
+        
+        
+
+        <div class="content is-small has-text-centered">
+            <p class="">Theme built by <a href="https://www.csrhymes.com">C.S. Rhymes</a></p>
+        </div>
+    </div>
+</footer>
+
+    
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts --></body>
+</html>
