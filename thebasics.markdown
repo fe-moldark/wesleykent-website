@@ -83,7 +83,7 @@ So, we said we care only about the left three digits - starting with the "6" in 
 In terms of our read write execute permissions, then, the USER has read, write, but NOT execute permissions for that file.
 <br><br>
 The next digit, "5", is the permissions for the GROUP - which in binary is 101 (again, we only care about the left three).<br>
-So, the GROUP's permissions include YES to read, NOT to write, and YES for Execute.<br><br>
+So, the GROUP's permissions include YES to read, NO to write, and YES for execute.<br><br>
 Lastly, the 0 indicates NO permissions at all for anyone else outside the user and group.<br><br><br>
 And one thing I almost forgot to add - `chmod` and `chown`.<br>
 - To "own" a file, thus giving yourself permissions to use it you can use the `chown USERNAME filename` command.<br><br>
