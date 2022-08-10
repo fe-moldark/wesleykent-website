@@ -14,7 +14,7 @@ If you are not already aware, nmap is an open-source port scanning tool used for
 This will be a brief overview of my basic go-to scan, and after that is done I will explain how I often modify it based on the results:<br>
 *Running as sudo<br>
 `nmap -sC -sV -O <Target IP>`<br>
-Depending on the results from this scan, you might need to disable host discovery with `-Pn`, you should run a longer follow up scan with `-p-`, or you might need want to target specific scripts at specific ports / services, or you might want to include more flags for more specific results.
+Depending on the results from this scan, you might need to disable host discovery with `-Pn`, you should run a longer follow up scan with `-p-`, you might want to target certain scripts at specific ports / services, or you might want to include more flags for a wider range of results.
 <br><br>
 Using the `-sU` or `-sS` you can specifiy a UDP or SYN scan.<br>
 The `-O` tries to detect the Operating System type and version.<br>
