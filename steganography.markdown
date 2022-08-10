@@ -4,7 +4,7 @@ title: Steganography
 subtitle: What is steganography, how is it used and how to counter it
 image: /home/wesleyvm1/WesleyKentBlog/assets/fe.ico
 description: What is steganography, how is it used and how to counter it
-permalink: /tipsandtricks/steganography
+permalink: /tipsandtricks/steganography/
 #hero_image: /assets/fe.ico
 #hero_height: is-fullheight
 ---
