@@ -35,7 +35,7 @@ This might thwart a poor attempt on someone's part to hide real information in p
 To recursivley grep, ignoring case sensitvity: `grep -iRl "search for this string"`<br>
 The `i` is ignoring the case, the `R` for the recursive search.<br><br>
 A `grep -x` search would search for an exact string.<br>
-Adding a `-C3` or would highlight the line where the text was found as well as three lines above and below it. You can substitute `A` or `B` for returning lines just above or below the search as well.<br><br>
+Adding a `-C3` would highlight the line where the text was found as well as three lines above and below it. You can substitute `A` or `B` as well for returning lines just above or below the search as well.<br><br>
 <br>
 
 ## Getting files over ftp, sftp, ssh, and smb
