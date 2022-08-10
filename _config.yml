@@ -56,7 +56,7 @@ defaults:
       show_sidebar: true
       
 # Pagination settings
-paginate: 5
+paginate: 8
 #paginate_path: "/blog/page:num"
       
       
