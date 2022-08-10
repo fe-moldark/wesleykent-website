@@ -13,7 +13,7 @@ permalink: /tipsandtricks/webstuff/
 Note: reference the [bruteforcing](/tipsandtricks/bruteforcing/) page for using hydra against http / https login pages. On to the rest.
 <br><br><br>
 ## Web Enumeration
-I will be focusing solely on `gobuster` since that is what I have consistently used with issue, but you can look into `dirb` if that is your preference.
+I will be focusing solely on `gobuster` since that is what I have consistently used without issue, but you can look into `dirb` if that is your preference.
 <br><br>
 Below is my default web enumration / gobuster scan that I always start with:
 `gobuster dir -u 10.10.242.242 -w /home/wesleyvm1/SecLists/Discovery/Web-Content/directory-list-2.3-small.txt `<br>
