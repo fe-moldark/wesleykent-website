@@ -11,7 +11,7 @@ permalink: /tipsandtricks/usingnmap/
 
 ## Introduction and flags
 If you are not already aware, nmap is an open-source port scanning tool used for security testing and "network exploration" as they call it.<br>
-This will be a brief overview of my basic go-to scan, and after it is done I will explain how I often modify it based on the results:<br>
+This will be a brief overview of my basic go-to scan, and after that is done I will explain how I often modify it based on the results:<br>
 *Running as sudo<br>
 `nmap -sC -sV -O <Target IP>`<br>
 Depending on the results from this scan, you might need to disable host discovery with `-Pn`, you should run a longer follow up scan with `-p-`, or you might need want to target specific scripts at specific ports / services, or you might want to include more flags for more specific results.
