@@ -2,7 +2,7 @@
 layout: page
 title: Raspberry Pi Projects
 subtitle: 
-image: /home/wesleyvm1/WesleyKentBlog/assets/fe.ico
+image: /assets/fe.ico
 description: 
 permalink: /raspberrypi/
 #hero_image: /assets/fe.ico
