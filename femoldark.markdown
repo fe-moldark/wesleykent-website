@@ -2,7 +2,7 @@
 layout: page
 title: FE Moldark
 subtitle: Building a game from the ground up...
-image: /home/wesleyvm1/WesleyKentBlog/assets/fe.ico
+image: /assets/fe.ico
 description: The pages meta description
 permalink: /femoldark/
 #hero_image: /assets/fe.ico
