@@ -2,7 +2,7 @@
 layout: page
 title: Web Stuff
 subtitle: Web enumeration, starting a web server, and uses of curl
-image: /home/wesleyvm1/WesleyKentBlog/assets/fe.ico
+image: /assets/fe.ico
 description: Web enumeration, starting a web server, and uses of curl
 permalink: /tipsandtricks/webstuff/
 #hero_image: /assets/fe.ico
@@ -15,8 +15,8 @@ Note: reference the [bruteforcing](/tipsandtricks/bruteforcing/) page for using 
 ## Web Enumeration
 I will be focusing solely on `gobuster` since that is what I have consistently used without issue, but you can look into `dirb` if that is your preference.
 <br><br>
-Below is my default web enumration / gobuster scan that I always start with:
-`gobuster dir -u 10.10.242.242 -w /home/wesleyvm1/SecLists/Discovery/Web-Content/directory-list-2.3-small.txt `<br>
+Below is my default web enumeration / gobuster scan that I always start with:
+`gobuster dir -u IP_ADDRESS -w /home/wesleyvm1/SecLists/Discovery/Web-Content/directory-list-2.3-small.txt `<br>
 As you can see I'm using one of the lists from SecLists, and you can use more expansive lists (takes more time though) or use more focused lists at specific types of web servers. Other good ones I use are the `common.txt` and `big.txt` in that same directory from SecLists.
 <br><br><br>
 ## Starting a Web Server
