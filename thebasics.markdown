@@ -1,8 +1,8 @@
 ---
 layout: page
 title: The Basics
-subtitle: If you need any help with the basics, such as indexing, locating stuff, anything not directly related to pen testing, but essential to know
-image: /home/wesleyvm1/WesleyKentBlog/assets/fe.ico
+subtitle: A collection of random thoughts that aren't individually long enough to warrant their own page
+image: /assets/fe.ico
 description: If you need any help with the basics, such as indexing, locating stuff, anything not directly related to pen testing, but essential to know
 permalink: /tipsandtricks/thebasics/
 #hero_image: /assets/fe.ico
@@ -13,14 +13,14 @@ permalink: /tipsandtricks/thebasics/
 
 To viewing tasks running on a machine:<br>
 - I trust you know how this works on Windows, go to task manager
-- With Linux you can use `ps aux` and then `grep` for specific process. To kill by process ID, just `kill PID`
+- With Linux you can use `ps aux` and then `grep` for specific processes. To kill by process ID, just `kill PID`
 
 
 For current location in the system, use `pwd`.
 
 When doing searches and other commands using the `2>/dev/null` throws out the stderr to the void, or the `null`.
 
-Useful logs can be found in `/var/log`.
+Useful logs can always be found in `/var/log`, Windows has Event Viewer, etc.
 <br><br><br>
 
 ## Finding Information
@@ -41,10 +41,9 @@ Adding a `-C3` would highlight the line where the text was found as well as thre
 ## Getting files over ftp, sftp, ssh, and smb
 
 #### ftp / sftp
-Let's start with ftp, from your nmap scan you should know whether or not you have anonymous login capabiltities, but even without that there are scripts you can run to enumrate usernames or try and brute force a login with hydra.<br>
+Let's start with ftp, from your nmap scan you should know whether or not you have anonymous login capabiltities, but even without that there are scripts you can run to enumerate usernames or try and brute force a login with hydra.<br>
 Once on the server, you can `get filename` back to your local machine, use the `put` command for uploading files, and navigate / list directories with `dir`, `ls`, and `cd` like normal.<br>
-Note: To actually initiate an ftp session, simply use:<br>
-`ftp IPADDRESS`, at which point you will prompted with a login request.
+Note: To actually initiate an ftp session, simply use: `ftp IPADDRESS`, at which point you will prompted with a login request.
 <br><br>
 I've limited interactions with sftp, but I do know it is a secure version of ftp running over ssh (port 22), and should use almost identical or identical commands to ftp.
 <br><br>
@@ -58,7 +57,7 @@ For ssh you will need to connect various ways - here's a few situations you migh
 Note: Reference the [brute forcing](/tipsandtricks/bruteforcing/) page for how to brute force a login over ssh.
 <br><br>
 #### smb
-For smb, there are some tools that are useful to enumerate the shares and users from the port. This would be `enum4linux`.<br>
+For smb, there are some tools that are useful to enumerate the shares and users from the port, and for this I mainly use `enum4linux`.<br>
 Whenever you see smb running over a port (commonly seen over 139 and 445), the following command will help with enumeration:<br>
 `enum4linux -a IPADDRESS`<br>
 This will perform all simple enumerations and from there hopefully you will uncover some shares you can get anonymous access to, maybe the usernames there are the same for other services running (like ssh for a possible brute force), etc.<br><br>
