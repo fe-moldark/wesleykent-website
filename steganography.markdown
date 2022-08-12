@@ -2,7 +2,7 @@
 layout: page
 title: Steganography
 subtitle: What is steganography, how is it used and how to counter it
-image: /home/wesleyvm1/WesleyKentBlog/assets/fe.ico
+image: /assets/fe.ico
 description: What is steganography, how is it used and how to counter it
 permalink: /tipsandtricks/steganography/
 #hero_image: /assets/fe.ico
@@ -10,11 +10,11 @@ permalink: /tipsandtricks/steganography/
 ---
 
 # What is Steganography
-Steganography - concealing information within something else so that it is not visible to anyone except those that have a the key and know where to look. Often this will be seen as embedding data into images, and to uncover that information there are a number of tools we can use.
+Steganography - concealing information within something else so that it is not visible to anyone except those that have the key and know where to look. Often this will be seen as embedding data into images, and to uncover that information there are a number of tools we can use.
 <br><br>
 
 # Tools to uncover information
-To install `stegosuite` and `steghide` reference my [fresh install](/resources/freshinstall) page.
+To install `stegosuite` and `steghide` reference my [resources](/tipsandtricks/resources/) page.
 <br><br>
 To start the GUI for stegosuite, simply enter `stegosuite` in the terminal. From there you can select a file and enter a key to try and identify embedded files.<br><br>
 Another tool you can use is called `binwalk`, for more details on how it works enter `binwalk -h` or reference [this site](https://www.kali.org/tools/binwalk/) from Kali Linux.<br>
