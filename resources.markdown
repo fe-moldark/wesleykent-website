@@ -11,8 +11,9 @@ permalink: /tipsandtricks/resources/
 
 # Introduction
 To start off, the CTFs I enjoy working through can be found at [TryHackMe](https://www.tryhackme.com) and [HackTheBox](https://www.hackthebox.com/).
-<br><br>
-For a massive of list of tried and true methods of bypassing misconfigured system, I give you: [gtfobins](https://gtfobins.github.io/)<br><br>
+<br>
+For a massive of list of tried and true methods of bypassing misconfigured system, I give you: [gtfobins](https://gtfobins.github.io/)
+<br>
 For everything to do with exploiting command execution vulnerabilities: [pentestmonkey](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
 <br><br>
 # My Recommended Linux Distro and Installs
