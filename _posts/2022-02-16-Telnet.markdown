@@ -25,7 +25,7 @@ And we can see we get the response on our local machine.<br><br>
 Knowing this, we can attempt to set up a reverse shell on the target and gain access that way. To do this, we will use an exploit from msfvenom and start a netcat listener on a port of our choosing. We'll configure our reverse shell with msfvenom:<br>
 <p align="center"><img width="750" src="/assets/blog/THM-Telnet/msfvenom.png"></p>
 The `lhost` being our `tun0` address (if using openvpn like I am) and the port to whatever we want.<br><br>
-We set up netcat on our local machine to listen on port 4444 and after using the `.RUN` on the outputted command from msfconsole (last line on the above image) on our target, we should see the reverse shell up and running.<br>
+We set up netcat on our local machine to listen on port 4444 and after using the `.RUN` on the outputted command from msfvenom (last line on the above image) on our target, we should see the reverse shell up and running.<br>
 <p align="center"><img width="600" src="/assets/blog/THM-Telnet/netcat to shell and flag.png"></p>
-And the flag is already in the current working directory, easy day. We could likely get a more powerful shell running with python, however this task didn't require any further exploitation. Cheers,<br><br>
+And the flag is already in the current working directory, easy day. We could likely get a more powerful shell running with python, however this task didn't require any further exploitation. Honestly, if I came across a service actually running telnet today I would assume that it was apart of some honeynet I had unknowingly walked into - there aren't many good reasons to keep that cleartext service running nowadays. Cheers,<br><br>
 Wes<br>
