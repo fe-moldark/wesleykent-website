@@ -27,12 +27,12 @@ Useful logs can always be found in `/var/log`, Windows has Event Viewer, etc.
 
 To find out who you currently are on the system use `whoami`.
 <br><br>
-Listing what the current directory with `ls`, there are more flags you can through on there to expand or limit the search. Also look into using `| grep SOMETHING` to only return results containg specific strings.
+Listing what is in the current directory with `ls`, there are more flags you can through on there to expand or limit the search (e.g. including hidden files). Also look into using `| grep SOMETHING` to only return results containg specific strings.
 
 To pull words from gibberish use: `strings filename.ext`<br>
 This might thwart a poor attempt on someone's part to hide real information in plain text behind a bunch of randomly combined letters in a large text file.
 
-To recursivley grep, ignoring case sensitvity: `grep -iRl "search for this string"`<br>
+To recursively grep, ignoring case sensitivity: `grep -iRl "search for this string"`<br>
 The `i` is ignoring the case, the `R` for the recursive search.<br><br>
 A `grep -x` search would search for an exact string.<br>
 Adding a `-C3` would highlight the line where the text was found as well as three lines above and below it. You can substitute `A` or `B` as well for returning lines just above or below the search as well.<br><br>
@@ -45,12 +45,12 @@ Let's start with ftp, from your nmap scan you should know whether or not you hav
 Once on the server, you can `get filename` back to your local machine, use the `put` command for uploading files, and navigate / list directories with `dir`, `ls`, and `cd` like normal.<br>
 Note: To actually initiate an ftp session, simply use: `ftp IPADDRESS`, at which point you will prompted with a login request.
 <br><br>
-I've limited interactions with sftp, but I do know it is a secure version of ftp running over ssh (port 22), and should use almost identical or identical commands to ftp.
+I've had limited interactions with sftp, but I do know it is a secure version of ftp running over ssh (port 22), and should use almost identical or identical commands to ftp.
 <br><br>
 #### ssh
-For ssh you will need to connect various ways - here's a few situations you might see:<br>
+For ssh, you will need to connect in various ways - here's a few situations you might see:<br>
 - The "normal" way - `ssh username@IPADDRESS` and once prompted enter the password
-- Logging into domain - `ssh -l username@something.local IPADDRESS`
+- Logging into a domain - `ssh -l username@something.local IPADDRESS`
 - When using a key - `ssh -i path_to_key username@IPADDRESS`
 <br>
 
@@ -59,7 +59,7 @@ Note: Reference the [brute forcing](/tipsandtricks/bruteforcing/) page for how t
 #### smb
 For smb, there are some tools that are useful to enumerate the shares and users from the port, and for this I mainly use `enum4linux`.<br>
 Whenever you see smb running over a port (commonly seen over 139 and 445), the following command will help with enumeration:<br>
-`enum4linux -a IPADDRESS`<br>
+`enum4linux -a IPADDRESS`<br><br>
 This will perform all simple enumerations and from there hopefully you will uncover some shares you can get anonymous access to, maybe the usernames there are the same for other services running (like ssh for a possible brute force), etc.<br><br>
 To actually login afterwards once you have more info:<br>
 `smbclient //IPADDRESS/SHARE -U username -p port`<br>
@@ -72,7 +72,7 @@ Interestingly enough you can actually see if files have SUID permissions based o
 <br><br>
 Linux file permissions are described with three numbers, each of which can be between 0-7. Assuming you already know binary, let's take a look at just one of those three numbers. Now, each bit when combined (ex. binary bit for 4 and 1 = 5 total) would describe the read, write, execute permissions (aka 4,2,1 - with 0 meaning NO permissions) for that number.<br><br>
 But, there are three numbers, right? _Each_   of those three numbers - be it, 777, 754, 600, etc etc _individually_ describe the permissions (read write execute, don't forget) for the user, the group, and lastly anyone else.<br><br>
-Let's now take an example of a permission set of "650":
+Let's take an example of a permission set of "650":
 - The first 6 in binary would be 110(0) = (4+2+0+0) and we care about the left most three
 - The second number, 5, would be 101(0) = (4+0+1+0) and again, only the left three matter
 - The last number is 0, which 000(0) = (0+0+0+0), denoting no permissions for anyone else
@@ -85,7 +85,7 @@ The next digit, "5", is the permissions for the GROUP - which in binary is 101 (
 So, the GROUP's permissions include YES to read, NO to write, and YES to execute.<br><br>
 Lastly, the 0 indicates NO permissions at all for anyone else outside the user and group.<br><br><br>
 And one thing I almost forgot to add - `chmod` and `chown`.<br>
-- To "own" a file, thus giving yourself permissions to use it you can use the `chown USERNAME filename` command.<br><br>
+- To "own" a file, thus giving yourself permissions to use it, you can use the `chown USERNAME filename` command.<br>
 - The `chmod` command can be used to add or otherwise alter permissions for a file.<br>
 For example: `chmod +x filename` will give you executable permissions, or something like `chmod 777 filename`, where the number is whatever permissions you want to designate.<br><br><br>
 
