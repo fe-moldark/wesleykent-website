@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Tips and Tricks
-subtitle: Useful notes and commands used for exploits, and other tools and methods that have proven useful
+subtitle: Useful notes and commands used for exploits, and other tools and methods that have proven helpful
 image: /assets/fe.ico
 description: Useful notes for commands and common exploit tools, methods that have proven useful.
 permalink: /tipsandtricks/
@@ -9,7 +9,7 @@ permalink: /tipsandtricks/
 #hero_height: is-fullheight
 ---
 
-Like I might have mentioned before, my memory might not be the best, but even if it was I would still keep these notes. Sometimes the syntax gets complicated or you just don't want to search for that one exploit you read about once from a random blog months back. I hope others can find this as useful as I have, and if you have anything you think I should include here, by all means [reach out](/contact/).<br>
+Like I may have previously mentioned, my memory might not be the best (I think this is funny), but even if it was I would still keep these notes. Sometimes the syntax gets complicated or you just don't want to search for that one exploit you read about once from a random blog months back. I hope others can find this as useful as I have, and if you have anything you think I should include here, by all means [reach out](/contact/).<br>
 <br>
 There is far too much for just one web page, so I've broken this down into the following categories.
 <br><br>
