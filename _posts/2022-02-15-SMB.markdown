@@ -9,7 +9,7 @@ intro: The following posts will cover material from TryHackMe along the Cyber De
 # TryHackMe - Simple SMB Exploit
 The following post will cover material from TryHackMe along the Cyber Defense path. If you want to learn more about the SMB protocol I would highly encourage you to reference the TryHackMe site as they will provide a much more in depth break down of how the protocol works than I will get into here.
 <br><br>
-Essentially SMB, or Server Message Block Protocol, is used to give remote access to certain files and connected devices (e.g. printers) on a network using client-server communication protocol. It's easy to draw similarities between this and FTP, and although they do have different purposes, some of the syntax is the same across the board.
+Essentially SMB, or Server Message Block Protocol, is used to give remote access to certain files and connected devices (e.g. printers) on a network using a client-server communication protocol. It's easy to draw similarities between this and FTP, and although they do have different purposes, some of the syntax is the same across the board.
 <br><br>
 Let's start off the box with a basic nmap scan of the target:<br>
 <p align="center"><img width="750" src="/assets/blog/THM-SMB/nmap.png"></p>
@@ -25,9 +25,9 @@ We can now try and login into that share anonymously:<br>
 <p align="center"><img width="750" src="/assets/blog/THM-SMB/img.webp"></p>
 The "Working From Home Information.txt" file sounds interesting, which we can then `get` to our machine:<br>
 <p align="center"><img width="850" src="/assets/blog/THM-SMB/get working from home note.png"></p>
-On that file we find clear information indicating that we should further investigate how the users are remotely accessing their machines, namely through ssh. There is a .ssh directory on the SMB share and we find the following:<br>
+On that file we find clear information indicating that we should further investigate how the users are remotely accessing their machines, namely through ssh. There is a `.ssh` directory on the SMB share and we find the following:<br>
 <p align="center"><img width="800" src="/assets/blog/THM-SMB/cdssh.png"></p>
-Now, we can try to login via ssh since we have a workable rsa-id, however we still do not have the username. What we do have is the name of the individual "John Cactus" from the "Working From Home Information.txt" file - hopefully the company auto assigns usernames such as FirstInitialLastName, FirstName, LastName, LastNameFirstname, so on so forth. To use the rsa_id we first need to change the permissions of our id_rsa file and give just ourselves full read/write access:<br>
+Now, we can try to login via ssh since we have a workable rsa-id, however we still do not have the username. What we do have is the name of the individual "John Cactus" from the "Working From Home Information.txt" file - hopefully the company auto assigns usernames such as FirstInitialLastName, FirstNameLastName, LastNameFirstname, so on so forth. To use the rsa_id we first need to change the permissions of our id_rsa file and give just ourselves full read/write access:<br>
 <p align="center"><img width="300" src="/assets/blog/THM-SMB/chmod.png"></p>
 After a few failed attempts to guess the username, I eventually got the following to work:<br>
 <p align="center"><img width="750" src="/assets/blog/THM-SMB/ssh in and see flag.png"></p>
