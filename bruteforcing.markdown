@@ -50,7 +50,7 @@ You can see for this instance I chose to incldue the `-t 4` flag to lower the de
 Okay, let's say you get your hands on the `/etc/shadow` file or some other form of a hashed password, how do you go about identifying the hash before you can try and break it?<br>
 For this, many distributions of linux should have a tool called "hash-identifier". How it works is you simply type in `hash-identifier` in your terminal and that'll start the program where you'll be prompted to enter in the hash. Alternatively, you can use a tool called "hashid" which works very similar to the former, if you need help with this one just enter in `man hashid` or `hashid --help` for help figuring it out.
 <br><br>
-Now using John to crack the hash. The first step is which _type_ of hash are you cracking, for instance John lists at least five different forms of MD5 hashes. So to identify which one is the one to use with John, type in something along the lines of `john --list=formats | grep MD5`. This will give the different MD5 hash forms you can try. Once the format is chosen, you will need a password list to use, the default should almost always be the `rockyou.txt` file (reference [here](/resources/freshinstall/) to get it), and if that doesn't work you'll likely have to branch out to other lists from SecLists.
+Now using John to crack the hash. The first step is which _type_ of hash are you cracking, for instance John lists at least five different forms of MD5 hashes. So to identify which one is the one to use with John, type in something along the lines of `john --list=formats | grep MD5`. This will give the different MD5 hash forms you can try. Once the format is chosen, you will need a password list to use, the default should almost always be the `rockyou.txt` file (reference [here](/tipsandtricks/resources/) to get it), and if that doesn't work you'll likely have to branch out to other lists from SecLists.
 <br><br>
 Now to setup an example brute force against a MD5 hash stored in the hash.txt file:<br>
 `john --format=Raw-MD5 --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt`<br>
@@ -60,10 +60,9 @@ Note: If you have already cracked a specific hash and deleted it, John will say 
 <br>
 Another note: Sometimes before attempting to crack a file you will need to convert it to a format that John can use. These tools are named things like "ssh2john" or "zip2john" (reference [here](/thm/2022/04/18/TomGhost.html) for a time when I had to use "gpg2john"), and since there are so many different kinds of formats out there, I'll leave you to do your own research on each one specifically. Just know that before John can take a crack at certain file types there has to be some conversion made beforehand. There are a million forums online that will cover the how-to for ssh keys, zip password protected files, etc - what's important is that you know these tools exist.<br>
 <br><br>
-
-## Other means of breaking hashes / encoded files
-Even if you don't know much about encoding / decoding you probably have heard the term "base64" at some point. To decode a file as simple as this just use:<br>
-`cat filename.ext | base64 -d` and you can of course output the result to a file by adding `> output.txt`
+Lastly, if you ever have to convert a file that is encoded as `base64` the command is as simple as:<br>
+`cat filename.ext | base64 -d` and you can of course output the result to a file by adding `> output.txt`<br>
+I've only ever had to use this once, but it's useful to know I suppose.
 <br><br>
 
 ## One note on everyone's favorite resource... online tools
