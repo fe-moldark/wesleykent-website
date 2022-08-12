@@ -32,7 +32,7 @@ What is steganography, how is it used and how to counter it.
 [**>>Default Payloads and Metasploit<<**](/tipsandtricks/defaultpayloads/)<br>
 Brief overview of some default payloads and how they're used within metasploit.
 <br><br>
-[**>>Resources<<**](/tipsandtricks/defaultpayloads/)<br>
+[**>>Resources<<**](/tipsandtricks/resources/)<br>
 Useful stuff for CTFs with TryHackMe and my recommended Linux Distribution / fresh install.<br><br>
 [**>>The Basics<<**](/tipsandtricks/thebasics/)<br>
 If you need any help with the basics, such as locating stuff, how linux permissions work, anything not directly addressed but still essential to know.
