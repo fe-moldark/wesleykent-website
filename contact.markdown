@@ -1,6 +1,9 @@
 ---
 layout: page
 title: Contact
+subtitle: Email is probably best
+image: /assets/fe.ico
+description: Contact
 permalink: /contact/
 ---
 
