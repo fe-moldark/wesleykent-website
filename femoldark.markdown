@@ -9,7 +9,7 @@ permalink: /femoldark/
 #hero_height: is-fullheight
 --- 
 
-I won't go into detail here because I have created an entirely seperate website for this topic at [**fe-moldark.dev**](https://www.fe-moldark.dev).
+I won't go into detail here because I have created an entirely seperate website for this topic at [fe-moldark.dev](https://www.fe-moldark.dev).
 <br><br>
 Summarized, this is a game I have been recreating with Python / Pygame from the ground up, literally started at nothing and now the project stands at around 16,000 lines of code. The game I am recreating is Fire Emblem, more specifically the older versions as seen on the GBA and DS since that is what I grew up with. This is a project that has been ongoing for many years now with just as many breaks in between. Life happens and you get busy I guess.
 <br><br>
