@@ -8,7 +8,7 @@ intro: This simple exploit is also apart of the cyber defense series, and focuse
 
 # Simple SMTP Exploit
 
-As you might've guessed, Simple Mail Transfer Protocol or SMTP deals with the sending emails. Since we already know this box deals with SMTP and we know what the default port for it is, let's try a targeted scan for time's sake:<br>
+As you might've guessed, Simple Mail Transfer Protocol or SMTP deals with sending emails. Since we already know this box deals with SMTP and we know what the default port for it is, let's try a targeted scan for time's sake:<br>
 <p align="center"><img width="700" src="/assets/blog/THM-SMTP/nmap scan.png"></p> 
 Thankfully the TryHackMe guys kept SMTP running over its default port.
 <br><br>
