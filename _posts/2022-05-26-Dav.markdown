@@ -30,7 +30,7 @@ It appears to work, and sure enough it has populated on the web server. Now to s
 <p align="center"><img width="800" src="/assets/blog/THM-Dav/netcat.png"></p> 
 Easily get the first flag:<br>
 <p align="center"><img width="800" src="/assets/blog/THM-Dav/user flag.png"></p> 
-Running `sudo -l` reveals we can run `/bin/cat` as root, so let's reference gtfobins for an exploit to escalate our privileges. Now - instead of defaulting to looking to gtfobins we can just realize that a) the flag is likely a `.txt` file named "flag", or "root", etc, and b) cat means just that - we can really just use cat to read the file if we can correctly guess the filename. And getting the root flag is as simple as follows:<br>
+Running `sudo -l` reveals we can run `/bin/cat` as root, so let's reference gtfobins for an exploit to escalate our privileges. Now - instead of defaulting to looking to gtfobins we can just realize that a) the flag is likely a `.txt` file named "flag", or "root", etc, and b) the `cat` command means just that - we can really just use it to read the file if we can correctly guess the filename. And getting the root flag is as simple as follows:<br>
 <p align="center"><img width="850" src="/assets/blog/THM-Dav/root.png"></p> 
 Sure enough, I luckily guessed it the first time around and the box has been pwned. Cheers,<br><br>
 Wes<br>
