@@ -8,7 +8,7 @@ intro: This was a genuinely enjoyable CTF to work through, there are a number of
 
 # TryHackMe - Pickle Rick
 
-This was a genuinely enjoyable CTF to work through, there are a number of different skills that you will need to call on to exploit this. The theme is also amusing for those Rick & Morty fans out there, but let's go ahead and dive into it.<br><br>
+This was a genuinely enjoyable CTF to work through, there are a number of different skills that you will need to call on to exploit this box. The theme is also amusing for those Rick & Morty fans out there, let's go ahead and dive into it.<br><br>
 Let's run our initial nmap scan against our target:<br>
 <p align="center"><img width="800" src="/assets/blog/THM-Pickle-Rick/nmap.png"></p> 
 Checking out the webpage, I saw from the source code that they did not clean up their code very well:<br>
@@ -27,15 +27,15 @@ Now that we have the request, let's run hydra using the information from line 22
 <p align="center"><img width="850" src="/assets/blog/THM-Pickle-Rick/hydra.png"></p> 
 While this runs in the background, let's see what more we can discover about the web server using gobuster:<br>
 <p align="center"><img width="750" src="/assets/blog/THM-Pickle-Rick/flag1.png"></p> 
-From the rest of these results we can navigate to view these pages and we get a password on the right side of the above image. Let's try to login into the .php portal now. This user/pass combination works, meaning we can stop our hydra attack, and we are forwarded to the below page:<br>
+From the rest of these results we can navigate to these pages and we get a password on the right side of the above image. Let's try to login into the .php portal now. This user/pass combination works, meaning we can stop our hydra attack, and we are forwarded to the below page:<br>
 <p align="center"><img width="650" src="/assets/blog/THM-Pickle-Rick/command panel.png"></p> 
 We can run a variety of commands, for example `whoami` and `ls`, but we are restricted from certain functions such as `cat somefile.ext`. Below we can see the results of the `ls` command:<br>
 <p align="center"><img width="500" src="/assets/blog/THM-Pickle-Rick/ls.png"></p> 
 Although we can't `cat` the "super secret" file, we can view it in the web browser (as a page), and there we will get our first flag.
 <br><br>
-We can also see which (if any) python is installed via the command panel, which it is:<br>
+We can also see which (if any) version of python is installed via the command panel, which it is:<br>
 <p align="center"><img width="700" src="/assets/blog/THM-Pickle-Rick/which python.png"></p> 
-Pentestmonkey is another great source of information alongside gtfobins, and we can use it to research how to try and start a reverse shell. We can get this shell up and running by establishing a netcat listener on our local machine and using the exploit from pentestmonkey (after modifying it of course):<br>
+Knowing this, we can get a shell up and running by establishing a netcat listener on our local machine and using an exploit from pentestmonkey (after modifying it of course):<br>
 <p align="center"><img width="850" src="/assets/blog/THM-Pickle-Rick/netcat.png"></p> 
 *It's worth noting that if you have an a distribution like Parrot OS (which I am running) they might come installed with several default payloads and other common pentesting tools. 
 <br><br>
