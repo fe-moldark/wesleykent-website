@@ -1,7 +1,7 @@
 ---
 layout: page
 title: The Basics
-subtitle: A collection of random thoughts that aren't individually long enough to warrant their own page
+subtitle: Some fundamentals, and a collection of random thoughts that individually aren't enough to warrant their own page
 image: /assets/fe.ico
 description: If you need any help with the basics, such as indexing, locating stuff, anything not directly related to pen testing, but essential to know
 permalink: /tipsandtricks/thebasics/
