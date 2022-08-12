@@ -29,9 +29,11 @@ Brief overview of Nmap, flags to be aware of, and using specific scripts.
 [**>>Steganography<<**](/tipsandtricks/steganography/)<br>
 What is steganography, how is it used and how to counter it.
 <br><br>
-[**>>Default payloads and msfconsole<<**](/tipsandtricks/defaultpayloads/)<br>
+[**>>Default Payloads and Metasploit<<**](/tipsandtricks/defaultpayloads/)<br>
 Brief overview of some default payloads and how they're used within metasploit.
 <br><br>
+[**>>Resources<<**](/tipsandtricks/defaultpayloads/)<br>
+Useful stuff for CTFs with TryHackMe and my recommended Linux Distribution / fresh install.<br><br>
 [**>>The Basics<<**](/tipsandtricks/thebasics/)<br>
 If you need any help with the basics, such as locating stuff, how linux permissions work, anything not directly addressed but still essential to know.
 
