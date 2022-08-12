@@ -3,12 +3,12 @@ layout: post
 title:  TryHackMe - Bounty Hunter
 date:   2022-02-27 00:00:00 -0600
 categories: THM
-intro: This CTF begins getting more interesting, as it involves ftp, hydra, and gtfobins for the first time.
+intro: This CTF begins getting more interesting than previous ones, as it involves ftp, hydra, and gtfobins for the first time.
 --- 
 
 # TryHackMe - Bounty Hunter
 
-This CTF begins getting more interesting, as it involves ftp, hydra, and gtfobins for the first time. It is a relatively short CTF, so let's go ahead and jump into it with an nmap scan:<br>
+This CTF begins getting more interesting than previous ones, as it involves ftp, hydra, and gtfobins for the first time. It is a relatively short CTF, so let's go ahead and jump into it with an nmap scan:<br>
 <p align="center"><img width="700" src="/assets/blog/THM-Bounty-Hunter/initial nmap.png"></p> 
 After seeing the webpage, we can try to enumerate the webserver with gobuster:<br>
 <p align="center"><img width="800" src="/assets/blog/THM-Bounty-Hunter/failed gobuster.png"></p> 
