@@ -10,21 +10,21 @@ intro: An interesting CTF that uses multiple services, cracking a key, and an ms
 
 Let's begin with a simple nmap scan:<br>
 <p align="center"><img width="700" src="/assets/blog/THM-TomGhost/initial nmap.png"></p> 
-We can see there are a number of possible outlets we can sift through to exploit this machine. As we have the Apache Tomcat version, let's do a quick search for any known exploits for it. The first result from exploit-db is conveniently called "Ghostcat", and knowing the name of this box there is a fair chance this exploit will work. Let's check it out on msfconsole:<br>
+We can see there are a number of possible outlets we can sift through to exploit this machine. As we have the Apache Tomcat version, let's do a quick search for any known exploits for it. The first result from exploit-db is conveniently called `tomcat_ghostcat`, and knowing the name of this box there is a fair chance this exploit will work. Let's check it out on msfconsole:<br>
 <p align="center"><img width="800" src="/assets/blog/THM-TomGhost/msf.png"></p> 
-We do find a user:pass from this auxiliary exploitand knowing that port 22 is open let try to ssh in:<br>
+We do find a user:pass from this auxiliary exploit and knowing that port 22 is open let try to ssh in:<br>
 <p align="center"><img width="800" src="/assets/blog/THM-TomGhost/ssh.png"></p> 
 And it works. We find the following files:<br>
 <p align="center"><img width="550" src="/assets/blog/THM-TomGhost/ls.png"></p> 
-I tried to get these over to our local machine but scp didn't work for whatever reason - whatever, so I started an http server to download them that way:<br>
+I tried to get these over to our local machine but `scp` didn't work for whatever reason - whatever, so I started an http server to download them that way:<br>
 <p align="center"><img width="700" src="/assets/blog/THM-TomGhost/http server.png"></p> 
-Easy enough, navigate to the IP Address/port and download to your local machine. The .asc file is a pgp private key, so let's try and brute force it. To start, let's convert it to something John the Ripper can work with:<br>
+Easy enough, navigate to the IP Address/port and download to your local machine. The .asc file is a pgp private key, so let's try and brute force it. To start, I had to convert it to something John the Ripper can work with:<br>
 <p align="center"><img width="850" src="/assets/blog/THM-TomGhost/gpg2john.png"></p> 
 Now we can brute it with the default `rockyou.txt` wordlist. Since this isn't my first run through you can see it doesn't show the password outright, but it does output an answer:<br>
 <p align="center"><img width="800" src="/assets/blog/THM-TomGhost/john.png"></p> 
-The gpg.txt is what I saved from the previous output of the gpg2john program we ran earlier.
+The gpg.txt is what I saved from the previous output of the `gpg2john` program we ran earlier.
 <br><br>
-The password, 'alexandru', provides us the key needed to open the credential.pgp file. We do that with the following function:<br>
+The password, "alexandru", provides us the key needed to open the `credential.pgp` file. We do that with the following function:<br>
 <p align="center"><img width="800" src="/assets/blog/THM-TomGhost/gpgg.png"></p> 
 And then entering the key below:
 <p align="center"><img width="600" src="/assets/blog/THM-TomGhost/enterpw.png"></p> 
@@ -32,11 +32,11 @@ We will get another credential sequence we can use to ssh back in as another use
 <br><br>
 Once logged in, we see the user flag in the working directory:<br>
 <p align="center"><img width="600" src="/assets/blog/THM-TomGhost/usertxt.png"></p> 
-We have the user flag, however it's clear I don't have root access as this new user 'merlin'. We can run `sudo -l` and see what he can run as root:<br>
+We have the user flag, however it's clear I don't have root access as this new user "merlin". We can run `sudo -l` and see what he can run as root:<br>
 <p align="center"><img width="850" src="/assets/blog/THM-TomGhost/cantroot.png"></p> 
 From our scan, we are looking for a way to run the zip file / location as root, so let's see what gtfobins has to offer on their website:<br>
 <p align="center"><img width="800" src="/assets/blog/THM-TomGhost/gtfo.png"></p> 
-Let's run the above, keeping in mind that as you'll see in my work, we do need to add the `sudo` to get a root shell instead of the standard user's shell:<br>
+Let's run the above, keeping in mind that as you'll see in my work, we do need to add the `sudo` in front to get a root shell instead of the standard user's shell:<br>
 <p align="center"><img width="700" src="/assets/blog/THM-TomGhost/finalll.png"></p> 
 And we have our root flag. Cheers,<br><br>
 Wes<br>
