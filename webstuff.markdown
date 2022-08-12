@@ -29,5 +29,5 @@ Alternatively, you can use an older version of Python if present:
 <br><br><br>
 ## Curl and wget
 Just a quick note that curl can be used to trigger a reverse tcp shell you uploaded as an e.g. php file, I discuss that on the [privilege escalation](/tipsandtricks/privilegeescalation/) page.
-There are also ways to curl a file TO a web server, but you won't likely need to use that.
+There are also ways to curl a file TO a web server, but you won't likely need to use that. I've only had to do that once, [here](/thm/2022/05/26/Dav.html).
 <br>
