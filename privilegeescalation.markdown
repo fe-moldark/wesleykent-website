@@ -2,7 +2,7 @@
 layout: page
 title: Privilege Escalation
 subtitle: The MANY different ways to escalate privileges
-image: /home/wesleyvm1/WesleyKentBlog/assets/fe.ico
+image: /assets/fe.ico
 description: The MANY different ways to escalate privileges
 permalink: /tipsandtricks/privilegeescalation/
 #hero_image: /assets/fe.ico
@@ -10,14 +10,14 @@ permalink: /tipsandtricks/privilegeescalation/
 ---
 
 # Introduction
-Alrighty, so there's a lot. I'm unsure how far into this I should go before I lose my mind alongside you, so this might be briefer than it could be. We shall see.
+Alrighty, so there's a lot that can be said here. I'm unsure how far into this I should go before I lose my mind alongside you reading this, so this might be briefer than it could be. We'll see.
 <br><br>
-To better qualify the situation - privilege escalation implies you already have some type of access to a system, say through a basic end user that had a poor password. The following scenarios imply you already have a shell of some kind, and you are looking to exploit that and get to the point where you are running the shell as an admin / root or at least can execute commands as an admin / root.
+To better qualify the situation - privilege escalation implies you already have some type of access to a system, say through a basic end user that had a poor password. The following scenarios imply you already have a shell of some kind, and you are looking to further exploit that and get to the point where you are running the shell as an admin / root or at least can execute commands as an admin / root.
 <br><br><br>
 # Let's start with sudo -l and SUID permissions
-One of the go to commands once you've established yourself within a shell on a system is a quick `sudo -l`. Takes 2 seconds and only another 30 seconds to check if anything from that might be helpful. What that does is list the commands that you can run as sudo, on a properly configured system this should be all but zero for normal users.
+One of the go to commands once you've established yourself within a shell on a system is a quick `sudo -l`. Takes two seconds to type and another thirty seconds to check if anything from that might be helpful. What that does is list the commands that you can run as sudo, on a properly configured system this should be all but zero for normal users.
 <br><br>
-Let's say there is an improperly configured system that allows you to run `/usr/bin/less` with sudo rights. This could lead to you reading files that you should not have access to. The easiest way to discover if there is a way to exploit whatever is listed from the `sudo -l` command is to reference [gtfobins](https://gtfobins.github.io/). They have a _massive_ library of ways to bypass restrictions and escalate your privileges - their site will be referenced multiple times.
+Let's say there is an improperly configured system that allows you to run `/usr/bin/less` with sudo rights. This could lead to you reading files that you should not have access to. The easiest way to discover if there is a way to exploit whatever is listed from the `sudo -l` command is to reference [gtfobins](https://gtfobins.github.io/). They have a _massive_ library of ways to bypass restrictions and escalate your privileges - their site will be referenced multiple times throughout my [CTF Exploits](/blog) page.
 <br><br>
 On a very similar note, we can use files that have the SUID permissions (can run files with the owner's privileges) to escalate our privileges. We can check what files like this exist by entering `find / -perm -u=s -type f 2>/dev/null`. This is very similar to any other find command, what this searches for are files that contain those SUID permissions. And again, if this returns you a list reference gtfobins for any known exploits from them.
 <br><br><br>
@@ -46,10 +46,10 @@ There are many different ways you can initiate that reverse shell, it all comes 
 Sometimes you might find that you have established a shell to a machine, but it is not the best or maybe not as stable as you would like. Some simple ways to do this include through python and perl, although there are more.
 <br><br>
 With python that would be:<br>
-python -c 'import pty;pty.spawn("/bin/bash")'
+`python -c 'import pty;pty.spawn("/bin/bash")'`
 <br><br>
 Through perl:<br>
-perl -e 'exec "/bin/sh";'
+`perl -e 'exec "/bin/sh";'`
 <br><br><br>
 
 # Reoccuring jobs / tasks on machines
@@ -57,15 +57,11 @@ Also known as cronjobs, although there are different kinds. Sometimes these will
 <br><br><br>
 
 # LinEnum
-This is another tool that can be found on GitHub, and can provide useful information on a target machine if you can get the permissions needed to run it. It does a lot of the things that are mentioned on this page automatically and generates a report for you to view later. Once you are on the machine you can get the file via wget or curl to the `/tmp` directory and work from there. The bash file is located [here](github.com/rebootuser/LinEnum/blob/master/LinEnum.sh).<br><br>
+This is another tool that can be found on GitHub, and can provide useful information on a target machine if you can get the permissions needed to run it. It does a lot of the things that are mentioned on this page automatically and generates a report for you to view later. Once you are on the machine you can get the file via wget or curl to the `/tmp` directory and work from there. The bash file is located [here](https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh).<br><br>
 Note: You may or may not need to `chmod +x` that file to give yourself executable permissions on it.
 <br><br><br>
 
 # Other
 Anytime you can find ssh keys, grab 'em. Reference the [bruteforcing](/tipsandtricks/bruteforcing/) page for ways to crack those and use them to your advantage.
 <br><br>
-As mentioned before, sometimes gaining that next foothold includes uploading e.g. php files to start a reverse tcp shell with yourself. However, depending where you upload they might restrict you to only certain types of files, or disallow certain types of files. Some ways to _maybe_ get around this is capitilize letters like .Php or .phP instead of .php, maybe see if it'll accept a .phtml file, etc. You get the idea. Security controls are meant to secure something otherwise not secure, but that doesn't mean they account for everything.
-
-
-
-The myriad of ways for privilege escalation. At a glance, knowing how to list files / programs that have higher privileges, increasing your shell's capabilities, modifying access controls, I don't know there's a lot to go over here, check out the page for more info.
+As mentioned before, sometimes gaining that next foothold includes uploading e.g. php files to start a reverse tcp shell with yourself. However, depending where you upload they might restrict you to only certain types of files, or disallow certain types of files. Some ways to _maybe_ get around this is capitilize letters like .Php or .phP instead of .php, maybe see if it'll accept a .phtml file, etc. You get the idea. Security controls are meant to secure something otherwise not secure (duh), but that doesn't mean they account for everything, even if that means something as simple as denying file types by certain extensions only.
