@@ -50,10 +50,10 @@ You can see for this instance I chose to incldue the `-t 4` flag to lower the de
 Okay, let's say you get your hands on the `/etc/shadow` file or some other form of a hashed password, how do you go about identifying the hash before you can try and break it?<br>
 For this, many distributions of linux should have a tool called "hash-identifier". How it works is you simply type in `hash-identifier` in your terminal and that'll start the program where you'll be prompted to enter in the hash. Alternatively, you can use a tool called "hashid" which works very similar to the former, if you need help with this one just enter in `man hashid` or `hashid --help` for help figuring it out.
 <br><br>
-Now using John to crack the hash. The first step is which _type_ of hash are you cracking, for instance John lists at least 5 different forms of MD5 hashes. So to identify which one is the one to use with John, type in something along the lines of `john --list=formats | grep MD5`. This will give the different MD5 hash forms you can try. Once the format is chosen, you will need a password list to use, the default should almost always be the `rockyou.txt` file (reference [here](/resources/freshinstall/) to get it), and if that doesn't work you'll likely have to branch out to other lists from SecLists.
+Now using John to crack the hash. The first step is which _type_ of hash are you cracking, for instance John lists at least five different forms of MD5 hashes. So to identify which one is the one to use with John, type in something along the lines of `john --list=formats | grep MD5`. This will give the different MD5 hash forms you can try. Once the format is chosen, you will need a password list to use, the default should almost always be the `rockyou.txt` file (reference [here](/resources/freshinstall/) to get it), and if that doesn't work you'll likely have to branch out to other lists from SecLists.
 <br><br>
 Now to setup an example brute force against a MD5 hash stored in the hash.txt file:<br>
-`john --form=Raw-MD5 --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt`<br>
+`john --format=Raw-MD5 --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt`<br>
 <br>
 Note: If you have already cracked a specific hash and deleted it, John will say it is already cracked if you try it again and then annoyingly not show you what it is. That cracked hash can be found in the john.pot file on your system. Since I don't know where you'll install John, you can find it with the following command:<br>
 `find / -type f -name john.pot 2>/dev/null`<br>
