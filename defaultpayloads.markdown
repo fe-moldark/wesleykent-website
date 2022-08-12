@@ -2,7 +2,7 @@
 layout: page
 title: Default Payloads and Metasploit
 subtitle: 
-image: /home/wesleyvm1/WesleyKentBlog/assets/fe.ico
+image: /assets/fe.ico
 description: Brief overview of some default payloads and how they're used in Metasploit
 permalink: /tipsandtricks/defaultpayloads/
 #hero_image: /assets/fe.ico
