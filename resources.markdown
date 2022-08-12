@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Resources
-subtitle: Useful stuff for CTFs with TryHackMe, HackTheBox and my favorite Linux Distribution
+subtitle: Useful stuff for CTFs with TryHackMe and my recommended Linux Distribution
 image: /assets/fe.ico
 description: Useful Links for CTFs with TryHackMe, HackTheBox and my favorite Linux Distribution
 permalink: /tipsandtricks/resources/
