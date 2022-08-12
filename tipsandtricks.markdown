@@ -2,7 +2,7 @@
 layout: page
 title: Tips and Tricks
 subtitle: Useful notes and commands used for exploits, and other tools and methods that have proven useful
-image: /home/wesleyvm1/WesleyKentBlog/assets/fe.ico
+image: /assets/fe.ico
 description: Useful notes for commands and common exploit tools, methods that have proven useful.
 permalink: /tipsandtricks/
 #hero_image: /assets/fe.ico
