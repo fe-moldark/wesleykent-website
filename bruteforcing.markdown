@@ -18,9 +18,9 @@ First, some of the basic flags used with hydra:<br>
 - You need the IP address you are targeting, for example: `10.10.188.175`
 - If you need to designate a non-default port: `-s [port#]`
 - The _type_ of attack, examples include: `http-post-form`, `ssh`, or `ftp`, to name but a few
-- If it is an `http-post-form` you will need to designate either a (for example) `:S=302` indicating a redirect which might be a good sign, or a `:F=failed` which would designate a failed login attempt (i.e. ignore).
+- If it is an `http-post-form` you will need to designate either a successful login `:S=302` indicating a redirect which might be a good sign, or a `:F=failed` which would designate a failed login attempt (i.e. ignore and keep trying)
 - Another part you will need for the web logins specifically is the actual request, which is obtained with burpsuite and get into that down below
-- There are many more flags you can include, but these should be enougshould get you started.
+- There are many more flags you can include, but these should be enougshould get you started
 <br><br><br>
 
 #### Example: Using hydra against a web portal
@@ -58,7 +58,7 @@ Now to setup an example brute force against a MD5 hash stored in the hash.txt fi
 Note: If you have already cracked a specific hash and deleted it, John will say it is already cracked if you try it again and then annoyingly not show you what it is. That cracked hash can be found in the john.pot file on your system. Since I don't know where you'll install John, you can find it with the following command:<br>
 `find / -type f -name john.pot 2>/dev/null`<br>
 <br>
-Another note: Sometimes before attempting to crack a file you will need to convert it to a format that John can use. These tools are named things like "ssh2john" or "zip2john" (reference [here](/thm/2022/04/18/TomGhost.html) for a time when I had to use "gpg2john"), and since there are so many different kinds of formats out there, I'll leave you to do your own research on each one specifically. Just know that before John can take a crack at certain file types there has to be some conversion made beforehand. There are a million forums online that will cover the how-to for ssh keys, zip password protected files, etc - what's important is that you know these tools exist.<br>
+Another note: Sometimes before attempting to crack a file you will need to convert it to a format that John can use. These tools are named things like "ssh2john" or "zip2john" (reference [here](/thm/2022/04/18/TomGhost.html) for a time when I had to use "gpg2john"), and since there are so many different kinds of formats out there, I'll leave you to do your own research on each one specifically. Just know that before John can take a crack at certain file types there has to be some conversion made beforehand. There are a million forums online that will cover the how-to for ssh keys, zip password protected files, etc - what's important is that you know these tools exist.
 <br><br>
 Lastly, if you ever have to convert a file that is encoded as `base64` the command is as simple as:<br>
 `cat filename.ext | base64 -d` and you can of course output the result to a file by adding `> output.txt`<br>
