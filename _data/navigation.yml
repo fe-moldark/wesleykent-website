@@ -21,14 +21,6 @@
     - name: The Basics
       link: /tipsandtricks/thebasics/
 
-- name: Resources
-  link: /resources/
-  dropdown:
-    - name: Useful links
-      link: /resources/usefullinks
-    - name: Fresh Install
-      link: /resources/freshinstall
-
 - name: Raspberry Pi Projects
   link: /raspberrypi/
   
