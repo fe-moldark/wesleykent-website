@@ -73,21 +73,21 @@ Interestingly enough you can actually see if files have SUID permissions based o
 Linux file permissions are described with three numbers, each of which can be between 0-7. Assuming you already know binary, let's take a look at just one of those three numbers. Now, each bit when combined (ex. binary bit for 4 and 1 = 5 total) would describe the read, write, execute permissions (aka 4,2,1 - with 0 meaning NO permissions) for that number.<br><br>
 But, there are three numbers, right? _Each_   of those three numbers - be it, 777, 754, 600, etc etc _individually_ describe the permissions (read write execute, don't forget) for the user, the group, and lastly anyone else.<br><br>
 Let's now take an example of a permission set of "650":
-- The first 6 in binary would be 1100 (4+2+0+0) and we care about the left most three
-- The second number, 5, would be 1010 (4+0+1+0) and again, only the left three matter
-- The last number is 0, which 0000 (0+0+0+0), denoting no permissions for anyone else
+- The first 6 in binary would be 110(0) = (4+2+0+0) and we care about the left most three
+- The second number, 5, would be 101(0) = (4+0+1+0) and again, only the left three matter
+- The last number is 0, which 000(0) = (0+0+0+0), denoting no permissions for anyone else
 <br><br>
 
 So, we said we care only about the left three digits - starting with the "6" in binary that was 110.<br>
 In terms of our read write execute permissions, then, the USER has read, write, but NOT execute permissions for that file.
 <br><br>
 The next digit, "5", is the permissions for the GROUP - which in binary is 101 (again, we only care about the left three).<br>
-So, the GROUP's permissions include YES to read, NO to write, and YES for execute.<br><br>
+So, the GROUP's permissions include YES to read, NO to write, and YES to execute.<br><br>
 Lastly, the 0 indicates NO permissions at all for anyone else outside the user and group.<br><br><br>
 And one thing I almost forgot to add - `chmod` and `chown`.<br>
 - To "own" a file, thus giving yourself permissions to use it you can use the `chown USERNAME filename` command.<br><br>
 - The `chmod` command can be used to add or otherwise alter permissions for a file.<br>
-For example: `chmod +x filename` will give you executable permissions, anything like `chmod 777 filename`, with the number being whatever permissions you want to designate.<br><br><br>
+For example: `chmod +x filename` will give you executable permissions, or something like `chmod 777 filename`, where the number is whatever permissions you want to designate.<br><br><br>
 
 This breakdown makes sense to me, but might be horribly explained to you. There are number of ways to explain this, and I'm sure you can find a video or another explanation if this didn't quite hit the mark. Cheers.
 <br>
