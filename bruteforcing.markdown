@@ -2,7 +2,7 @@
 layout: page
 title: Brute Forcing Logins and Passwords
 subtitle: Using tools like Hydra, John, and Burpsuite
-image: /home/wesleyvm1/WesleyKentBlog/assets/fe.ico
+image: /assets/fe.ico
 description: Using tools like Hydra, John, and Burpsuite
 permalink: /tipsandtricks/bruteforcing/
 #hero_image: /assets/fe.ico
