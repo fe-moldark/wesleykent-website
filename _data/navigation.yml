@@ -16,6 +16,8 @@
       link: /tipsandtricks/steganography/
     - name: Default payloads and msfconsole
       link: /tipsandtricks/defaultpayloads/
+    - name: Resources
+      link: /tipsandtricks/resources/
     - name: The Basics
       link: /tipsandtricks/thebasics/
 
