@@ -11,9 +11,9 @@ permalink: /tipsandtricks/thebasics/
 
 # Some random thoughts to begin
 
-To viewing tasks running on a machine:<br>
+To view tasks running on a machine:<br>
 - I trust you know how this works on Windows, go to task manager
-- With Linux you can use `ps aux` and then `grep` for specific processes. To kill by process ID, just `kill PID`
+- With Linux you can use `ps aux` and then `grep` for specific processes. To kill by process ID, just use `kill PID`
 
 
 For current location in the system, use `pwd`.
