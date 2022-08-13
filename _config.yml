@@ -52,7 +52,7 @@ defaults:
     values:
       author: "Wesley Kent"
       layout: post
-      hero_image: /assets/default.png
+      hero_image: /assets/icon.png
       show_sidebar: true
       
 # Pagination settings
