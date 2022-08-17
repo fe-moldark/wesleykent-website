@@ -28,7 +28,7 @@
 title: Wesley Kent
 email: wesley.kent98@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  A site dedicated to cybersecurity, pen testing, and personal projects.
+  A site dedicated to cybersecurity, CTF exploits, and personal projects
 baseurl: "" #/wesleykent-website" # the subpath of your site, e.g. /blog
 url: "" #https://fe-moldark.github.io/wesleykent-website/"#wesleykent-website/ # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  fe-moldark
