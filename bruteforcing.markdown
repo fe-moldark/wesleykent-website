@@ -19,7 +19,7 @@ First, some of the basic flags used with hydra:<br>
 - If you need to designate a non-default port: `-s [port#]`
 - The _type_ of attack, examples include: `http-post-form`, `ssh`, or `ftp`, to name but a few
 - If it is an `http-post-form` you will need to designate either a successful login `:S=302` indicating a redirect which might be a good sign, or a `:F=failed` which would designate a failed login attempt (i.e. ignore and keep trying)
-- Another part you will need for the web logins specifically is the actual request, which is obtained with burpsuite and get into that down below
+- Another part you will need for the web logins specifically is the actual request, which is obtained with burpsuite and I will get into that down below
 - There are many more flags you can include, but these should be enougshould get you started
 <br><br><br>
 
