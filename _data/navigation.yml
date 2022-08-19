@@ -21,6 +21,9 @@
     - name: The Basics
       link: /tipsandtricks/thebasics/
 
+- name: Scripts
+  link: /websitehashing/
+  
 - name: Raspberry Pi Projects
   link: /raspberrypi/
   
