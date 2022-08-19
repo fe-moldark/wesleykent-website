@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Privilege Escalation
-subtitle: The MANY different ways to escalate privileges
+subtitle: The MANY different ways to escalate your privileges
 image: /assets/fe.ico
 description: The MANY different ways to escalate privileges
 permalink: /tipsandtricks/privilegeescalation/
