@@ -14,8 +14,8 @@ All that being said, I decided, hey - why not look at this from the perspective 
 Simply put, this step is irrelevant due to the fact that this is a static site I am hosting through a public repository - i.e. there is no personal or sensitive data to conceal. This site does not support any users creating accounts or anything else like that I might be worried about, so the confidentiality aspect of this is basically irrelevant. To protect any visitors coming to this site the best I can do is enforce secure protocols like HTTPS over HTTP. The integrity part is where I was mainly concerned, and that is where this gets more complicated.
 <br><br><br>
 # Integrity
-As I started off at the beginning of this page, I was mainly worried about the integrity aspect of the site, after all it is connected to some of my professional accounts like LinkedIn. There is also too much content for me to manually review - it would be far too time consuming and impractical
-.<br><br>
+As I started off at the beginning of this page, I was mainly worried about the integrity aspect of the site, after all it is connected to some of my professional accounts like LinkedIn. There is also too much content for me to manually review - it would be far too time consuming and impractical.
+<br><br>
 So, I decided to automate this with a script (several actually), and since I've already got a raspbbery pi running a file sharing service back home, why not add this on there as a cronjob to run every hour or every day? I ended up breaking this into two separate scripts - the first to compare and hash the files against known good copies, and the second to send me an alert via email if any anomalies are detected.
 <br>
 ### 1st Script - compare and hash files against known good hashes
