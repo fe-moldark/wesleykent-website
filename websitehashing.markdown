@@ -75,7 +75,7 @@ for item in full_list:
             hasher.update(buf)
             GOOD_HASH=hasher.hexdigest()
     except IOError:
-        GOOD_HASH="anewfilehasbeenloaded" #indicates an image formally not on the site is now present
+        GOOD_HASH="anewfilehasbeenloaded" #indicates an image formerly not on the site is now present
 	
     print NEW_HASH==GOOD_HASH, tohash1
     print "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
