@@ -42,6 +42,7 @@ plugins:
   - jekyll-feed
   - remote_theme
   - jekyll-redirect-from
+  - jekyll-sitemap
 
 
 defaults:
