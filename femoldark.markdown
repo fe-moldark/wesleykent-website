@@ -9,9 +9,9 @@ permalink: /femoldark/
 #hero_height: is-fullheight
 --- 
 
-I won't go into detail here because I have created an entirely seperate website for this topic at [fe-moldark.dev](https://www.fe-moldark.dev).
+I won't go into detail here since I have already created an entirely seperate website for this topic at [fe-moldark.dev](https://www.fe-moldark.dev).
 <br><br>
-Summarized, this is a game I have been recreating with Python / Pygame from the ground up, literally started at nothing and now the project stands at around 16,000 lines of code. The game I am recreating is Fire Emblem, more specifically the older versions as seen on the GBA and DS since that is what I grew up with. This is a project that has been ongoing for many years now with just as many breaks in between. Life happens and you get busy I guess.
+Summarized, this is a game I have been recreating with Python / Pygame from the ground up, literally started at nothing and the project now stands at around 16,000 lines of code. The game I am recreating is Fire Emblem, more specifically the older versions as seen on the GBA and DS since that is what I grew up with. This is a project that has been ongoing for many years now with just as many breaks in between. Life happens and you get busy I guess.
 <br><br>
 One thing I will note is that the end goal is to play this game on a case that I will make using a 3D printer I recently purchased. I've already got the design down (on paper that is) and what parts I will need, however some initial tests on my Pi 3B+ showed the processor was too slow. Thankfully, I don't think the issue is in my code, rather times when the screen has to blit numerous surfaces with some transparent parts that need the `convert_alpha()` - that's not really something I can get around. That being said, I am looking into getting a Banana Pi M5 as that _should_ provide more than enough additional computing power. Given the chip / pi shortage however, that may take some time to get, and with other projects and school right now I am okay with keeping this part on the back burner.
 <br><br>
