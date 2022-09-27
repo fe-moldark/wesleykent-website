@@ -22,7 +22,7 @@ soup=BeautifulSoup(r.text,'html.parser')
 prodTable=soup.find('ol',{'class':'meta_pid_boxes'})
 for line in prodTable: #cycle through and find em
     line=str(line)
-    if line !='\n': #some are empty liens...
+    if line !='\n': #some are empty lines...
         newline=line.split('\n')
         _type=newline[3][:3]
         _stock=newline[5][:-8]
