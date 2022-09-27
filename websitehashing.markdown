@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Securing my site(s) from the perspective of Confidentiality, Integrity, and Availability
+title: Securing my sites from the perspective of Confidentiality, Integrity, and Availability
 permalink: /websitehashing/
 ---
 
