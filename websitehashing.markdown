@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Securing my sites from the perspective of Confidentiality, Integrity, and Availability
-permalink: /websitehashing/
+permalink: /scripts/websitehashing/
 ---
 
 # The CIA Triad and how I approached this
