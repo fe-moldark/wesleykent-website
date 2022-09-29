@@ -22,7 +22,12 @@
       link: /tipsandtricks/thebasics/
 
 - name: Scripts
-  link: /websitehashing/
+  link: /scripts/
+  dropdown:
+    - name: Website hashing
+      link: /scripts/websitehashing/
+    - name: RPi and Dilbert
+      link: /scripts/rpi_and_dilbert/
   
 - name: Raspberry Pi Projects
   link: /raspberrypi/
