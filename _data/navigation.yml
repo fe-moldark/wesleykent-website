@@ -35,6 +35,8 @@
 - name: FE Moldark
   link: /femoldark/
   dropdown: 
+    - name: FE Moldark
+    - link: /femoldark/
     - name: Game Console
     - link: /femoldark/gameconsole/
   
