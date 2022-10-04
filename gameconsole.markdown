@@ -20,7 +20,7 @@ All in all, it provides exactly what I'm looking for without a steep learning cu
 <br><br><br>
 This has certainly been enjoyable, however, even with the set backs I just mentioned. There's something genuinely fun about writing the software behind the game, assembling the hardware that will interact with the software, and then designing the case that will house the hardware. Maybe I'll write my own linux distro just for this platform... I'm kidding, I don't how to do that.
 <br><br><br>
-**If you want to preview what these look like (using GitHub's very poor in-built Tool), reference these links:**<br>
+**If you want to preview what these look like (using GitHub's very poor in-built tool), reference these links:**<br>
 [Front cover](https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/3d_files/front-cover.stl) / [Back cover](https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/3d_files/back-cover-center.stl)
 <br><br><br>
 **If you want to download these and manipulate them yourself, I will link those files down below:**<br>
