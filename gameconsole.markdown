@@ -23,7 +23,7 @@ This has certainly been enjoyable, however, even with the set backs I just menti
 **If you want to preview what these look like (using GitHub's very poor in-built tool), reference these links:**<br>
 [Front cover](https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/3d_files/front-cover.stl) / [Back cover](https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/3d_files/back-cover-center.stl)
 <br><br><br>
-**If you want to download these and manipulate them yourself, I will link those files down below:**<br>
+**If you want to download these files and manipulate them yourself, I will link them below:**<br>
 [Front cover as STL](https://github.com/fe-moldark/wesleykent-website/raw/gh-pages/assets/3d_files/front-cover.stl)<br>
 [Front cover as MCX](https://github.com/fe-moldark/wesleykent-website/raw/gh-pages/assets/3d_files/front-cover.mcx)<br><br>
 [Back cover as STL](https://github.com/fe-moldark/wesleykent-website/raw/gh-pages/assets/3d_files/back-cover-center.stl)<br>
