@@ -10,14 +10,14 @@ permalink: /tipsandtricks/webstuff/
 ---
 
 # Introduction
-Note: reference the [bruteforcing](/tipsandtricks/bruteforcing/) page for using hydra against http / https login pages. On to the rest.
+Note: reference the [bruteforcing](/tipsandtricks/bruteforcing/) page for using hydra against http / https login portals. On to the rest.
 <br><br><br>
 ## Web Enumeration
 I will be focusing solely on `gobuster` since that is what I have consistently used without issue, but you can look into `dirb` if that is your preference.
 <br><br>
 Below is my default web enumeration / gobuster scan that I always start with:
 `gobuster dir -u IP_ADDRESS -w /home/wesleyvm1/SecLists/Discovery/Web-Content/directory-list-2.3-small.txt `<br>
-As you can see I'm using one of the lists from SecLists, and you can use more expansive lists (takes more time though) or use more focused lists at specific types of web services. Other good ones I use are the `common.txt` and `big.txt` in that same directory from SecLists.
+As you can see I'm using one of the lists from SecLists, and you can use more expansive lists (takes more time though) or use more focused lists at specific types of web services. Other good ones I use are the `common.txt` and `big.txt` in that same directory from SecLists. Lastly, if you need to designate a non-default port just add that as you normally would to the IP address with `IP_ADDRESS:Port#`.
 <br><br><br>
 ## Starting a Web Server
 Since most modern web servers come with some version of Python installed and you very often can get access to it because of how much it is used, and it certainly comes in handy when trying to start a web server. This might be to get a more visual representation of a directory within a web server, maybe you want an easy point-and-click method for downloading files, etc. Of course, this scenario implies you do already have access to the server, thought I should mention that.<br><br>
