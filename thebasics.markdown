@@ -18,7 +18,7 @@ To view tasks running on a machine:<br>
 
 For current location in the system, use `pwd`.
 
-When doing searches and other commands using the `2>/dev/null` throws out the stderr to the void, or the `null`.
+When doing searches and other commands using the `2>/dev/null` throws out the stderr to the void, or the `/null`.
 
 Useful logs can always be found in `/var/log`, Windows has Event Viewer, etc.
 <br><br><br>
@@ -27,10 +27,10 @@ Useful logs can always be found in `/var/log`, Windows has Event Viewer, etc.
 
 To find out who you currently are on the system use `whoami`.
 <br><br>
-Listing what is in the current directory with `ls`, there are more flags you can through on there to expand or limit the search (e.g. including hidden files). Also look into using `| grep SOMETHING` to only return results containg specific strings.
+Listing what is in the current directory with `ls`, there are more flags you can through on there to expand or limit the search, for example including hidden files, listing files by size, date created, etc. Also look into using `| grep SOMETHING` to only return results containg specific strings.
 
 To pull words from gibberish use: `strings filename.ext`<br>
-This might thwart a poor attempt on someone's part to hide real information in plain text behind a bunch of randomly combined letters in a large text file.
+This might thwart a poor attempt on someone's part to hide real information in plain text behind a bunch of randomly combined letters in a large text file. I've also used this after running an nmap scan and it returns data but the service is unrecognized, so the text that it does return is garbled with a bunch of special characters - very hard to sift through manually.
 
 To recursively grep, ignoring case sensitivity: `grep -iRl "search for this string"`<br>
 The `i` is ignoring the case, the `R` for the recursive search.<br><br>
@@ -42,7 +42,7 @@ Adding a `-C3` would highlight the line where the text was found as well as thre
 
 #### ftp / sftp
 Let's start with ftp, from your nmap scan you should know whether or not you have anonymous login capabiltities, but even without that there are scripts you can run to enumerate usernames or try and brute force a login with hydra.<br>
-Once on the server, you can `get filename` back to your local machine, use the `put` command for uploading files, and navigate / list directories with `dir`, `ls`, and `cd` like normal.<br>
+Once on the server, you can `get filename` back to your local machine, use the `put` command for uploading files, and navigate / list directories with `dir`, `ls`, and `cd` like normal.<br><br>
 Note: To actually initiate an ftp session, simply use: `ftp IPADDRESS`, at which point you will prompted with a login request.
 <br><br>
 I've had limited interactions with sftp, but I do know it is a secure version of ftp running over ssh (port 22), and should use almost identical or identical commands to ftp.
@@ -70,7 +70,7 @@ Smb follows similar commands like with an ftp server, to get files off the serve
 # More on file permissions
 Interestingly enough you can actually see if files have SUID permissions based on their permissions as the rwx permissions denote it with an "s", but that's beside the point.
 <br><br>
-Linux file permissions are described with three numbers, each of which can be between 0-7. Assuming you already know binary, let's take a look at just one of those three numbers. Now, each bit when combined (ex. binary bit for 4 and 1 = 5 total) would describe the read, write, execute permissions (aka 4,2,1 - with 0 meaning NO permissions) for that number.<br><br>
+Linux file permissions are described with three numbers, each of which can be between 0-7. Assuming you already know binary, let's take a look at just one of those three numbers. Now, each bit when combined (ex. binary bit for 4 and 1 = 5 total) would describe the read, write, execute permissions (aka 4,2,1 - with 0 meaning NO permissions) for that position.<br><br>
 But, there are three numbers, right? _Each_   of those three numbers - be it, 777, 754, 600, etc etc _individually_ describe the permissions (read write execute, don't forget) for the user, the group, and lastly anyone else.<br><br>
 Let's take an example of a permission set of "650":
 - The first 6 in binary would be 110(0) = (4+2+0+0) and we care about the left most three
