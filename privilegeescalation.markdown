@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Privilege Escalation
-subtitle: The MANY different ways to escalate your privileges
+subtitle: The many different ways to escalate your privileges
 image: /assets/fe.ico
 description: The MANY different ways to escalate privileges
 permalink: /tipsandtricks/privilegeescalation/
@@ -46,22 +46,24 @@ There are many different ways you can initiate that reverse shell, it all comes 
 Sometimes you might find that you have established a shell to a machine, but it is not the best or maybe not as stable as you would like. Some simple ways to do this include through python and perl, although there are more.
 <br><br>
 With python that would be:<br>
-`python -c 'import pty;pty.spawn("/bin/bash")'`
+`python -c 'import pty;pty.spawn("/bin/bash")'`<br>
+This extends to v3.x as well. If you're unsure what is installed, run a quick `which python`.
 <br><br>
 Through perl:<br>
 `perl -e 'exec "/bin/sh";'`
 <br><br><br>
 
 # Reoccuring jobs / tasks on machines
-Also known as cronjobs, although there are different kinds. Sometimes these will run exploitable or editable tasks periodically. If you can find a way to change them directly, or resources / modules they interact with, this can be yet another way to gain access to more information or escalate your access. On most linux distributions you will find this at `/etc/crontab`. You can access this with a text editor or with `crontab -e`.
+Also known as cronjobs, although there are different kinds. Sometimes these will run exploitable or editable tasks on a schedule. If you can find a way to change them directly or resources / modules they interact with, this can be yet another way to gain access to more information or escalate your access. On most linux distributions you will find this at `/etc/crontab`. You can access this with a text editor or with `crontab -e`, or use the `-l` flag instead to just view them.
 <br><br><br>
 
 # LinEnum
 This is another tool that can be found on GitHub, and can provide useful information on a target machine if you can get the permissions needed to run it. It does a lot of the things that are mentioned on this page automatically and generates a report for you to view later. Once you are on the machine you can get the file via wget or curl to the `/tmp` directory and work from there. The bash file is located [here](https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh).<br><br>
-Note: You may or may not need to `chmod +x` that file to give yourself executable permissions on it.
+Note: You will likely need to `chmod +x` that file to give it executable permissions.
 <br><br><br>
 
 # Other
 Anytime you can find ssh keys, grab 'em. Reference the [bruteforcing](/tipsandtricks/bruteforcing/) page for ways to crack those and use them to your advantage.
 <br><br>
 As mentioned before, sometimes gaining that next foothold includes uploading e.g. php files to start a reverse tcp shell with yourself. However, depending where you upload they might restrict you to only certain types of files, or disallow certain types of files. Some ways to _maybe_ get around this is capitilize letters like .Php or .phP instead of .php, maybe see if it'll accept a .phtml file, etc. You get the idea. Security controls are meant to secure something otherwise not secure (duh), but that doesn't mean they account for everything, even if that means something as simple as denying file types by certain extensions only.
+<br>
