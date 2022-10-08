@@ -14,11 +14,12 @@ permalink: /tipsandtricks/bruteforcing/
 For this section I'll cover two examples using hydra - both will be instances I've used in exploits from various CTFs<br><br>
 First, some of the basic flags used with hydra:<br>
 - You need a username: `-l admin` for a single username OR `-L usernamelist.txt` for a list of possible usernames
-- You need a password to run against the username(s): `-p aSinglePassword` OR `-P /usr/share/wordlists/rockyou.txt`  the latter being more likely
-- You need the IP address you are targeting, for example: `10.10.188.175`
+- You need a password to run against the username(s): `-p aSinglePassword` OR `-P /usr/share/wordlists/rockyou.txt` the latter option being more common
+- You need the IP address or URL you are targeting, for example: `10.10.188.175`
 - If you need to designate a non-default port: `-s [port#]`
 - The _type_ of attack, examples include: `http-post-form`, `ssh`, or `ftp`, to name but a few
-- If it is an `http-post-form` you will need to designate either a successful login `:S=302` indicating a redirect which might be a good sign, or a `:F=failed` which would designate a failed login attempt (i.e. ignore and keep trying)
+- If it is a web-based attack like `http-post-form` you will need to designate either a successful login `:S=302` indicating a redirect which might be a good sign, or a `:F=failed` which would designate a failed login attempt (i.e. ignore and keep trying)
+- Also worth noting is I have had issues with needing to add "http://" in front of the IP address even when specifying it is a `http-post-form`
 - Another part you will need for the web logins specifically is the actual request, which is obtained with burpsuite and I will get into that down below
 - There are many more flags you can include, but these should be enougshould get you started
 <br><br><br>
@@ -30,7 +31,7 @@ After running gobuster to enumerate their web server I found their login portal 
 I replaced my test inputs of "testuser" and "testpw" with the appropriate `^USER^` and `^PASS^` notation, and at the end of that added that a success means a 302 redirect, since that means I am being logged in and forwarded elsewhere: `:S=302`.<br>
 Before I show the command I will also note that I knew the username was `fsociety` and had obtained a password list hidden on their site called `fsociety.dic`.<br><br>
 SO - putting all this together and knowing the syntax from above we get the following (semi-coherent) command:<br>
-`hydra -l fsociety -P /home/wesleyvm1/Downloads/fsociety.dic 10.10.188.175 http-post-form "/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In&redirect_to=http%3A%2F%2F10.10.188.175%2Fwp-admin%2F&testcookie=1:S=302`<br>
+`hydra -l fsociety -P /home/wesleyvm1/Downloads/fsociety.dic 10.10.188.175 http-post-form "/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In&redirect_to=http%3A%2F%2F10.10.188.175%2Fwp-admin%2F&testcookie=1:S=302"`<br>
 <br>
 It's as simple as that. Even more simple is an ssh brute force, which I will cover below.<br><br>
 Quick note: To clarify the `:F=failed` scenario, basically if after attempting a login if that word (in this scenario "failed") appears on the screen that indicates an `F`, or failure, so it will try again until it does not get the word "failed" on the page - i.e. a successful login.
@@ -43,14 +44,14 @@ The final command ended up being as simple as:<br>
 `hydra -t 4 -l lin -P /home/wesleyvm1/Downloads/locks.txt 10.10.180.91 ssh -v`<br><br>
 And to see what a successful login looks like, this is what I (eventually) got:<br>
 ![](/assets/hydra1.jpg)<br>
-You can see for this instance I chose to incldue the `-t 4` flag to lower the default number of tasks and used the `-v` for verbose.<br><br><br>
+You can see for this instance I chose to incldue the `-t 4` flag to lower the default number of tasks (parallel threads) and used the `-v` for verbose. Not inlcuding the limiting `-t` can result in failed attempts to login and it's just the result of too many login attempts too quickly, I want to say the default number of threads is 16.<br><br><br>
 
 ## Hash-identifier, hashid, and John
 <br>
 Okay, let's say you get your hands on the `/etc/shadow` file or some other form of a hashed password, how do you go about identifying the hash before you can try and break it?<br>
 For this, many distributions of linux should have a tool called "hash-identifier". How it works is you simply type in `hash-identifier` in your terminal and that'll start the program where you'll be prompted to enter in the hash. Alternatively, you can use a tool called "hashid" which works very similar to the former, if you need help with this one just enter in `man hashid` or `hashid --help` for help figuring it out.
 <br><br>
-Now using John to crack the hash. The first step is which _type_ of hash are you cracking, for instance John lists at least five different forms of MD5 hashes. So to identify which one is the one to use with John, type in something along the lines of `john --list=formats | grep MD5`. This will give the different MD5 hash forms you can try. Once the format is chosen, you will need a password list to use, the default should almost always be the `rockyou.txt` file (reference [here](/tipsandtricks/resources/) to get it), and if that doesn't work you'll likely have to branch out to other lists from SecLists.
+Now using John to crack the hash. The first step is which _type_ of hash are you cracking, for instance John lists at least five different forms of MD5 hashes. So to identify which one is the one to use with John, type in something along the lines of `john --list=formats | grep MD5`. This will give the different MD5 hash forms you can try. Once the format is chosen, you will need a password list to use, the default should almost always be the `rockyou.txt` file, and if that doesn't work you'll likely have to branch out to other lists from SecLists or create your own customized one.
 <br><br>
 Now to setup an example brute force against a MD5 hash stored in the hash.txt file:<br>
 `john --format=Raw-MD5 --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt`<br>
