@@ -20,12 +20,14 @@ The `-O` tries to detect the Operating System type and version.<br>
 Nmap defaults to scanning the top 1000 ports, so it's best practice to run the longer scan with `-p-` as a flag to run through all 65,535 of them. Alternatively, you can target a single (or multiple) port(s) with `-p <#>,<#>` and so on. <br>
 The `-sC` will run the default scripts (always a good option).<br>
 The `-sV` will examine the open ports it finds for services / versions running on them (also always a good option).<br>
+The `-A` for an aggresive scan - should reveal more information about the services running and the machine itself.<br>
+To try and avoid detection by a firewall or IDS software you can look into using `-f`, `-D`, or `-S` for a variety of spoofing and decoy methods.<br>
 <br><br>
 ## Running specific scripts on ports
 Say you want to run specific scripts against a single port:<br>
 - First locate where your scripts are installed with nmap. If it is somewhere other than `/usr/share/nmap/scripts`, search for it with:<br>
 `find / -name scripts -type d 2>/dev/null | grep nmap`<br>
-From there, you can manually look thorugh or use grep to find scripts that you would like to run - for instance it looks like nmap includes at least 6 different scripts you can try running against ports running ssh.<br>
+From there, you can manually look through or use grep to find scripts that you would like to run - for instance it looks like nmap includes at least 6 different scripts you can try running against ports running ssh.<br>
 - From there, let's say you chose a specific script, e.g. the `ssh-brute.nse` script, against an open ssh service over port 22:<br>
 `nmap --script=ssh-brute.nse -p 22 10.10.40.182`<br>
 <br><br>
