@@ -25,18 +25,18 @@ I believe I created a report on that exploit, if I remember to link it, it will 
 ## Default Payloads List
 Full disclosure on the following list of default payloads for metasploit - I did not put this together, I got it from another site proably a year back and I can't remember which one it was, but I _think_ it was [this one](https://docs.rapid7.com/metasploit/working-with-payloads/). Anyway, metasploit will auto choose from the following list or you can manually designate which one you want to use:<br><br>
 ```
-windows/meterpreter/reverse_tcp<br>
-java/meterpreter/reverse_tcp<br>
-php/meterpreter/reverse_tcp<br>
-php/meterpreter_reverse_tcp<br>
-ruby/shell_reverse_tcp<br>
-cmd/unix/interact<br>
-cmd/unix/reverse<br>
-cmd/unix/reverse_perl<br>
-cmd/unix/reverse_netcat_gaping<br>
-windows/meterpreter/reverse_nonx_tcp<br>
-windows/meterpreter/reverse_ord_tcp<br>
-windows/shell/reverse_tcp<br>
-generic/shell_reverse_tcp<br>
+windows/meterpreter/reverse_tcp
+java/meterpreter/reverse_tcp
+php/meterpreter/reverse_tcp
+php/meterpreter_reverse_tcp
+ruby/shell_reverse_tcp
+cmd/unix/interact
+cmd/unix/reverse
+cmd/unix/reverse_perl
+cmd/unix/reverse_netcat_gaping
+windows/meterpreter/reverse_nonx_tcp
+windows/meterpreter/reverse_ord_tcp
+windows/shell/reverse_tcp
+generic/shell_reverse_tcp
 ```
 <br>
