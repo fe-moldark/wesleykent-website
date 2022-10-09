@@ -30,7 +30,7 @@ After running gobuster to enumerate their web server I found their login portal 
 <br>![](/assets/burp1.jpg)<br><br>
 I replaced my test inputs of "testuser" and "testpw" with the appropriate `^USER^` and `^PASS^` notation, and at the end of that added that a success means a 302 redirect, since that means I am being logged in and forwarded elsewhere: `:S=302`.<br>
 Before I show the command I will also note that I knew the username was `fsociety` and had obtained a password list hidden on their site called `fsociety.dic`.<br><br>
-SO - putting all this together and knowing the syntax from above we get the following (semi-coherent) command:<br>
+So - putting all this together and knowing the syntax from above we get the following (semi-coherent) command:<br>
 `hydra -l fsociety -P /home/wesleyvm1/Downloads/fsociety.dic 10.10.188.175 http-post-form "/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In&redirect_to=http%3A%2F%2F10.10.188.175%2Fwp-admin%2F&testcookie=1:S=302"`<br>
 <br>
 It's as simple as that. Even more simple is an ssh brute force, which I will cover below.<br><br>
