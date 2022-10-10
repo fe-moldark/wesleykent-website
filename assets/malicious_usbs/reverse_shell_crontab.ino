@@ -1,7 +1,10 @@
 //This DigiSpark scripts edits a reverse shell into the crontab that reaches out every minute to try and start a session with a local machine
 //For use with the Digispark Attiny 85
+//
 //Author: Wesley Kent
 //Created: 10/09/2022
+//
+//https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/malicious_usbs/reverse_shell_crontab.ino
 
 #include "DigiKeyboard.h"
 #define KEY_ARROW_DOWN  0x51 //only key that explicitly needs defined
