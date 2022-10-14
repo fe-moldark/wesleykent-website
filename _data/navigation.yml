@@ -31,7 +31,9 @@
   
 - name: Raspberry Pi Projects
   link: /raspberrypi/
-  
+
+- name: USB Injectors
+  link: /usb_injectors/
     
 - name: FE Moldark
   link: /femoldark/
