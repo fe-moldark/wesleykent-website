@@ -11,7 +11,7 @@ permalink: /tipsandtricks/metasploit/
 So what is Metasploit - it's a framework used to find and exploit vulnerabilities on a network, which makes it a great tool for pen testing. That is a very brief (and reductive) summary, you can find more about them on their website [here](https://www.metasploit.com/). The two ways you'll likely use this framework is through `msfconsole` and `msfvenom`, both of which can be accessed from the terminal.
 <br><br>
 The first of those, `msfconsole`, is used to find and run known exploits, as well as handle the payloads that are generated from `msfvenom`. And, well, `msfvenom` is what was just described - it is used to craft payloads for specific types of operating systems that  can then be used.
-<br><br>
+<br><br><br>
 
 # Msfconsole
 This is often used in conjuction with searching exploit-db or more easily using the `searchsploit` tool. Both of these tools will return a list of any known vulnerabilities associated with a service, OS and/or its version. For instance, an old CTF I did called something like "Tom Ghost" I think had an old Apache Tomcat version. From there, I used `searchsploit` to identify the exploit and then `msfconsole` to actually run it. Another time at work I identified a known vulnerability with a Cisco switch running an outdated service using an auxiliary scanner (...with permission, I should probably mention that). Even though I could not exploit it with Metasploit directly and had to do it manually, it was still able to identify there was a vulnerability there. I hope this gives you an idea of what it can be used for.
