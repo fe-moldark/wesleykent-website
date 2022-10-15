@@ -8,14 +8,14 @@
       link: /tipsandtricks/bruteforcing/
     - name: Privilege Escalation
       link: /tipsandtricks/privilegeescalation/
+    - name: Metasploit
+      link: /tipsandtricks/metasploit/
     - name: Web Stuff
       link: /tipsandtricks/webstuff/
     - name: Using Nmap
       link: /tipsandtricks/usingnmap/
     - name: Steganography
       link: /tipsandtricks/steganography/
-    - name: Metasploit
-      link: /tipsandtricks/metasploit/
     - name: Resources
       link: /tipsandtricks/resources/
     - name: The Basics
