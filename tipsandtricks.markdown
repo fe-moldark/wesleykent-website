@@ -20,6 +20,9 @@ This page covers brute forcing passwords and logins using tools like Hydra, John
 [**>>Privilege Escalation<<**](/tipsandtricks/privilegeescalation/)<br>
 The myriad of ways for privilege escalation. At a glance, knowing how to list files / programs that have higher privileges, increasing your shell's capabilities, modifying access controls - I don't know there's a lot to go over here, check out the page for more info. 
 <br><br>
+[**>>Metasploit<<**](/tipsandtricks/metasploit/)<br>
+Brief overview of the metasploit framework, covering msfconsole and msfvenom.
+<br><br>
 [**>>Web Stuff<<**](/tipsandtricks/webstuff/)<br>
 Web enumeration, starting a web server, and uses of curl.
 <br><br>
@@ -28,9 +31,6 @@ Brief overview of Nmap, flags to be aware of, and using specific scripts.
 <br><br>
 [**>>Steganography<<**](/tipsandtricks/steganography/)<br>
 What is steganography, how is it used and how to counter it.
-<br><br>
-[**>>Default Payloads and Metasploit<<**](/tipsandtricks/defaultpayloads/)<br>
-Brief overview of some default payloads and how they're used within metasploit.
 <br><br>
 [**>>Resources<<**](/tipsandtricks/resources/)<br>
 Useful stuff for CTFs with TryHackMe and my recommended Linux Distribution / fresh install.<br><br>
