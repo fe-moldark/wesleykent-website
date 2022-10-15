@@ -10,7 +10,7 @@ On top of this, a study conducted by the Department of Homeland Security years a
 <br><br>
 As mentioned, this page will cover the [Digispark Attiny 85](http://digistump.com/products/1), pictured below.<br>
 <p align="center"><img width="300" src="/assets/malicious_usbs/digiattiny85.jpg"></p>
-These scripts can be installed on the Digispark boards through the Arduino IDE, which can be downloaded from [here](https://www.arduino.cc/en/software). I'm not going to cover the exact installation process because whether you go the Windows or Linux route it's going to be a pain, and there are more than enough tutorials already out there for that. If you go the Linux route you'll need to configure udev rules for your system (reference [here](https://startingelectronics.org/tutorials/arduino/digispark/digispark-linux-setup/)) or the correct drivers if you go the Windows route (start [here](https://github.com/digistump/DigistumpArduino/releases)).
+These scripts can be installed on the Digispark boards through the Arduino IDE, which can be downloaded from [here](https://www.arduino.cc/en/software). I'm not going to cover the exact installation process because whether you go the Windows or Linux route it's going to be a pain, and there are more than enough tutorials already out there that cover the process. If you go the Linux route you'll need to configure udev rules for your system (reference [here](https://startingelectronics.org/tutorials/arduino/digispark/digispark-linux-setup/)) or install the correct drivers if you go the Windows route (start [here](https://github.com/digistump/DigistumpArduino/releases)).
 <br><br><br>
 
 # Configuring the crontab to install a reverse shell
