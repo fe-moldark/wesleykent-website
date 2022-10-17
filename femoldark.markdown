@@ -18,15 +18,15 @@ One thing I will note is that the end goal is to play this game on a case that I
 Again, a lot to say about this but there is a website that does so better and in more detail, so click the link above if you are interested. To maybe pique your interest I'll include some screenshots of the gameplay / graphics I've created for this project. Enjoy.
 <br><br>
 <center>
-	<img src="/assets/femoldark/chapter config.png" alt=""><br>
-	<img src="/assets/femoldark/armory.png" alt=""><br>
-	<img src="/assets/femoldark/fog of war2.png" alt=""><br>
-	<img src="/assets/femoldark/full enemy map.png" alt=""><br>
-	<img src="/assets/femoldark/move map.png" alt=""><br>
-	<img src="/assets/femoldark/player info.png" alt=""><br>
-	<img src="/assets/femoldark/player phase.png" alt=""><br>
-	<img src="/assets/femoldark/supply.png" alt=""><br>
-	<img src="/assets/femoldark/trade chapter config.png" alt=""><br>
-	<img src="/assets/femoldark/trade.png" alt=""><br>
+	<img src="/assets/femoldark/chapter config.png" alt="" width=900><br>
+	<img src="/assets/femoldark/armory.png" alt="" width=900><br>
+	<img src="/assets/femoldark/fog of war2.png" alt="" width=900><br>
+	<img src="/assets/femoldark/full enemy map.png" alt="" width=900><br>
+	<img src="/assets/femoldark/move map.png" alt="" width=650><br>
+	<img src="/assets/femoldark/player info.png" alt="" width=900><br>
+	<img src="/assets/femoldark/player phase.png" alt="" width=900><br>
+	<img src="/assets/femoldark/supply.png" alt="" width=900><br>
+	<img src="/assets/femoldark/trade chapter config.png" alt="" width=900><br>
+	<img src="/assets/femoldark/trade.png" alt="" width=800><br>
 </center>
 
