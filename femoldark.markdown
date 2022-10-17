@@ -22,7 +22,7 @@ Again, a lot to say about this but there is a website that does so better and in
 	<img src="/assets/femoldark/armory.png" alt="" width=1050><br>
 	<img src="/assets/femoldark/fog of war2.png" alt="" width=1050><br>
 	<img src="/assets/femoldark/full enemy map.png" alt="" width=1050><br>
-	<img src="/assets/femoldark/move map.png" alt="" width=800><br>
+	<img src="/assets/femoldark/move map.png" alt="" width=750><br>
 	<img src="/assets/femoldark/player info.png" alt="" width=1050><br>
 	<img src="/assets/femoldark/player phase.png" alt="" width=1050><br>
 	<img src="/assets/femoldark/supply.png" alt="" width=1050><br>
