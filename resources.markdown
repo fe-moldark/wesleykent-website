@@ -51,7 +51,7 @@ sudo apt-get install cifs-utils
 sudo apt-get install nfs-common
 
 sudo apt install default-mysql-client
-install enum4linux
+sudo apt install enum4linux
 pip install 2to3
 
 wget -c https://github.com/danielmiessler/SecLists/archive/master.zip -O SecList.zip \
