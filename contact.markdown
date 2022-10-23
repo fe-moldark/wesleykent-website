@@ -13,3 +13,5 @@ You can reach out to me via email at [wesley.kent98@gmail.com](mailto:wesley.ken
 <br><br>
 I'm going to assume most of the initial traffic to this site will be through my LinkedIn page, but we'll see what google analytics says after a couple of months. My LinkedIn account can be found [here](https://www.linkedin.com/in/wesley-kent), feel free to reach out and connect.
 <br><br>
+If you want a challenge with decryption reference [here](https://raw.githubusercontent.com/fe-moldark/wesleykent-website/gh-pages/assets/DECRYPTME.jpg) for a go at a cipher I wrote over a year back. Not overly complex, but you might get a headache if you look at it too long. You will know where and how to reach me if you solve it. Best of luck.
+<br><br>
