@@ -10,7 +10,7 @@ permalink: /tipsandtricks/webstuff/
 ---
 
 # Introduction
-Ttile more or less says it all. If you are looking for help on how to setup hydra attacks against http / https login portals reference the [bruteforcing](/tipsandtricks/bruteforcing/) page. On to the rest.
+Title more or less says it all. If you are looking for help on how to setup hydra attacks against http / https login portals reference the [bruteforcing](/tipsandtricks/bruteforcing/) page. On to the rest.
 <br><br><br>
 ## Web Enumeration
 I will be focusing solely on `gobuster` since that is what I have consistently used without issue, but you can look into `dirb` if that is your preference.
