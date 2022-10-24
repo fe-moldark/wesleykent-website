@@ -45,7 +45,7 @@ If you created or downloaded a file but forget where it is located you can searc
 #### ftp / sftp
 Let's start with ftp, from your nmap scan you should know whether or not you have anonymous login capabiltities, but even without that there are scripts you can run to enumerate usernames or try and brute force a login with hydra.<br>
 Once on the server, you can `get filename` back to your local machine, use the `put` command for uploading files, and navigate / list directories with `dir`, `ls`, and `cd` like normal.<br><br>
-Note: To actually initiate an ftp session, simply use: `ftp IPADDRESS`, at which point you will prompted with a login request.
+Note: To actually initiate an ftp session, simply use: `ftp IPADDRESS`, at which point you will prompted with a login request. If you need to passively login use a `-p` flag - don't worry, if you actually need the passive login you will be prompted with a message about it.
 <br><br>
 I've had limited interactions with sftp, but I do know it is a secure version of ftp running over ssh (port 22), and should use almost identical or identical commands to ftp.
 <br><br>
