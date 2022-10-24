@@ -20,6 +20,8 @@ One of the go to commands once you've established yourself within a shell on a s
 Let's say there is an improperly configured system that allows you to run `/usr/bin/less` with sudo rights. This could lead to you reading files that you should not have access to. The easiest way to discover if there is a way to exploit whatever is listed from the `sudo -l` command is to reference [gtfobins](https://gtfobins.github.io/). They have a _massive_ library of ways to bypass restrictions and escalate your privileges - their site will be referenced multiple times throughout my [CTF Exploits](/blog) page.
 <br><br>
 On a very similar note, we can use files that have the SUID permissions (can run files with the owner's privileges) to escalate our privileges. We can check what files like this exist by entering `find / -perm -u=s -type f 2>/dev/null`. This is very similar to any other find command, what this searches for are files that contain those SUID permissions. And again, if this returns you a list reference gtfobins for any known exploits from them.
+<br><br>
+Manually checking each result from the SUID permissions can be tedious, however, and others have created scripts that can automate this process for us. I found [this page](https://null-byte.wonderhowto.com/how-to/find-exploit-suid-binaries-with-suid3num-0215789/), which has a script that does exactly this and will inform you of anything that might be vulnerable. This is similar to the LinEnum script I will mention down below. You can try directly curling the script onto the target machine or just download it and start a web server locally and transfer it that way.<br><br>
 <br><br><br>
 
 # Uploading reverse tcp shells
