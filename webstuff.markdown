@@ -10,13 +10,13 @@ permalink: /tipsandtricks/webstuff/
 ---
 
 # Introduction
-Note: reference the [bruteforcing](/tipsandtricks/bruteforcing/) page for using hydra against http / https login portals. On to the rest.
+Ttile more or less says it all. If you are looking for help on how to setup hydra attacks against http / https login portals reference the [bruteforcing](/tipsandtricks/bruteforcing/) page. On to the rest.
 <br><br><br>
 ## Web Enumeration
 I will be focusing solely on `gobuster` since that is what I have consistently used without issue, but you can look into `dirb` if that is your preference.
 <br><br>
-Below is my default web enumeration / gobuster scan that I always start with:
-`gobuster dir -u IP_ADDRESS -w /home/wesleyvm1/SecLists/Discovery/Web-Content/directory-list-2.3-small.txt `<br>
+Below is my default web enumeration / gobuster scan that I always start with: `gobuster dir -u IP_ADDRESS -w /home/wesleyvm1/SecLists/Discovery/Web-Content/directory-list-2.3-small.txt `<br>
+That should give you enough to work on while you run larger wordlists (and more targeted ones) in the background.<br><br>
 As you can see I'm using one of the lists from SecLists, and you can use more expansive lists (takes more time though) or use more focused lists at specific types of web services. Other good ones I use are the `common.txt` and `big.txt` in that same directory from SecLists. If you need to designate a non-default port just add that as you normally would to the IP address with `IP_ADDRESS:Port#`. Lastly, in some instances I've run into issues with certificates being invalid, you can disable certificate checks with a `-k` flag. Anything else you'll need for it can be found within the help menu.
 <br><br><br>
 ## Starting a Web Server
