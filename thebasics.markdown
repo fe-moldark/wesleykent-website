@@ -75,15 +75,15 @@ Interestingly enough you can actually see if files have SUID permissions based o
 Linux file permissions are described with three numbers, each of which can be between 0-7. Assuming you already know binary, let's take a look at just one of those three numbers. Now, each bit when combined (ex. binary bit for 4 and 1 = 5 total) would describe the read, write, execute permissions (aka 4,2,1 - with 0 meaning NO permissions) for that position.<br><br>
 But, there are three numbers, right? _Each_   of those three numbers - be it, 777, 754, 600, etc etc _individually_ describe the permissions (read write execute, don't forget) for the user, the group, and lastly anyone else.<br><br>
 Let's take an example of a permission set of "650":
-- The first 6 in binary would be 110(0) = (4+2+0+0) and we care about the left most three
-- The second number, 5, would be 101(0) = (4+0+1+0) and again, only the left three matter
-- The last number is 0, which 000(0) = (0+0+0+0), denoting no permissions for anyone else
+- The first 6 in binary would be 110 = (4+2+0)
+- The second number, 5, would be 101 = (4+0+1)
+- The last number is 0, which 000 = (0+0+0)
 <br><br>
 
-So, we said we care only about the left three digits - starting with the "6" in binary that was 110.<br>
+So - starting with the "6" in binary that was 110.<br>
 In terms of our read write execute permissions, then, the USER has read, write, but NOT execute permissions for that file.
 <br><br>
-The next digit, "5", is the permissions for the GROUP - which in binary is 101 (again, we only care about the left three).<br>
+The next digit, "5", is the permissions for the GROUP - which in binary is 101.<br>
 So, the GROUP's permissions include YES to read, NO to write, and YES to execute.<br><br>
 Lastly, the 0 indicates NO permissions at all for anyone else outside the user and group.<br><br><br>
 And one thing I almost forgot to add - `chmod` and `chown`:<br>
