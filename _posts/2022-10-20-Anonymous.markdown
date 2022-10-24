@@ -58,7 +58,7 @@ As a quick side note, I checked the crontab next with a `crontab -l` in the bash
 Well, with netcat not working I tried the `/dev/tcp` route which I got from [PenTestMonkey](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet). For whatever reason (the issue still wasn't the port), our nc listener now lights up with that reverse shell:<br>
 <p align="center"><img width="750" src="/assets/blog/THM-Anonymous/nc_listener.png"></p>
 <br>
-I tried a `sudo -l` which did not help, and after checking for SUID permissions it returned a massive list that would have taken a long time to sift through manually. I found [this page](https://null-byte.wonderhowto.com/how-to/find-exploit-suid-binaries-with-suid3num-0215789/), which has a script that will automatically search for anything in that list that might be vulnerable. This is similar to the LinEnum script I have mentioned on previous posts.<br><br>
+I tried a `sudo -l` which did not help, and after checking for SUID permissions it returned a massive list that would have taken a long time to sift through manually. I found [this page](https://null-byte.wonderhowto.com/how-to/find-exploit-suid-binaries-with-suid3num-0215789/), which has a script that will automatically search for anything in that list that might be vulnerable. This is similar to the LinEnum script I have mentioned in previous posts.<br><br>
 Following their steps I downloaded their `.py` file (I had also previously confirmed python was installed on this system), and after starting a web server on our local machine we can download the script onto the target machine:<br>
 <p align="center"><img width="750" src="/assets/blog/THM-Anonymous/download_from_webserver.png"></p>
 <br>
