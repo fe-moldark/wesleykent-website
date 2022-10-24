@@ -23,7 +23,8 @@ Other flags to be aware of:<br>
 - The `-sV` will examine the open ports it finds for services / versions running on them (also always a good option).
 - The `-A` for an aggresive scan - should reveal more information about the services running and the machine itself.
 - To try and avoid detection by a firewall or IDS software you can look into using `-f`, `-D`, or `-S` for a variety of spoofing and decoy methods.
-<br><br>
+<br><br><br>
+
 ## Running specific scripts on ports
 Say you want to run specific scripts against a single port:<br>
 - First locate where your scripts are installed with nmap. If it is somewhere other than `/usr/share/nmap/scripts`, search for it with:<br>
