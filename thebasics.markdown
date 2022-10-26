@@ -27,7 +27,7 @@ Useful logs can always be found in `/var/log`, Windows has Event Viewer, etc.
 
 To find out who you currently are on the system use `whoami`.
 <br><br>
-Listing what is in the current directory with `ls`, there are more flags you can through on there to expand or limit the search, for example including hidden files, listing files by size, date created, etc. Also look into using `| grep SOMETHING` to only return results containg specific strings. Adding a `-l` lists more information, `a` will show hidden files, `-t` for sorting by last modified, you get the idea.
+Listing what is in the current directory with `ls`, there are more flags you can through on there to expand or limit the search, for example including hidden files, listing files by size, date created, etc. Also look into using `| grep SOMETHING` to only return results containg specific strings. Adding a `-l` lists more information, `-a` will show hidden files, `-t` for sorting by last modified, you get the idea.
 
 To pull words from gibberish use: `strings filename.ext`<br>
 This might thwart a poor attempt on someone's part to hide real information in plain text behind a bunch of randomly combined letters in a large text file. I've also used this after running an nmap scan and it returns data but the service is unrecognized, so the text that it does return is garbled with a bunch of special characters - very hard to sift through manually but more feasible with this method.
