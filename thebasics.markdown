@@ -64,7 +64,7 @@ Whenever you see smb running over a port (commonly seen over 139 and 445), the f
 `enum4linux -a IPADDRESS`<br><br>
 This will perform all simple enumerations and from there hopefully you will uncover some shares you can get anonymous access to, maybe the usernames there are the same for other services running (like ssh for a possible brute force), etc.<br><br>
 To actually login afterwards once you have more info:<br>
-`smbclient //IPADDRESS/SHARE -U username -p port`<br>
+`smbclient '\\IPADDRESS\SHARE_NAME' -U username -p port`<br>
 Again, if you can login anonymously you shouldn't need the `-U` flag, and if smb is running over a standard port the same goes for the `-p`.<br><br>
 Smb follows similar commands like with an ftp server, to get files off the server you can use the `get filename` command.
 <br><br><br>
