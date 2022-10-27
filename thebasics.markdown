@@ -66,7 +66,7 @@ This will perform all simple enumerations and from there hopefully you will unco
 To actually login afterwards once you have more info:<br>
 `smbclient '\\IPADDRESS\SHARE_NAME' -U username -p port`<br>
 Again, if you can login anonymously you shouldn't need the `-U` flag, and if smb is running over a standard port the same goes for the `-p`.<br><br>
-Smb follows similar commands like with an ftp server, to get files off the server you can use the `get filename` command.
+Smb shares similar commands with an ftp server - to get files off the server you can use the `get filename` command and the same applies to the `put` command.
 <br><br><br>
 
 # More on file permissions
@@ -77,7 +77,7 @@ But, there are three numbers, right? _Each_   of those three numbers - be it, 77
 Let's take an example of a permission set of "650":
 - The first 6 in binary would be 110 = (4+2+0)
 - The second number, 5, would be 101 = (4+0+1)
-- The last number is 0, which 000 = (0+0+0)
+- The last number, 0, would be 000 = (0+0+0)
 <br><br>
 
 So - starting with the "6" in binary that was 110.<br>
@@ -91,5 +91,5 @@ And one thing I almost forgot to add - `chmod` and `chown`:<br>
 - The `chmod` command can be used to add or otherwise alter permissions for a file.<br>
 For example: `chmod +x filename` will give you executable permissions, or something like `chmod 777 filename`, where the number is whatever permissions you want to designate.<br><br><br>
 
-This breakdown makes sense to me, but might be horribly explained to you. There are number of ways to explain this, and I'm sure you can find a video or another explanation if this didn't quite hit the mark. Cheers.
+This breakdown makes sense to me, but might be horribly explained to you. There are number of ways to explain this, and I'm confident you can find another resource out there if this didn't quite hit the mark. Cheers.
 <br>
