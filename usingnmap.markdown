@@ -16,7 +16,7 @@ This will be a brief overview of my basic go-to scan, and after that is done I w
 Depending on the results from this scan, you might need to disable host discovery with `-Pn`, you should run a longer follow up scan with `-p-` to catch any services running on non-default ports, you might want to target certain scripts at specific ports / services, or you might want to include more flags for a wider range of results.
 <br><br>
 Other flags to be aware of:<br>
-- Using the `-sU` or `-sS` you can specifiy a UDP or SYN (stealth) scan.
+- Using the `-sU` or `-sS` you can specify a UDP or SYN (stealth) scan.
 - The `-O` tries to detect the Operating System type and version.
 - Nmap defaults to scanning the top 1000 ports, so it's best practice to run the longer scan with `-p-` as a flag to run through all 65,535 of them. Alternatively, you can target a single (or multiple) port(s) with `-p <#>,<#>` and so on.
 - The `-sC` will run the default scripts (always a good option).
@@ -25,8 +25,8 @@ Other flags to be aware of:<br>
 - To try and avoid detection by a firewall or IDS software you can look into using `-f`, `-D`, or `-S` for a variety of spoofing and decoy methods.
 <br><br><br>
 
-## Running specific scripts on ports
-Say you want to run specific scripts against a single port:<br>
+## Running specific scripts against services
+Say you want to run specific scripts against a particular service on a port:<br>
 - First locate where your scripts are installed with nmap. If it is somewhere other than `/usr/share/nmap/scripts`, search for it with:<br>
 `find / -name scripts -type d 2>/dev/null | grep nmap`<br>
 From there, you can manually look through or use grep to find scripts that you would like to run - for instance it looks like nmap includes at least 6 different scripts you can try running against ports running ssh.<br>
