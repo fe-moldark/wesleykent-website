@@ -1,6 +1,7 @@
 ---
 layout: page
-title: USB Keyboard Injectors - using the Digispark Attiny 85
+title: USB Keyboard Injectors
+subtitle: Using the Digispark Attiny 85
 permalink: /usb_injectors/
 ---
 
