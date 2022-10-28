@@ -10,7 +10,7 @@ Update as of October '22:
 <iframe width="840" height="445" src="https://player.vimeo.com/video/756628586?h=9c7c184f0b&amp;badge=0&amp;autopause=0&amp;autoplay=1;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 <br><br><br>
-I was initially going to push this onto the main [femoldark](/femoldark/) page but I figured this will be a consistently updated topic, so I might as well create a seperate space for it. I settled on designing this case using [MatterControl](https://www.matterhackers.com/store/l/mattercontrol/sk/MKZGTDW6) for the following reasons:
+I was initially going to push this onto the main [FE Moldark](/femoldark/) page but I figured this will be a consistently updated topic, so I might as well create a seperate space for it. I settled on designing this case using [MatterControl](https://www.matterhackers.com/store/l/mattercontrol/sk/MKZGTDW6) for the following reasons:
 - It's free
 - It's a relatively straight-forward 3d design software, nothing complex like you would see with Blender, etc
 - It also acts as a slicer, so I can directly export the stl files into gcode for my Ender 3 Pro
