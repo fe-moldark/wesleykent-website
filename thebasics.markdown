@@ -50,7 +50,7 @@ Note: To actually initiate an ftp session, simply use: `ftp IPADDRESS`, at which
 I've had limited interactions with sftp, but I do know it is a secure version of ftp running over ssh (port 22), and should use almost identical or identical commands to ftp.
 <br><br>
 #### ssh
-For ssh, you will need to connect in various ways - here's a few situations you might see:<br>
+For ssh you will need to connect in various ways - here's a few situations you might see:<br>
 - The "normal" way - `ssh username@IPADDRESS` and once prompted enter the password
 - Logging into a domain - `ssh -l username@something.local IPADDRESS`
 - When using a key - `ssh -i path_to_key username@IPADDRESS`
