@@ -33,7 +33,7 @@ _(Newer updates will appear at the top here, older ones at the bottom)_
 <br><br>
 
 #### Update, November '22:
-The side pieces are now both complete and the center piece (front and back) both nearly finalized. Every piece so far has taken at least one test print to identify some very minor adjustments (usually just a millimeters or so), after that everything prints off as expected. The downside is the time it takes to print - the side piece you see in the first video below took 5 hrs to print, so it;s never a "quick" fix. I'm also paranoid the 3D printer will catch on fire so I never run it while I'm away. Check out the two updates below:
+The side pieces are now both complete and the center pieces (front and back) both nearly finalized. Every piece so far has taken at least one test print to identify some very minor adjustments (usually just a millimeters or so), after that everything prints off as expected. The downside is the time it takes to print - the side piece you see in the first video below took 5 hrs to print, so it's never a "quick" fix. I'm also paranoid that the 3D printer will catch on fire, so I never run it while I'm away. Check out the two updates below:
 <br><br>
 ##### Part 1:
 <center>
