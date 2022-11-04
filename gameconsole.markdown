@@ -42,7 +42,7 @@ The side pieces are now both complete and the center pieces (front and back) bot
 <br><br>
 ##### Part 2:
 <center>
-<iframe width="840" height="445" src="https://player.vimeo.com/video/767150751?h=1f07d13c1a&amp;badge=0&amp;autopause=0&amp;autoplay=0;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="840" height="445" src="https://player.vimeo.com/video/767171969?h=ca6b97c298&amp;badge=0&amp;autopause=0&amp;autoplay=0;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 <br><br>
 
