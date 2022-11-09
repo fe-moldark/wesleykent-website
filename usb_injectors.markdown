@@ -14,7 +14,7 @@ As mentioned, this page will cover the [Digispark Attiny 85](http://digistump.co
 These scripts can be installed on the Digispark boards through the Arduino IDE, which can be downloaded from [here](https://www.arduino.cc/en/software). I'm not going to cover the exact installation process because whether you go the Windows or Linux route it's going to be a pain, and there are more than enough tutorials already out there that cover the process. If you go the Linux route you'll need to configure udev rules for your system (reference [here](https://startingelectronics.org/tutorials/arduino/digispark/digispark-linux-setup/)) or install the correct drivers if you go the Windows route (start [here](https://github.com/digistump/DigistumpArduino/releases)).
 <br><br><br>
 
-# Configuring the crontab to install a reverse shell
+# Example: Configuring the crontab to install a reverse shell
 The script I wrote can be found in its entirety [here](https://raw.githubusercontent.com/fe-moldark/wesleykent-website/gh-pages/assets/malicious_usbs/reverse_shell_crontab.ino), and before you actually try to write this to the Digispark board you will need to edit the IDE's preferences tab to install the Digispark library and then from the boards manager as well on the IDE - again, there are a million tutorials for this.
 <br><br>
 Excluding defining a few keys in the beginning the script takes place almost entirely in the `void loop()`, which I will now go over. This section below will press the key combination "CTRL+ALT+T", which on Ubuntu (and other linux distros) will open up a console. From there the I entered in `crontab -e` which will allow us to edit the crontab in the next step. Here is what that looks like:
