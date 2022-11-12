@@ -21,3 +21,8 @@ Another tool you can use is called `binwalk`, for more details on how it works e
 Example usage of this would be `binwalk -e file.bin`, where the `-e` flag indicates to extract known file types.<br>
 <br>
 A companion tool to `stegosuite` is `steghide` can be used to both embed and extract data, for the various flags / uses on that reference `man steghide`.
+<br><br>
+
+# A Challenge
+If you want a challenge with decryption reference [here](https://raw.githubusercontent.com/fe-moldark/wesleykent-website/gh-pages/assets/DECRYPTME.jpg) for a go at a cipher I wrote over a year back. This was well before I had done any reading at all about cryptography, steganography, ciphers, etc. so I would do this in a completely different way now. As for a hint, I believe frequency analysis should be able to break this if you know where to look and when to stop looking. You will know where and how to reach me if you solve it. This was fun to make way back when even if it has no practical application. Best of luck.
+<br><br>
