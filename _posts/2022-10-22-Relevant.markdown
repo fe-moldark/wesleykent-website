@@ -1,0 +1,74 @@
+---
+layout: post
+title:  TryHackMe - Relevant
+date:   2022-10-22 00:00:00 -0600
+categories: THM
+intro: A good dive into a Windows machine requiring a vulnerable smb share, msfvenom, and exploitable permissions once you gain the foothold.
+---
+
+# TryHackMe - Relevant
+My go-to scan was taking too long, so I first ran an initial nmap scan only looking for open ports, then the more targeted port scan you see below:<br>
+<p align="center"><img width="850" src="/assets/blog/THM-Relevant/nmap.png"></p>
+<br>
+Seeing the web server over port 80 I went there first in the browser. The site was very bland, and there was nothing useful from the site's source code. The alternate port for that page over 49663 also offered nothing. I tried enumerating possible pages / directories for them with `gobuster` and got nothing but 400 - RunTime errors:<br>
+<p align="center"><img width="850" src="/assets/blog/THM-Relevant/gobuster.png"></p>
+<br>
+The page itself links to one of Microsoft Windows Server sites, which tracks with the Operating System guess from the nmap scan, that's the only good thing to come from this.<br><br>
+Well, seeing as how some SMB services are mentioned on  a few of the ports I tried to list available shares on the host with the following command:<br>
+<p align="center"><img width="500" src="/assets/blog/THM-Relevant/smb.png"></p>
+<br>
+No login credentials were needed to get the initial share names, however after trying to interact with several of them I was only able to gain access to `nt4wrksv` without any authentication. Lo and behold, their very secure way of storing passwords:<br>
+<p align="center"><img width="850" src="/assets/blog/THM-Relevant/smb_exploit.png"></p>
+<br>
+Surprisingly, I ended up not needing these passwords to pwn this machine, but I did not know that at the time so I went ahead and cracked the hashes. That first hash looked very similar to other passwords I've seen encoded in base64, and sure enough I was able to decode it with the following:<br>
+<p align="center"><img width="500" src="/assets/blog/THM-Relevant/base64.png"></p>
+<br>
+Base64 applied to both hashes in that password file, but again it wasn't needed in the first place. Now that I had some working credentials, I looked for places to use them. These got me access to another one of the shares, but that had nothing to offer there. I tried logging into the RDP service, but those credentials were rejected.<br><br>
+So, this brought me back to the original SMB share. I've already gotten files from it, but I might also be able to upload a reverse shell and gain a foothold that way. Now, since this is only an SMB share we likely will not be able to execute it directly from there, but since this is hosting a web server and we were able to previously logon to the `nt4wrksv` share anonymously, my thought was to try and call the script from wherever the file resides over the web interface.
+<br><br>
+Now the files did not appear under port 80, but if you navigate to the ephemeral port that was hosting the alternate http page you should find it there under `/share_name/file_name`. Knowing this, and that this is a Windows machine, let's craft that payload with `msfvenom`:<br>
+<p align="center"><img width="850" src="/assets/blog/THM-Relevant/msfvenom.png"></p>
+<br>
+Since I am using meterpreter to handle this shell, let's set that up with `msfconsole` and the `multi/handler` exploit:<br>
+<p align="center"><img width="700" src="/assets/blog/THM-Relevant/configure multi handler.png"></p>
+<br>
+Let's upload that payload to the SMB share:
+<p align="center"><img width="650" src="/assets/blog/THM-Relevant/upload reverse shell.png"></p>
+<br>
+After this I tried curling the URL, navigating to it, etc but I could not activate it that way. I was hoping that the exe format would work since I know this is running some kind of Windows OS, sadly it did not work. After some research into what other formats are best for this scenario I tried using the aspx format. I went through the same process as above but for the different file format and then put that onto the same smb share:<br>
+<p align="center"><img width="750" src="/assets/blog/THM-Relevant/try aspx instead.png"></p>
+<br>
+Since this handler with aspx is not going through meterpreter I setup a `nc` listener instead of going the `msfconsole` route, and after using `wget` at that file's location on the web server the shell lights up:<br>
+<p align="center"><img width="550" src="/assets/blog/THM-Relevant/got shell.png"></p>
+<br>
+Unfortunately, not too many CTFs are Windows machines (that I've done at least) and when it was, it was often a known exploit that was easy to identify. So, I started looking for similar scripts to the `LinEnum` I have mentioned in previous posts. One search result was a Reddit post with the same question and there were many suggestions including `Sherlock`, `Powerview`, `Powerup`, `Jaws`, `Windows-Privesc-Check` and quite literally `WindowsEnum`. So I downloaded the `WindowsEnum` file locally and started a web server to punch it over to the target machine. Curl did not work, wget was also not installed, I even ended up trying a direct powershell command after some research with `Invoke-WebRequest` etc but I lacked the permissions for that. Now, I only realized this later but I was way overcomplicating things - I had access to the machine and I had previously uploaded files via the SMB shares, so why not just use that?
+<br><br>
+Because my brain must have short-circuited during this time I ended up going down a different avenue to pwn this machine, but at the end I will still show the results of that script after I realized I wasn't thinking clearly.
+<br><br>
+Back to the machine - the user flag was something I realized I probably had access to with my current permissions, so I navigated over to the `Users` folder, found the user "Bob" and could read the `user.txt` flag on his Desktop:<br>
+<p align="center"><img width="550" src="/assets/blog/THM-Relevant/user flag.png"></p>
+<br>
+That's great and all, but we still don't have access to the root flag no doubt located in the Administrator folder. Similar to commands we can run on linux I ran a `whoami /priv` on the Windows machine with the following results:<br>
+<p align="center"><img width="850" src="/assets/blog/THM-Relevant/privileges.png"></p>
+<br>
+After a good amount of research (well, the second page of results...) I found [this](https://github.com/dievus/printspoofer) with an executable called `PrintSpoofer.exe` that supposedly uses those permissions for privilege escalation. As I mentioned before, this was when I realized I can still upload files to the target machine over the smb share, which is what I did next and after running it I got the following:<br>
+<p align="center"><img width="600" src="/assets/blog/THM-Relevant/escalation.png"></p>
+<br>
+And a quick whoami confirms we are now `nt authority` on the system. To get the root flag now just navigate to the Administrator's Desktop:<br>
+<p align="center"><img width="475" src="/assets/blog/THM-Relevant/root flag.png"></p>
+<br>
+And this CTF is mercifully complete.
+<br><br>
+
+As promised here are the results of that `WindowsEnum` script I was talking about earlier:<br>
+<p align="center"><img width="800" src="/assets/blog/THM-Relevant/where uploaded to.png"></p>
+<br>
+A quick `where` search will locate where the smb share is stored on the system and then you can run the powershell script as is. This route would have worked as well since part of their enumeration is running the `whoami /priv` command and so you would have been able to locate that vulnerability either way. I forgot to screenshot that portion of the results, but it appears the same as when I manually entered the command.
+<br><br>
+That was more or less all for this CTF. I have no doubt there were other ways to compromise it since I found two sets of valid credentials but ended up not using them anywhere. Maybe the RDP service was vulnerable or I just entered in information incorrectly, I'm not sure. One thought I had while writing this is I'm sure you could set up a way to generate a security log for anyone trying to login as that user. Basically setup that file as a "honey file" (I am grossly misusing the "honeypot/honeynet" terms here, I know - just follow along) and if anyone finds it and tries to use it you would know that some is acting with at least some malicious intent. Once you receive that alert you could begin investigating where that person tried to log in from, check your network for other strange activities, check for users acting outside their baseline, etc. Food for thought.
+<br><br>
+Regardless, this was a good break from the traditional linux environment I am used to and a lot was learned. Hopefully the next Windows CTF I do I can explore those other scripts used to enumerate Windows machines. 
+<br><br>
+Cheers,<br><br>
+Wes
+<br><br>
