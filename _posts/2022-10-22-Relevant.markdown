@@ -3,7 +3,7 @@ layout: post
 title:  TryHackMe - Relevant
 date:   2022-10-22 00:00:00 -0600
 categories: THM
-intro: A good dive into a Windows machine requiring a vulnerable smb share, msfvenom, and exploitable permissions once you gain the foothold.
+intro: A good dive into a Windows machine requiring a vulnerable smb share, msfvenom, and exploitable permissions after you get that initial foothold.
 ---
 
 # TryHackMe - Relevant
