@@ -27,7 +27,8 @@ If you want to preview what these look like (using GitHub's very poor in-built t
 If you want to download these files and manipulate them yourself, I will throw the link to the entire folder housing them [here](https://github.com/fe-moldark/wesleykent-website/tree/gh-pages/assets/3d_files). That folder has all of the above files in both their MCX and STL formats.
 <br><br><br>
 
-# Updates
+<h1><img alt="gear_gif" src="https://wesleykent.com/assets/gif gear.gif" width="45" height="45" style="vertical-align:bottom"/> Updates </h1>
+<br>
 
 _(Newer updates will appear at the top here, older ones at the bottom)_
 <br><br>
