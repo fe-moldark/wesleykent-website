@@ -24,7 +24,7 @@ There's something genuinely fun about writing the software behind the game, asse
 If you want to preview what these look like (using GitHub's very poor in-built tool), reference these links:<br>
 <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/3d_files/frontside_stl_for_github.stl" target="_blank" rel="noopener noreferrer">Front Cover</a> / <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/3d_files/backside_stl_for_github.stl" target="_blank" rel="noopener noreferrer">Back Cover</a> / <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/3d_files/side_pieces_stl_for_github.stl" target="_blank" rel="noopener noreferrer">Side Pieces</a> / <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/3d_files/buttons_stl_for_github.stl" target="_blank" rel="noopener noreferrer">Buttons</a>
 <br><br><br>
-If you want to download these files and manipulate them yourself, I will throw the link to the entire folder housing them [here](https://github.com/fe-moldark/wesleykent-website/tree/gh-pages/assets/3d_files). That folder has all of the above files in both their MCX and STL formats.
+If you want to download these files and manipulate them yourself, I will throw the link to the entire folder housing them <a href="https://github.com/fe-moldark/wesleykent-website/tree/gh-pages/assets/3d_files" target="_blank" rel="noopener noreferrer">here</a>. That folder has all of the above files in both their MCX and STL formats.
 <br><br><br>
 
 <h1><img alt="gear_gif" src="https://wesleykent.com/assets/gif gear.gif" width="45" height="45" style="vertical-align:bottom"/> Updates </h1>
