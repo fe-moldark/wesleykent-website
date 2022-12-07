@@ -7,13 +7,13 @@ permalink: /femoldark/gameconsole/
 
 # The 3D modeling and slicing software
 
-I was initially going to push this onto the main [femoldark](/femoldark/) page but I figured this will be a consistently updated topic, so I might as well create a seperate space for it. I settled on designing this case using [MatterControl](https://www.matterhackers.com/store/l/mattercontrol/sk/MKZGTDW6) for the following reasons:
+I was initially going to push this onto the main [femoldark](/femoldark/) page but I figured this will be a consistently updated topic, so I might as well create a seperate space for it. I settled on designing this case using <a href="https://www.matterhackers.com/store/l/mattercontrol/sk/MKZGTDW6" target="_blank" rel="noopener noreferrer">MatterControl</a> for the following reasons:
 - It's free
 - It's a relatively straight-forward 3d design software, nothing complex like you would see with Blender, etc
 - It also acts as a slicer, so I can directly export the stl files into gcode for my Ender 3 Pro
 <br><br>
 
-All in all, it provides exactly what I'm looking for without a steep learning curve, and I would recommend it to any beginner. The one thing that it does not allow as a slicer is the ability to edit the nozzle and bed temperature, and the print speed by layer, which I only recently needed after upgrading to a glass bed instead of the magnetic one. Since then I have been using [Cura](https://ultimaker.com/software/ultimaker-cura) as the slicer with great results, although a bit slower (as intended).
+All in all, it provides exactly what I'm looking for without a steep learning curve, and I would recommend it to any beginner. The one thing that it does not allow as a slicer is the ability to edit the nozzle and bed temperature, and the print speed by layer, which I only recently needed after upgrading to a glass bed instead of the magnetic one. Since then I have been using <a href="https://ultimaker.com/software/ultimaker-cura" target="_blank" rel="noopener noreferrer">Cura</a> as the slicer with great results, although a bit slower (as intended).
 <br><br>
 The game console has gone through many iterations and I think I've finally settled on a working design. It can be difficult to tell what will or won't work until it's actually off the print bed and in hand, but with enough trial and error I think it's nearing the final print stages.
 <br><br>
