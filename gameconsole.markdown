@@ -22,7 +22,7 @@ There's something genuinely fun about writing the software behind the game, asse
 
 # Files for download
 If you want to preview what these look like (using GitHub's very poor in-built tool), reference these links:<br>
-[Front cover](https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/3d_files/frontside_stl_for_github.stl) / [Back cover](https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/3d_files/backside_stl_for_github.stl) / [Side pieces](https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/3d_files/side_pieces_stl_for_github.stl) / [Buttons](https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/3d_files/buttons_stl_for_github.stl)
+<a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/3d_files/frontside_stl_for_github.stl" target="_blank" rel="noopener noreferrer">Front Cover</a> / <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/3d_files/backside_stl_for_github.stl" target="_blank" rel="noopener noreferrer">Back Cover</a> / <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/3d_files/side_pieces_stl_for_github.stl" target="_blank" rel="noopener noreferrer">Side Pieces</a> / <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/3d_files/buttons_stl_for_github.stl" target="_blank" rel="noopener noreferrer">Buttons</a>
 <br><br><br>
 If you want to download these files and manipulate them yourself, I will throw the link to the entire folder housing them [here](https://github.com/fe-moldark/wesleykent-website/tree/gh-pages/assets/3d_files). That folder has all of the above files in both their MCX and STL formats.
 <br><br><br>
