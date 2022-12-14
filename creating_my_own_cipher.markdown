@@ -64,7 +64,7 @@ def giveMeShortKey(randomKey,text): #"randomKey" is what was just generated, "te
 ```
 <br>
 To compare and contrast the two keys visually, here are the first twenty or so characters of the two side-by-side:<br>
-<p align="center"><img width="700" src="/assets/cipher/key lengths.png"></p>
+<p align="center"><img width="600" src="/assets/cipher/key lengths.png"></p>
 <br>
 Looking at the beginning of each key that was generated we can see the long key which will actually be saved in the image is 545 characters long and the reduced key is 95 characters. The large key is generated from the small one by inserting random characters equal to the value of pi for each sequential character by its indexed value in that key.
 <br><br>
@@ -72,7 +72,7 @@ What that means is we see 3 random characters in the long key, then the `[`, whi
 <br><br><br>
 
 This ends the portion that creates the key, and how it is decrypted later on. This large key, however, needs a home within the image somehow and I discovered that you can in fact add text data to the end of jpeg images when opening the image in a text editor. Weird, right? This is a great way to conceal the key against a human eye - after all this is what is looks like even when you do open the image in a text editor (the key is highlighted at the bottom for one of my test images):<br>
-<p align="center"><img width="950" src="/assets/cipher/highlighted_key.png"></p>
+<p align="center"><img width="1000" src="/assets/cipher/highlighted_key.png"></p>
 <br>
 No one I know of would think to open an image in a text editor like Notepad and scroll down to the bottom and try and find something out of place. Machines, however, do notice this. Submitting that same image to a free "photo forensics" site that included features like string extraction revealed the following:<br>
 <p align="center"><img width="900" src="/assets/cipher/string_extraction.png"></p>
