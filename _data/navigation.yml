@@ -34,6 +34,9 @@
 
 - name: USB Injectors
   link: /usb_injectors/
+  
+- name: Custom Cipher
+  link: /creating_my_own_cipher/
     
 - name: FE Moldark
   link: /femoldark/
