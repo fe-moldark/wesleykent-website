@@ -36,7 +36,7 @@ _(Newer updates will appear at the top here, older ones at the bottom)_
 Back side pieces are nearly complete, just need to perfect the track and better secure the piece holding the spring to the main board. I'm hoping to be able to start doing some final prints in the future so I can begin wiring everything together and actually test it out.
 <br>
 <center>
-<iframe width="840" height="445" src="https://player.vimeo.com/video/756628586?h=9c7c184f0b&amp;badge=0&amp;autopause=0&amp;autoplay=0;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="840" height="445" src="https://player.vimeo.com/video/781238023?h=c7e9db3e8f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 <br><br>
 
