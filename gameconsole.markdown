@@ -32,6 +32,14 @@ If you want to download these files and manipulate them yourself, I will throw t
 _(Newer updates will appear at the top here, older ones at the bottom)_
 <br><br><br>
 
+#### Update, December '22:
+Back side pieces are nearly complete, just need to perfect the track and better secure the piece holding the spring to the main board. I'm hoping to be able to start doing some final prints in the future so I can begin wiring everything together and actually test it out.
+<br>
+<center>
+<iframe width="840" height="445" src="https://player.vimeo.com/video/756628586?h=9c7c184f0b&amp;badge=0&amp;autopause=0&amp;autoplay=0;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+<br><br>
+
 #### Update, November '22:
 The side pieces are now both complete and the center pieces (front and back) both nearly finalized. Every piece so far has taken at least one test print to identify some very minor adjustments (usually just a millimeters or so), after that everything prints off as expected. The downside is the time it takes to print - the side piece you see in the first video below took 5 hrs to print, so it's never a "quick" fix. I'm also paranoid that the 3D printer will catch on fire, so I never run it while I'm away. Check out the two updates below:
 <br><br>
