@@ -24,5 +24,5 @@ A companion tool to `stegosuite` is `steghide` can be used to both embed and ext
 <br><br>
 
 # A Challenge
-If you want a challenge with decryption reference [here](https://raw.githubusercontent.com/fe-moldark/wesleykent-website/gh-pages/assets/DECRYPTME.jpg) for a go at a cipher I wrote over a year back. This was well before I had done any reading at all about cryptography, steganography, ciphers, etc. so I would do this in a completely different way now. As for a hint, I believe frequency analysis should be able to break this if you know where to look and when to stop looking. You will know where and how to reach me if you solve it. This was fun to make way back when even if it has no practical application. Best of luck.
+If you want a challenge with decryption reference <a href="https://raw.githubusercontent.com/fe-moldark/wesleykent-website/gh-pages/assets/cipher/encrypted_image.jpg" target="_blank" rel="noopener noreferrer">here</a> for a go at a cipher I wrote a while back. This was well before I had done any reading at all about cryptography, steganography, ciphers, etc. but I had fun making it. I have a full break down on how this works [here](https://wesleykent.com/creating_my_own_cipher/).
 <br><br>
