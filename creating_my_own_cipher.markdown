@@ -72,10 +72,10 @@ What that means is we see 3 random characters in the long key, then the `[`, whi
 <br><br><br>
 
 This ends the portion that creates the key, and how it is decrypted later on. This large key, however, needs a home within the image somehow and I discovered that you can in fact add text data to the end of jpeg images when opening the image in a text editor. Weird, right? This is a great way to conceal the key against a human eye - after all this is what is looks like even when you do open the image in a text editor (the key is highlighted at the bottom for one of my test images):<br>
-<p align="center"><img width="950" src="/assets/highlighted_key.png"></p>
+<p align="center"><img width="950" src="/assets/cipher/highlighted_key.png"></p>
 <br>
 No one I know of would think to open an image in a text editor like Notepad and scroll down to the bottom and try and find something out of place. Machines, however, do notice this. Submitting that same image to a free "photo forensics" site that included features like string extraction revealed the following:<br>
-<p align="center"><img width="900" src="/assets/string_extraction.png"></p>
+<p align="center"><img width="900" src="/assets/cipher/string_extraction.png"></p>
 <br>
 So it can be found out that way. I have no issue with this, however, because this is only one of many steps. Even if you find this you would need to know that it has to be reduced somehow, figure out what to reduce it by, and then know where and how to use the reduced key you've uncovered.
 <br><br>
@@ -132,9 +132,9 @@ for y in range(maxHeight):
 That exception will return "0" for the RGB value, which will be used to designate the end of the line when you decrypt the image.
 <br><br>
 This is where the editing of the array gets complex, and I will cover how it works with an image first as that's the only way I've had success in explaining this, and then discuss the code behind it afterwards. Before you get confused, here is what a single block to encode one character might actually look like:
-<p align="center"><img width="160" src="/assets/grayscale_block.png"></p>
+<p align="center"><img width="160" src="/assets/cipher/grayscale_block.png"></p>
 Let's look at how this actually breaks down in a more comprehensive, and colorful, way:<br>
-<p align="center"><img width="500" src="/assets/example_character_encoding.jpg"></p>
+<p align="center"><img width="500" src="/assets/cipher/example_character_encoding.jpg"></p>
 <br>
 Those numbers are meaningless right now, I understand. To explain each of what the colors represents:<br>
 <br>
