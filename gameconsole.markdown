@@ -33,7 +33,7 @@ _(Newer updates will appear at the top here, older ones at the bottom)_
 <br><br><br>
 
 #### Update, December '22:
-Back side pieces are nearly complete, just need to perfect the track and better secure the piece holding the spring to the main board. I'm hoping to be able to start doing some final prints in the future so I can begin wiring everything together and actually test it out.
+Back side pieces are nearly complete, just need to perfect the track and better secure the piece holding the spring to the main board. I'm hoping to start doing some final prints in the near future so I can begin wiring everything together and actually test it out.
 <br>
 <center>
 <iframe width="840" height="445" src="https://player.vimeo.com/video/781238023?h=c7e9db3e8f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
