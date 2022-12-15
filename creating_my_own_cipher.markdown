@@ -23,7 +23,7 @@ My first step was defining allowed characters in the text - this includes all lo
 <br><br>
 Since I don't want to use just one key to encrypt every single image (that's just not secure after all), let's randomize the symmetric key:
 ```python
-list1=[char for char in alphaDict] #take the variable and throw it into a string
+list1=[char for char in alphaDict] #take the string and throw it into a list
 numpy.random.shuffle(list1) #randomize our key
 
 text="".join(list1) #and we have a new key once again
