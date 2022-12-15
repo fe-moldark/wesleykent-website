@@ -150,7 +150,7 @@ This example value that was generated was calculated previously using the `num=(
 <br><br><br>
 Now for the code behind this. Inside that same `for` loop I mentioned before, each of the 16 squares within that 4x4 block are defined below, and I have explicitly broken down how each row looks like so you can easily follow along:<br>
 ```python
-#layer 1
+#layer1
 num1=randint(15,230)   
 num2=randint(15,230)
 num3=randint(15,230)
@@ -233,7 +233,7 @@ doesntmatterthenumber=randint(55,190) #number to manipulate
 for i in range(len(new_columns)):
     new_col=new_columns[i]
     if i==0:#first item
-        new_col_one_rgb=doesntmatterthenumber+choose_difference #18, 6
+        new_col_one_rgb=doesntmatterthenumber+choose_difference
     else:#second item
         new_col_two_rgb=doesntmatterthenumber-(choose_apart-choose_difference)
 ```
@@ -247,9 +247,9 @@ data[(y*(ratio))+(4*(new_row)):(y*(ratio))+(4*(new_row+1)), (x*ratio)+(4*(new_co
 Now to save the spot on the image that was the red tile, or the one that we are pointed from the RGB values at tiles 15 and 16. If the initial `num` was zero then we need to ensure that it is reset before writing to the location at `(use1,use2)` - don't forget that the "0" indicates the end of that line, otherwise we subtract the difference I alluded to earlier aka the `choose_apart` variable:<br>
 ```python
 if num==0:
-    new_num=0
+    new_num=0 #otherwise subtraction seen below might give a negative #
 else:
-    new_num=num-choose_apart
+    new_num=num-choose_apart #actually a character being encoded, not the end of the line
 
 data[(y*(ratio))+(4*(use2)):(y*(ratio))+(4*(use2+1)), (x*ratio)+(4*(use1)):(x*ratio)+(4*(use1+1))]=[new_num,new_num,new_num]
 ```
@@ -276,7 +276,7 @@ The rest of this script is the text-based interface that controls how to interac
 # Adding a misdirect
 If you saw the initial image on this page then you might be wondering where all the red comes from in the sea of grayscale blocks. I did not cover that in the explanation above because it has nothing to do with the actual cipher - it is a complete misdirect.
 <br><br>
-I simply added a single red pixel block per 4x4 grid of each character, as well as the bottom layer of all red. This was inspired by that old "what's black, white, and read all over" joke, but it is really just meant to throw people off. After all, every block has one and it's the only distinguishing RGB color. The bottom four lines are some kind of red, the 1st and 3rd layers are all even numbers, 2nd and 4th are odd. The single pixel blocks scattered throughout the rest of the image are all divisible by nine (9) as well, so instead of trying to make the deception completely obscure I tried to give someone _something_ to find. I just think it's funny because you can find legitimate patterns in those red blocks but they are utterly meaningless. Hopefully this would confuse anyone from identifying the actual markers or patterns used to encode the data.
+I simply added a single red pixel block per 4x4 grid of each character, as well as the bottom layer of all red. This was inspired by that old "what's black, white, and read all over" joke, but it is really just meant to throw people off. After all, every block has one and it's the only distinguishing RGB color. The very bottom four lines are some shade of red, the 1st and 3rd layers are all even numbers, 2nd and 4th are odd. The single pixel blocks scattered throughout the rest of the image are all divisible by nine (9) as well, so instead of trying to make the deception completely obscure I tried to give someone _something_ to find. I just think it's funny because you can find legitimate patterns in those red blocks but they are utterly meaningless. Hopefully this would confuse anyone from identifying the actual markers or patterns used to encode the data.
 <br><br><br>
 
 # Decrypting the image
