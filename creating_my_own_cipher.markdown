@@ -10,7 +10,7 @@ permalink: /creating_my_own_cipher/
 I remember writing the initial version of this in my barracks room years back and that was well before I had taken any kind of steganography or cryptography classes of any kind, so this was truly just me having fun. As such, there are several parts I have revisited in the past several years to try and guard against things like frequency analysis and other basic issues I identified. I forget what the exact inspiration was to write this but I'm still glad I did because it was fun to write (although infuriating at times). And no, I am not currently using this to house any sensitive information so I feel comfortable sharing how it works on the web for others to look at.
 <br><br>
 What this script does is accept text entered in manually, line by line, or as a `txt` file and then converts it into something that looks like this:<br>
-<p align="center"><img width="800" src="/assets/cipher/example image.png"></p>
+<p align="center"><img width="900" src="/assets/cipher/example image.png"></p>
 I will break down how the scripts work down below if you want to manipulate it yourself, or just for those that are curious. To view the entire scripts, reference <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/scripts/Final_Encrypt.py" target="_blank" rel="noopener noreferrer">here for the encrypt file</a> and <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/scripts/Final_Decrypt.py" target="_blank" rel="noopener noreferrer">here for the decrypt file</a>.
 <br><br><br>
 
