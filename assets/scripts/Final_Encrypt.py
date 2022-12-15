@@ -362,7 +362,7 @@ while True:
             enterDirectory=raw_input("=================================================\n> Enter full path to file to be encrypted below <\n=================================================\nInput: ")
 
             if os.path.exists(enterDirectory)==False and enterDirectory[-4:]!=".txt":
-                print "Named file does not exist and entered name is not a compatible text file. Try again."
+                print "Named file does not exist or entered name is not a compatible text file. Try again."
             elif os.path.exists(enterDirectory)!=True:
                 print "Named file does not exist at that location. Try again."
             elif enterDirectory[-4:]!=".txt": #obsolete now? I think
