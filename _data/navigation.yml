@@ -28,6 +28,8 @@
       link: /scripts/websitehashing/
     - name: RPi and Dilbert
       link: /scripts/rpi_and_dilbert/
+    - name: Custom Cipher
+      link: /creating_my_own_cipher/
   
 - name: Raspberry Pi Projects
   link: /raspberrypi/
