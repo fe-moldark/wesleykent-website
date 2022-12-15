@@ -63,7 +63,7 @@ def giveMeShortKey(randomKey,text): #"randomKey" is what was just generated, "te
     return myAnswerKey #short key
 ```
 <br>
-To compare and contrast the two keys visually, here are the first twenty or so characters of the two side-by-side:<br>
+To compare and contrast the two keys visually, here are the first thirty or so characters of the two side-by-side:<br>
 <p align="center"><img width="600" src="/assets/cipher/key lengths.png"></p>
 <br>
 Looking at the beginning of each key that was generated we can see the long key which will actually be saved in the image is 545 characters long and the reduced key is 95 characters. The large key is generated from the small one by inserting random characters equal to the value of pi for each sequential character by its indexed value in that key.
