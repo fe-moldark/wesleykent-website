@@ -19,7 +19,7 @@ As I started off at the beginning of this page, I was mainly worried about the i
 So, I decided to automate this with a script (several actually), and since I've already got a raspbbery pi running a file sharing service back home, why not add this on there as a cronjob to run every hour or every day? I ended up breaking this into two separate scripts - the first to compare and hash the files against known good copies, and the second to send me an alert via email if any anomalies are detected.
 <br>
 ## 1st Script - compare and hash files against known good hashes
-For this part I'll be highlighting the important parts while ignoring the rest of the steps like importing random modules. For the script in its entirety, click [here](https://raw.githubusercontent.com/fe-moldark/wesleykent-website/gh-pages/assets/scripts/downloadzip.py).
+For this part I'll be highlighting the important parts while ignoring the rest of the steps like importing random modules. For the script in its entirety, click <a href="https://raw.githubusercontent.com/fe-moldark/wesleykent-website/gh-pages/assets/scripts/downloadzip.py" target="_blank" rel="noopener noreferrer">here</a>.
 <br><br>
 First, I needed to get the zipped file off the repository, save it locally, and then unzip the file:
 ```python
@@ -147,7 +147,7 @@ for files in theList:
 That is all for the first script, on to the second.
 <br><br>
 ## 2nd Script - deciding whether or not to send an alert, and if needed, sending it via SMTP
-The link to the full second script can be found [here](https://raw.githubusercontent.com/fe-moldark/wesleykent-website/gh-pages/assets/scripts/gmailzip.py). This first part below will define several variables, including the login credentials for the sending account and the email address of the recieving account:
+The link to the full second script can be found <a href="https://raw.githubusercontent.com/fe-moldark/wesleykent-website/gh-pages/assets/scripts/gmailzip.py" target="_blank" rel="noopener noreferrer">here</a>. This first part below will define several variables, including the login credentials for the sending account and the email address of the recieving account:
 ```python
 #set variables that will be needed to send an email
 ctx = ssl.create_default_context()
