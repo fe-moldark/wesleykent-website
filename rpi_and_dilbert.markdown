@@ -11,7 +11,7 @@ I've got a couple other scripts that I find both entertaining and useful, so I t
 ## Raspberry Pi Stock Notification
 Well it would seem the chip shortage is coming to gradual end, unfortunately Raspberry Pis still come in short supply. After having a Pi Zero and 3B+ just die on me after many years for no apparent reason, I needed to restock. So I learned a little bit about web scraping which was new to me and put together the following script. Currently it only collects data from Adafruit's website, as the other ones I found were either over-priced or more sketchy than I was comfortable buying from.<br>
 <br>
-Link to the full script can be found [here](https://raw.githubusercontent.com/fe-moldark/wesleykent-website/gh-pages/assets/scripts/adafruit_stock.py), and I will break down how it works below. There are two different types of product pages that I had to look at, one that listed different versions of the same product (RPi4 with varying amounts of RAM) and the other type that only showed a single product type.
+Link to the full script can be found <a href="https://raw.githubusercontent.com/fe-moldark/wesleykent-website/gh-pages/assets/scripts/adafruit_stock.py" target="_blank" rel="noopener noreferrer">here</a>, and I will break down how it works below. There are two different types of product pages that I had to look at, one that listed different versions of the same product (RPi4 with varying amounts of RAM) and the other type that only showed a single product type.
 <br><br>
 That first type for RPi4 was identified with the following:
 ```python
@@ -71,7 +71,7 @@ If needed it will then send an email alerting me to the RPi board(s) now in stoc
 
 
 ## Who doesn't need more Dilbert in their lives
-My thought process behind this - 1) Dilbert is an amusing comic strip, 2) Oh, they're still putting out daily comics, 3) Okay, I can automate this. Clearly I'm a genius ahead of my time. Link to the full script can be found [here](https://raw.githubusercontent.com/fe-moldark/wesleykent-website/gh-pages/assets/scripts/daily_dilbert.py), but I will go over the important parts down below.<br><br>
+My thought process behind this - 1) Dilbert is an amusing comic strip, 2) Oh, they're still putting out daily comics, 3) Okay, I can automate this. Clearly I'm a genius ahead of my time. Link to the full script can be found <a href="https://raw.githubusercontent.com/fe-moldark/wesleykent-website/gh-pages/assets/scripts/daily_dilbert.py" target="_blank" rel="noopener noreferrer">here</a>, but I will go over the important parts down below.<br><br>
 First to identify the date and corresponding url from the dilbert site, then to pull the html data from it using BeautifulSoup (bs4):<br>
 ```python
 #Get date
