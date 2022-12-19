@@ -35,4 +35,4 @@ From there, you can manually look through or use grep to find scripts that you w
 <br><br>
 
 ## Other
-Again, much more that can be said here. You can increase the verbosity, use tools to evade firewalls / IDS with spoofing, ways to save the results of the scan, etc. That's probably going further than is warranted for now, just know the options are out there. If you want to read more on nmap go [here](https://nmap.org/), or at the terminal just enter in `man nmap` for a detailed look into all the different flags, their meaning and how to use them.<br>
+Again, much more that can be said here. You can increase the verbosity, use tools to evade firewalls / IDS with spoofing, ways to save the results of the scan, etc. That's probably going further than is warranted for now, just know the options are out there. If you want to read more on nmap go <a href="https://nmap.org/" target="_blank" rel="noopener noreferrer">here</a>, or at the terminal just enter in `man nmap` for a detailed look into all the different flags, their meaning and how to use them.<br>
