@@ -60,7 +60,7 @@ Also known as cronjobs, although there are different kinds. Sometimes these will
 <br><br><br>
 
 # LinEnum
-This is another tool that can be found on GitHub, and can provide useful information on a target machine if you can get the permissions needed to run it. It does a lot of the things that are mentioned on this page automatically and generates a report for you to view later. Once you are on the machine you can get the file via wget or curl to the `/tmp` directory and work from there. The bash file is located <a href="(https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh" target="_blank" rel="noopener noreferrer">here</a>.<br><br>
+This is another tool that can be found on GitHub, and can provide useful information on a target machine if you can get the permissions needed to run it. It does a lot of the things that are mentioned on this page automatically and generates a report for you to view later. Once you are on the machine you can get the file via wget or curl to the `/tmp` directory and work from there. The bash file is located <a href="https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh" target="_blank" rel="noopener noreferrer">here</a>.<br><br>
 Note: You will likely need to `chmod +x` that file to give it executable permissions.
 <br><br><br>
 
