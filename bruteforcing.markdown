@@ -21,7 +21,7 @@ First, some of the basic flags used with hydra:<br>
 - If it is a web-based attack like `http-post-form` you will need to designate either a successful login `:S=302` indicating a redirect which might be a good sign, or a `:F=failed` which would designate a failed login attempt (i.e. ignore and keep trying)
 - Also worth noting is I have had issues with needing to add "http://" in front of the IP address even when specifying it is a `http-post-form`
 - Another part you will need for the web logins specifically is the actual request, which is obtained with burpsuite and I will get into that down below
-- There are many more flags you can include, but these should be enougshould get you started
+- There are many more flags you can include, but these should be enough to get you started
 <br><br><br>
 
 #### Example: Using hydra against a web portal
@@ -67,5 +67,5 @@ I've only ever had to use this once, but it's useful to know I suppose.
 <br><br>
 
 ## One note on everyone's favorite resource... online tools
-To be fair, I do try and use John whenever possible to keep sharp on that skill, but I can be lazy and there are powerful online cracking tools out there. Sometimes it is tedious to go through the whole process of identifying the hash with a hash-identifer, it eventually tells you it is a raw MD5 hash, then you have to find the exact format for it in John with `john --list=formats | grep MD5` - where you eventually see `Raw-MD5` as an output, and then you finally run the command `john --format=Raw-MD5 --wordlist=/usr/share/wordlists/rockyou.txt hash.txt`. What I'm saying is that sometimes it can be a tedious process, and plenty of online resources can save you that time and energy. Sites like [crackstation](https://crackstation.net/) are one of many out there that can meet these needs, just make sure to stay proficient with John.
+To be fair, I do try and use John whenever possible to keep sharp on that skill, but I can be lazy and there are powerful online cracking tools out there. Sometimes it is tedious to go through the whole process of identifying the hash with a hash-identifer, it eventually tells you it is a raw MD5 hash, then you have to find the exact format for it in John with `john --list=formats | grep MD5` - where you eventually see `Raw-MD5` as an output, and then you finally run the command `john --format=Raw-MD5 --wordlist=/usr/share/wordlists/rockyou.txt hash.txt`. What I'm saying is that sometimes it can be a tedious process, and plenty of online resources can save you that time and energy. Sites like <a href="https://crackstation.net/" target="_blank" rel="noopener noreferrer">crackstation</a> are one of many out there that can meet these needs, just make sure to stay proficient with John.
 <br>
