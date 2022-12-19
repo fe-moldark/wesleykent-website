@@ -10,16 +10,16 @@ permalink: /tipsandtricks/resources/
 ---
 
 # Introduction
-To start off, the CTFs I enjoy working through can be found at [TryHackMe](https://www.tryhackme.com) and [HackTheBox](https://www.hackthebox.com/).
+To start off, the CTFs I enjoy working through can be found at <a href="https://www.tryhackme.com" target="_blank" rel="noopener noreferrer">TryHackMe</a> and <a href="https://www.hackthebox.com/" target="_blank" rel="noopener noreferrer">HackTheBox</a>
 <br>
-For a massive of list of tried and true methods of bypassing misconfigured system, I give you: [gtfobins](https://gtfobins.github.io/)
+For a massive of list of tried and true methods of bypassing misconfigured systems I give you: <a href="https://gtfobins.github.io/" target="_blank" rel="noopener noreferrer">gtfobins</a>
 <br>
-For everything to do with exploiting command execution vulnerabilities: [pentestmonkey](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
+For everything to do with exploiting command execution vulnerabilities: <a href="https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet" target="_blank" rel="noopener noreferrer">pentestmonkey</a>
 <br><br>
 # My Recommended Linux Distro and Installs
-My choice for virtualization: [VMware](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html)
+My choice for virtualization: <a href="https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html" target="_blank" rel="noopener noreferrer">VMware</a>
 <br>
-My favorite linux distribution: [ParrotOS](https://www.parrotsec.org/download/)
+My favorite linux distribution: <a href="https://www.parrotsec.org/download/" target="_blank" rel="noopener noreferrer">ParrotOS</a>
 <br><br>
 In addition to the above links, below is an ongoing text file I keep in the event my Virtual Machine decides it no longer has the will to live and I have to rebuild from stratch. Also, if I decide I want to use another distribution but want to keep the same tools. All that being said, I would recommend the following commands / installs to get your machine ready to go. These include a number of tools for steganography, default password lists from SecLists, John for password cracking, basically just a good buff to ParrotOS if you are starting fresh.
 <br>
