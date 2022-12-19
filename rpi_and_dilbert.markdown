@@ -40,7 +40,7 @@ for line in prodTable:
 ```
 Pages that only host a single product on their page all follow a similar format, which made it easy to loop through for the remaining RPi boards based on their product ID:
 ```python
-#Pages for RPi 3B+, 3B, Pi Zero (Not W, Pi Zero, Pi Zero 2 --> 4 digit number is the product ID
+#Pages for RPi 3B+, 3B, Pi Zero (Not W), Pi Zero, Pi Zero 2 --> 4 digit number is the product ID
 adafruit_single_products_list=[('3775','RPi 3B+'),('3055','RPi 3B'),('2885','RPi Zero (Not W)'),('3400','RPi Zero W'),('5291','RPi Zero 2')]
 
 def single_prod_at_adafruit(_url,_type,log_adafruit):
