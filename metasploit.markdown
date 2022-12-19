@@ -8,7 +8,7 @@ permalink: /tipsandtricks/metasploit/
 ---
 
 # Introduction
-So what is Metasploit - it's a framework used to find and exploit vulnerabilities on a network, which makes it a great tool for pen testing. That is a very brief (and reductive) summary, you can find more about them on their website [here](https://www.metasploit.com/). The two ways you'll likely use this framework is through `msfconsole` and `msfvenom`, both of which can be accessed from the terminal.
+So what is Metasploit - it's a framework used to find and exploit vulnerabilities on a network, which makes it a great tool for pen testing. That is a very brief (and reductive) summary, you can find more about them on their website <a href="https://www.metasploit.com/" target="_blank" rel="noopener noreferrer">here</a>. The two ways you'll likely use this framework is through `msfconsole` and `msfvenom`, both of which can be accessed from the terminal.
 <br><br>
 The first of those, `msfconsole`, is used to find and run known exploits, as well as handle the payloads that are generated from `msfvenom`. And, well, `msfvenom` is what was just described - it is used to craft payloads for specific types of operating systems that  can then be used.
 <br><br><br>
@@ -32,7 +32,7 @@ To look at all the flags that can be used with this tool use the typical `msfven
 <br><br><br>
 
 # Default Reverse Shell List
-To make the beginning easy for you, below is a list of some default (auto selected) reverse shell payloads that can be crafted with `msfvenom` and recieved with `msfconsole`. Full disclosure on the following list - I did not put this together, I got it from another site probably a year back and I can't remember which one it was, but I _think_ it was [this one](https://docs.rapid7.com/metasploit/working-with-payloads/). Trying to give credit where it's due. Anyway, this is a good place to start, but for the ENTIRE list of payloads (it's a lot) you can use `msfvenom -l payloads` and then sift through them yourself manually or grep for keywords. Here's that list:<br>
+To make the beginning easy for you, below is a list of some default (auto selected) reverse shell payloads that can be crafted with `msfvenom` and recieved with `msfconsole`. Full disclosure on the following list - I did not put this together, I got it from another site probably a year back and I can't remember which one it was, but I _think_ it was <a href="https://docs.rapid7.com/metasploit/working-with-payloads/" target="_blank" rel="noopener noreferrer">this one</a>. Trying to give credit where it's due. Anyway, this is a good place to start, but for the ENTIRE list of payloads (it's a lot) you can use `msfvenom -l payloads` and then sift through them yourself manually or grep for keywords. Here's that list:<br>
 ```
 windows/meterpreter/reverse_tcp
 java/meterpreter/reverse_tcp
