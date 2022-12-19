@@ -17,7 +17,7 @@ Steganography - concealing information within something else so that it is not v
 To install `stegosuite` and `steghide` reference my [resources](/tipsandtricks/resources/) page.
 <br><br>
 To start the GUI for stegosuite, simply enter `stegosuite` in the terminal. From there you can select a file and enter a key to try and identify embedded files.<br><br>
-Another tool you can use is called `binwalk`, for more details on how it works enter `binwalk -h` or reference [this site](https://www.kali.org/tools/binwalk/) from Kali Linux.<br>
+Another tool you can use is called `binwalk`, for more details on how it works enter `binwalk -h` or reference <a href="https://www.kali.org/tools/binwalk/" target="_blank" rel="noopener noreferrer">this site</a> from Kali Linux.<br>
 Example usage of this would be `binwalk -e file.bin`, where the `-e` flag indicates to extract known file types.<br>
 <br>
 A companion tool to `stegosuite` is `steghide` can be used to both embed and extract data, for the various flags / uses on that reference `man steghide`.
