@@ -32,6 +32,16 @@ If you want to download these files and manipulate them yourself, I will throw t
 _(Newer updates will appear at the top here, older ones at the bottom)_
 <br><br><br>
 
+#### Update, January '23:
+The backside is complete as far as the 3d-model goes, all that's left is to begin to wire everything together and make sure it all works as expected.
+<br><br>
+I am also working on a new design for the front side pieces that will allow for a neat way to disassemble the game console when needed, but that will take some time still. The current plan on that front is to cut up some unused 2x20 M/F GPIO headers for the Raspberry Pi to create connectors that will be entirely removable without needing to solder / unsolder things. It will make more sense once I've actually created the model and printed it off - for now, the update is below:
+<br>
+<center>
+<iframe width="840" height="445" src="https://player.vimeo.com/video/785796279?h=21cc2bd0a7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+<br><br>
+
 #### Update, December '22:
 Back side pieces are nearly complete, just need to perfect the track and better secure the piece holding the spring to the main board. I'm hoping to start doing some final prints in the near future so I can begin wiring everything together and actually test it out.
 <br>
