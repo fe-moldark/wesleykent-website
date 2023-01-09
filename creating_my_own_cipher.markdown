@@ -1,7 +1,7 @@
 ---
 layout: page
 title: The time I created my own cipher for fun
-subtitle: And while it remains impractical for actual use, it's still awesome
+subtitle: And as I've added more layers to it, the more secure I see it being
 description: Creating a custom cipher by encoding text into an image with Python 2.7, PIL, and Numpy
 permalink: /creating_my_own_cipher/
 ---
@@ -285,6 +285,9 @@ Unsurprisingly, to decrypt the image you need to do all the steps in reverse - s
 The downside to this encryption is that anyone with the know-how could read any data stored this way. Everyone knows how RSA works but you still can't reasonably brute-force the private key when using large enough key sizes (for now, at least). That being said, if a random person used this on their personal device I find it highly unlikely anyone would be able to crack it. But I welcome anyone to challenge that and try, [let me know](/contact/) if you are able - I would love to hear how you did it.
 <br><br><br>
 
+# What is still being worked on
+I'll update this in time, but basically instead of always going to tiles 15 & 16 for where to look this will be randomized as well with a second part to the key. I've got a clever idea of how to do this, but it needs some work still. It will basically act as a pre-shared key (PSK) between a e.g. client and server while still encrypting each file with a unique keyon top of the PSK. The final thing I want to do is to allow the information for the other two squares in the 3x3 grid to not only be in the next column over to the right, but use yet another pattern to dictate whether you need to reference left or right, or up or down as well.
+<br><br><br>
 
 # Final thoughts
 As for why choosing to encode the data into an image... well it just makes things more difficult. Coming at this cipher with no knowledge of how it works you would be able to identify some trends in the RGB data (the limiting value of each line, the RGB values that form the "L" on the bottom right of the box, the red RGB blocks that are meant to deceive, etc), but again, nothing that you would look at and think "oh, that's how this works". Having every letter be a different RGB value is just the cherry on top - I hope that would throw off any attempts at frequency analysis.
