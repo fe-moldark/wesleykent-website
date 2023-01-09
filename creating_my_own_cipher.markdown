@@ -286,7 +286,7 @@ The downside to this encryption is that anyone with the know-how could read any 
 <br><br><br>
 
 # What is still being worked on
-I'll update this in time, but basically instead of always going to tiles 15 & 16 for where to look this will be randomized as well with a second part to the key. I've got a clever idea of how to do this, but it needs some work still. It will basically act as a pre-shared key (PSK) between a e.g. client and server while still encrypting each file with a unique keyon top of the PSK. The final thing I want to do is to allow the information for the other two squares in the 3x3 grid to not only be in the next column over to the right, but use yet another pattern to dictate whether you need to reference left or right, or up or down as well.
+I'll update this in time, but basically instead of always going to tiles 15 & 16 for where to look, this will be randomized as well with a second part to the key. I've got a clever idea on how to do this, but it needs some work still. It will basically act as a pre-shared key (PSK) between a e.g. client and server while still encrypting each file with a unique key on top of the PSK. The final thing I want to do is to allow the information for the other two squares in the 3x3 grid to not only be in the next column over to the right, but use yet another pattern to dictate whether you need to reference the column on the left or right, or store it vertically. The purpose of this is just to add more randomness to the cipher, making it more difficult to identify patterns within it.
 <br><br><br>
 
 # Final thoughts
