@@ -30,12 +30,6 @@
       link: /scripts/rpi_and_dilbert/
     - name: Cipher
       link: /creating_my_own_cipher/
-      
-- name: FE Moldark
-  link: /femoldark/
-  dropdown:
-    - name: Game Console
-      link: /femoldark/gameconsole/
   
 - name: Raspberry Pi Projects
   link: /raspberrypi/
@@ -45,6 +39,12 @@
   
 - name: Cipher
   link: /creating_my_own_cipher/
+  
+- name: FE Moldark
+  link: /femoldark/
+  dropdown:
+    - name: Game Console
+      link: /femoldark/gameconsole/
   
 - name: Contact
   link: /contact/
