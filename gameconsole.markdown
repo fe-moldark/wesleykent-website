@@ -36,6 +36,8 @@ _(Newer updates will appear at the top here, older ones at the bottom)_
 The backside is complete as far as the 3d-model goes, all that's left is to begin to wire everything together and make sure it all works as expected.
 <br><br>
 I am also working on a new design for the front side pieces that will allow for a neat way to disassemble the game console when needed, but that will take some time still. The current plan on that front is to cut up some unused 2x20 M/F GPIO headers for the Raspberry Pi to create connectors that will be entirely removable without needing to solder / unsolder things. It will make more sense once I've actually created the model and printed it off - for now, the update is below:
+<br><br>
+_*Note: I've since had to switch up the potentiometer to a dual-gang 6-pin 2-pos logarithmic one, I will cover that later, however._
 <br>
 <center>
 <iframe width="840" height="445" src="https://player.vimeo.com/video/785796279?h=21cc2bd0a7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
