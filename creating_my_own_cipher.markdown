@@ -134,7 +134,7 @@ That exception will return "0" for the RGB value, which will be used to designat
 This is where the editing of the array gets complex, and I will cover how it works with an image first as that's the only way I've had success in explaining this, and then discuss the code behind it afterwards. Before you get confused, here is what a single block to encode one character might actually look like:
 <p align="center"><img width="160" src="/assets/cipher/grayscale_block.png"></p>
 Let's look at how this actually breaks down in a more comprehensive, and colorful, way:<br>
-<p align="center"><img width="500" src="/assets/cipher/example_character_encoding.jpg"></p>
+<p align="center"><img width="350" src="/assets/cipher/example_character_encoding.jpg"></p>
 <br>
 Those numbers are meaningless right now, I understand. To explain each of what the colors represents:<br>
 <br>
