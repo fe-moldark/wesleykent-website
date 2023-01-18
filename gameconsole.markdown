@@ -37,10 +37,17 @@ The backside is complete as far as the 3d-model goes, all that's left is to begi
 <br><br>
 I am also working on a new design for the front side pieces that will allow for a neat way to disassemble the game console when needed, but that will take some time still. The current plan on that front is to cut up some unused 2x20 M/F GPIO headers for the Raspberry Pi to create connectors that will be entirely removable without needing to solder / unsolder things. It will make more sense once I've actually created the model and printed it off - for now, the update is below:
 <br><br>
-_*Note: I've since had to switch up the potentiometer to a dual-gang 6-pin 2-pos logarithmic one, I will cover that later, however._
-<br>
+_*Note: Part 2 of this is me explaining a fix for what I thought would work for the audio in the last few minutes of Part 1 but did not play out as expected. Sound is now working, and I also decided to include a DPDT switch and a spare audio jack for multiple forms of outputting audio besides just the speakers._
+<br><br>
+##### Part 1:
 <center>
 <iframe width="840" height="445" src="https://player.vimeo.com/video/785796279?h=21cc2bd0a7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+<br><br>
+
+##### Part 2:
+<center>
+<iframe width="840" height="445" src="https://player.vimeo.com/video/790294544?h=19f914211c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 <br><br>
 
