@@ -41,7 +41,7 @@ Sadly, I don't recall where I got the USB joystick from - all I remember is that
 <br><br><br>
 
 # Parts / Boards needed
-_*Goes without saying but none of this is sponsored, this is just where I happened to source the parts from for this project. If you can find these pieces cheaper elsewhere, go for it._
+_*Goes without saying but none of this is sponsored, this is just where I happened to source the parts for this project from. If you can find these pieces cheaper elsewhere, go for it._
 <br><br>
 This isn't a complete list yet, but some of those parts mentioned above can be found here:<br>
 - <a href="https://www.adafruit.com/product/987" target="_blank" rel="noopener noreferrer">Stereo 3.7W Class D Audio Amplifier - MAX98306</a>
