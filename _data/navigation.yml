@@ -45,6 +45,8 @@
   dropdown:
     - name: Game Console
       link: /femoldark/gameconsole/
+    - name: Circuit Diagram & Wiring
+      link: /femoldark/circuit_diagram/
   
 - name: Contact
   link: /contact/
