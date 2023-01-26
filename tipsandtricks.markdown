@@ -9,8 +9,8 @@ permalink: /tipsandtricks/
 #hero_height: is-fullheight
 ---
 
-Like I may have previously mentioned, my memory might not be the best (I think this is funny), but even if it was I would still keep these notes. Sometimes the syntax gets complicated or you just don't want to search for that one exploit you read about once from a random blog months back. I hope others can find these notes as useful as I have, and if you have anything you think I should include here by all means [reach out](/contact/).<br>
-<br>
+Like I may have previously mentioned, my memory might not be the best (I think this is funny), but even if it was I would still keep these notes. Sometimes the syntax gets complicated or you just don't want to search for that one exploit you read about once from a random blog months back. These pages are something I know I would have found useful when first starting out with sites like TryHackMe and HackTheBox - it's really a collection of notes I've taken along the way but put into a much more organized format.
+<br><br>
 There is far too much for just one web page, so I've broken this down into the following categories.
 <br><br>
 <br>
