@@ -1,9 +1,9 @@
 ---
 layout: page
-title: STL files for Download / Preview
+title: STL Files for Download / Preview
 subtitle: 
 image: /assets/fe.ico
-description: STL and MCX files for the Game Console
+description: STL and MCX Files for the Game Console
 permalink: /femoldark/stls_for_download/
 ---
 
@@ -14,7 +14,7 @@ permalink: /femoldark/stls_for_download/
 
 
 
-# STL (and MCX) files for download
+# STL (and MCX) Files for Download
 If you want to download these and manipulate them yourself I will share those links down below, nothing is behind a paywall of course. I'll be hosting them here on Github and on Sketchfab since they offer a convenient way to embed the 3d models into web pages.
 <br><br>
 - The Github directory housing both the STL and MCX formats can be found <a href="https://github.com/fe-moldark/wesleykent-website/tree/gh-pages/assets/3d_files/new_gamepad" target="_blank" rel="noopener noreferrer">here</a>, as well some other designs I've worked on if you are interested.
@@ -23,7 +23,7 @@ If you want to download these and manipulate them yourself I will share those li
 <br><br><br>
 
 # Preview
-I would recommend viewing this page on a larger screen, i.e. not your mobile. THe frames should adjust properly now, but you still won't be able to get a good look at the 3d models on too small of a screen. All of the below are current as of January '23, but still require some minor adjustments.
+I would recommend viewing this page on a larger screen, i.e. not your mobile. The frames should adjust properly now, but you still won't be able to get a good look at the 3d models on a small screen. All of the below are current as of January '23, but still require some minor adjustments here and there.
 <br><br>
 
 Center Back Piece ([STL](https://github.com/fe-moldark/wesleykent-website/raw/gh-pages/assets/3d_files/new_gamepad/center%20back%20piece.stl) / [MCX](https://github.com/fe-moldark/wesleykent-website/raw/gh-pages/assets/3d_files/new_gamepad/back%20center.mcx)):<br>
