@@ -47,7 +47,7 @@
       link: /femoldark/gameconsole/
     - name: Circuit Diagram & Wiring
       link: /femoldark/circuit_diagram/
-    -name: STL Files for Download
+    - name: STL Files for Download
       link: /femoldark/stls_for_download/
   
 - name: Contact
