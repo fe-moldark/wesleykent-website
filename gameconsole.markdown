@@ -1,9 +1,14 @@
 ---
 layout: page
 title: Designing the Game Console
-subtitle: (A work in progress...)
+subtitle: A work in progress...
 permalink: /femoldark/gameconsole/
 ---
+
+<head>
+  <link rel="stylesheet" type="text/css" href="/styles/embedded_videos_and_stls.css">
+</head>
+
 
 # The 3D modeling and slicing software
 
@@ -20,12 +25,7 @@ The game console has gone through many iterations and I think I've finally settl
 There's something genuinely fun about writing the software behind the game, assembling the hardware that will interact with the software, and then designing the case that will house the hardware. Maybe I'll write my own linux distro just for this platform... I'm kidding, I don't how to do that.
 <br><br><br>
 
-# Files for download
-If you want to preview what these look like (using GitHub's very poor in-built tool), reference these links:<br>
-<a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/3d_files/frontside_stl_for_github.stl" target="_blank" rel="noopener noreferrer">Front Cover</a> / <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/3d_files/backside_stl_for_github.stl" target="_blank" rel="noopener noreferrer">Back Cover</a> / <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/3d_files/side_pieces_stl_for_github.stl" target="_blank" rel="noopener noreferrer">Side Pieces</a> / <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/3d_files/buttons_stl_for_github.stl" target="_blank" rel="noopener noreferrer">Buttons</a>
-<br><br><br>
-If you want to download these files and manipulate them yourself, I will throw the link to the entire folder housing them <a href="https://github.com/fe-moldark/wesleykent-website/tree/gh-pages/assets/3d_files" target="_blank" rel="noopener noreferrer">here</a>. That folder has all of the above files in both their MCX and STL formats.
-<br><br><br>
+
 
 <h1><img alt="gear_gif" src="https://wesleykent.com/assets/gif gear.gif" width="45" height="45" style="vertical-align:bottom"/> Updates </h1>
 <br>
@@ -41,13 +41,13 @@ _*Note: Part 2 of this is me explaining a fix for what I thought would work for 
 <br><br>
 ##### Part 1:
 <center>
-<iframe width="840" height="445" src="https://player.vimeo.com/video/785796279?h=21cc2bd0a7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe id="content" src="https://player.vimeo.com/video/785796279?h=21cc2bd0a7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 <br><br>
 
 ##### Part 2:
 <center>
-<iframe width="840" height="445" src="https://player.vimeo.com/video/790294544?h=19f914211c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe id="content" src="https://player.vimeo.com/video/790294544?h=19f914211c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 <br><br>
 
@@ -55,7 +55,7 @@ _*Note: Part 2 of this is me explaining a fix for what I thought would work for 
 Back side pieces are nearly complete, just need to perfect the track and better secure the piece holding the spring to the main board. I'm hoping to start doing some final prints in the near future so I can begin wiring everything together and actually test it out.
 <br>
 <center>
-<iframe width="840" height="445" src="https://player.vimeo.com/video/781238023?h=c7e9db3e8f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe id="content" src="https://player.vimeo.com/video/781238023?h=c7e9db3e8f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 <br><br>
 
@@ -64,12 +64,12 @@ The side pieces are now both complete and the center pieces (front and back) bot
 <br><br>
 ##### Part 1:
 <center>
-<iframe width="840" height="445" src="https://player.vimeo.com/video/765484157?h=6da0820cfa&amp;badge=0&amp;autopause=0&amp;autoplay=0;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe id="content" src="https://player.vimeo.com/video/765484157?h=6da0820cfa&amp;badge=0&amp;autopause=0&amp;autoplay=0;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 <br><br>
 ##### Part 2:
 <center>
-<iframe width="840" height="445" src="https://player.vimeo.com/video/767171969?h=ca6b97c298&amp;badge=0&amp;autopause=0&amp;autoplay=0;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe id="content" src="https://player.vimeo.com/video/767171969?h=ca6b97c298&amp;badge=0&amp;autopause=0&amp;autoplay=0;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 <br><br>
 
@@ -77,6 +77,6 @@ The side pieces are now both complete and the center pieces (front and back) bot
 One issue I am working through right now is redesigning how the battery is going to work, which actually has more layers to it than you might think. What I've currently settled on should work, however based on some measurements it likely means I will have to heavily redesign the backside as the RPi board and the Battery case may end up switching places and rotating. The issues only compounded once I realized that some of the specific components I had bought (like the hdmi ribbon cable) were tailored to a very specific length, and now that everything is shifting I've got to reorder a longer one. Not the end of the world, but something that will set me back time-wise. Check out the update below:
 <br>
 <center>
-<iframe width="840" height="445" src="https://player.vimeo.com/video/756628586?h=9c7c184f0b&amp;badge=0&amp;autopause=0&amp;autoplay=0;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe id="content" src="https://player.vimeo.com/video/756628586?h=9c7c184f0b&amp;badge=0&amp;autopause=0&amp;autoplay=0;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 <br><br>
