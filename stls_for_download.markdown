@@ -17,7 +17,7 @@ permalink: /femoldark/stls_for_download/
 # STL (and MCX) Files for Download
 If you want to download these and manipulate them yourself I will share those links down below, nothing is behind a paywall of course. I'll be hosting them here on Github and on Sketchfab since they offer a convenient way to embed the 3d models into web pages.
 <br><br>
-- The Github directory housing both the STL and MCX formats can be found <a href="https://github.com/fe-moldark/wesleykent-website/tree/gh-pages/assets/3d_files/new_gamepad" target="_blank" rel="noopener noreferrer">here</a>, as well some other designs I've worked on if you are interested.
+- The Github directory housing both the STL and MCX formats can be found <a href="https://github.com/fe-moldark/wesleykent-website/tree/gh-pages/assets/3d_files/new_gamepad" target="_blank" rel="noopener noreferrer">here</a>, as well some other designs I've worked on if you are interested
 <br><br>
 - My Sketchfab profile can be found <a href="https://sketchfab.com/femoldark" target="_blank" rel="noopener noreferrer">here</a>
 <br><br><br>
