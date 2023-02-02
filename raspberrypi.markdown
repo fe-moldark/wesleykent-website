@@ -30,7 +30,7 @@ This project took just a bit of research and writing the software for the projec
 <img src="/assets/rpi/dash2test.jpg" alt=""> | <img src="/assets/rpi/dash3test.jpg" alt="">
 <br><br>
 
-I've since updated this design to "Version 3.0", and you can read all about it [here](/raspberrypi/dashcam/). The case is now 3d printed, you have control over the IR lights, and I ended up rewriting parts of the script as well for a variety of functions. It now looks like:
+I've since updated this design to "Version 3.0", and you can read all about it [here](/raspberrypi/dashcam/). The case is now 3d printed, you have control over the IR lights, and I ended up rewriting parts of the script as well for a variety of functions. It now looks like the following:<br>
 <center>
   <img width="1200" src="/assets/dashcam/dash_git2.png">
 </center>
