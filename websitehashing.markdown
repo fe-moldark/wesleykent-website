@@ -38,7 +38,7 @@ except:
     sys.exit()
 ```
 <br>
-Now, this particular script is run once a day and checks the images stored on the site to ensure they haven't been tampered with in any way. So, from the location where I just saved the unzipped folder I need to get all those (image) path locations and save them to `full_list`:
+Now, this particular script is run once a day and checks the images stored on the site to ensure they haven't been tampered with in any way. I've since changed this to simply collect and check every file downloaded (because why not), but if you wanted to keep it to just the images, then this way works too. So, from the location where I just saved the unzipped folder I need to get all those (image) path locations and save them to `full_list`:
 ```python
 main="/media/pi/MyExternalDrive/save_wk_website/wesleykent-website-gh-pages/assets/"
 full_list=[]
