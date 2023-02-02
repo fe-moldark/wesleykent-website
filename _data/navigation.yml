@@ -33,6 +33,9 @@
   
 - name: Raspberry Pi Projects
   link: /raspberrypi/
+  dropdown:
+    - name: Dashcam
+      link: /raspberrypi/dashcam/
 
 - name: USB Injectors
   link: /usb_injectors/
