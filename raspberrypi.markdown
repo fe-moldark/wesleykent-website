@@ -24,11 +24,16 @@ I finally got my NAS up and running, it uses a simple file sharing service I can
 
 # Dashcam
 This project took just a bit of research and writing the software for the project even as I was assembling the hardware. The first image below, or "Version 1.0" as I call it, with the LCD screen proved too heavy to stay stuck to the windshield when driving over bumpy roads. "Version 2.0" (3rd image) was more lightweight and has only slightly less functionality but still includes the switches and LEDs needed for control and monitoring. Records with a push of a button and a flip of a switch, and provides plenty of room for heat to escape.<br>
-<p align="center"><img width="850" src="/assets/rpi/dash1.jpg"></p>
-
+<center>
+  <img width="850" src="/assets/rpi/dash1.jpg">
+</center>
 <img src="/assets/rpi/dash2test.jpg" alt=""> | <img src="/assets/rpi/dash3test.jpg" alt="">
+<br><br>
 
-
+I've since updated this design to "Version 3.0", and you can read all about it [here](/raspberrypi/dashcam/). The case is now 3d printed, you have control over the IR lights, and I ended up rewriting parts of the script as well for a variety of functions. It now looks like:
+<center>
+  <img width="1200" src="/assets/dashcam/dash_git2.png">
+</center>
 <br><br>
 
 # Home Security
