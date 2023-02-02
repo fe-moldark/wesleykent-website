@@ -10,7 +10,7 @@ permalink: /raspberrypi/
 ---
 
 # Custom RetroPie
-This project took a good chunk of time, but now runs RetroPie perfectly, sound included, with a larger case than normal for comfort. I know parts of this design will get some hate for using a) wood for the case, and b) for using a Pi3 instead of a pi zero. At the time using a Pi3 made more sense due to the specific lcd screen I already had and since the case was designed to be larger anyway, a Pi3 fit easily. As far as using wood, it was a fun way to avoid having to 3d print a small case (this was years before I got my own) and allowed me more freedom when designing it. Haven't had any issues with it overheating yet (going on two years) as the backing provides more than enough ventilation. Currently has over 3 dozen games installed and alleviates boredom when needed - definitely a success.<br>
+This project took a good chunk of time, but now runs RetroPie perfectly, sound included, with a larger case than normal for comfort. I know parts of this design will get some hate for using a) wood for the case, and b) for using a Pi3 instead of a Pi Zero. At the time using a Pi3 made more sense due to the specific lcd screen I already had and since the case was designed to be larger anyway, a Pi3 fit easily. As far as using wood, it was a fun way to avoid having to 3d print a small case (this was years before I got my own) and allowed me more freedom when designing it. Haven't had any issues with it overheating yet (going on two years) as the backing provides more than enough ventilation. Currently has over 3 dozen games installed and alleviates boredom when needed - definitely a success.<br>
 <p align="center"><img width="950" src="/assets/rpi/retropie1.jpg"></p>
 
 <img src="/assets/rpi/retropie2.jpg" alt=""> | <img src="/assets/rpi/retropie4.jpg" alt="">
@@ -18,7 +18,7 @@ This project took a good chunk of time, but now runs RetroPie perfectly, sound i
 <br><br>
 
 # Home NAS and VPN Server
-I finally got my NAS up and running, it uses a simple file sharing service I can use in conjunction with the VPN for remote access, and conveniently works with both my phone and laptop. I might also hook up my home printer to the samba service, although that seems like unnecessary work right now and I would need another raspberry pi to act as a print server. VPN is running PiVPN with wire guard (via freedns).<br>
+I finally got my NAS up and running, it uses a simple file sharing service I can use in conjunction with the VPN for remote access, and conveniently works with both my phone and laptop. The NAS is now running off a Pi3 B+ for better performance than the Zero could ever offer. I might also hook up my home printer to the samba service, although that seems like unnecessary work right now and I would need another raspberry pi to act as a print server. VPN is running PiVPN with wire guard (via freedns).<br>
 <p align="center"><img width="850" src="/assets/rpi/nasvpn.jpg"></p>
 <br><br><br>
 
