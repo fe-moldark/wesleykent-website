@@ -49,4 +49,3 @@ And now we have our meterpreter shell running. We can create a shell if wanted, 
 <p align="center"><img width="600" src="/assets/blog/HTB-Netmon/twelve.webp"></p>
 And after all this we have both flags for this CTF. Cheers,<br><br>
 Wes<br>
-
