@@ -191,12 +191,17 @@ countWeb=0
 
 WebServer=False
 
+trueOrFalse=areWeGoodOnStorage()
+countToF=0
+
+
 
 while True:
     
-
-    trueOrFalse=areWeGoodOnStorage()
-
+    countToF+=1
+    if countToF>=3000: #once every 5 minutes
+        trueOrFalse=areWeGoodOnStorage()
+        countToF=0
 
 
     if trueOrFalse is True:
