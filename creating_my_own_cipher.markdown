@@ -3,7 +3,7 @@ layout: page
 title: The time I created my own cipher for fun
 subtitle: And as I've added more layers to it, the more secure I see it being
 description: Creating a custom cipher by encoding text into an image with Python 2.7, PIL, and Numpy
-permalink: /creating_my_own_cipher/
+permalink: /scripts/creating_my_own_cipher/
 ---
 
 # Introduction
