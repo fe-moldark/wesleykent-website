@@ -29,7 +29,7 @@
     - name: RPi and Dilbert
       link: /scripts/rpi_and_dilbert/
     - name: Cipher
-      link: /creating_my_own_cipher/
+      link: /scripts/creating_my_own_cipher/
   
 - name: Raspberry Pi Projects
   link: /raspberrypi/
@@ -39,9 +39,6 @@
 
 - name: USB Injectors
   link: /usb_injectors/
-  
-- name: Cipher
-  link: /creating_my_own_cipher/
   
 - name: FE Moldark
   link: /femoldark/
