@@ -15,6 +15,6 @@ Simple scripts to notify me when various RPi boards are back in stock and a scri
 [**>>Writing my own Cipher<<**](/scripts/creating_my_own_cipher/)<br>
 This consists of two scripts which are used to first encrypt text-based information into an image and then the second script to decrypt it back. The data goes through several rounds of manipulation before being encoded, uses a symmetric key stored within the image, and as far as I can tell remains safe from frequency analysis.
 <br><br>
-[**>>Automating Work with Google Admin Console<<**](/scripts/google_admin_console/)<br>
+[**>>Automating work with Google Admin Console<<**](/scripts/google_admin_console/)<br>
 Creating large amounts of new users within Google's Admin Console can be time consuming, so I automated some of it. Now, this script reads submissions from a Google Form spreadsheet and generates a CSV file that I can use to bulk update / create new users on the Admin Console.
  <br><br>
