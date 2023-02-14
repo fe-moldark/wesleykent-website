@@ -148,18 +148,7 @@ for i in range(num_of_new_users):
 
 
     first,last=str(name[0]),str(name[1])
-    try:
-        aff_1,aff_2,aff_3=attribute_from_form.split("/")
-    except ValueError:
-        aff_1,aff_2,aff_3=attribute_from_form.split("-")
-
-    if len(aff_1)==1:
-        aff_1="0"+str(aff_1)
-    if len(aff_2)==1:
-        aff_2="0"+str(aff_2)
-
-    aff_pass=str(aff_1+aff_2+aff_3)
-    password=str(aff_pass)
+    password=str(attribute_from_form)
     email=str(str(first[0].lower())+str(last.lower())+EmailExtension)
 
     final=[first,last,email,password,Domain,EmployeeType,Department,BuildingID,ChangePasswordatNextSign_In,DefaultFalse]
