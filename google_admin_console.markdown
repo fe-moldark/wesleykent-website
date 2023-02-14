@@ -11,7 +11,7 @@ description: Using a Google Form to generate a CSV file that can bulk update int
 # What this script does
 At the time of writing this I am working in an IT Support role, and part of the responsibilities there include creating and managing user accounts from the Google Admin Console. Creating one or two accounts on occasion is quite simple, however, when large bunches of new users need to be added it can be quite time consuming.
 <br><br>
-So, I decided to automate parts of this process, because what better way to spend your time than writing a program that takes even more time to write than it will likely end up saving. What this script does is it reads entries from a Google Form sheet and generates a CSV file that I can use to bulk update / create new users on the Admin Console. 
+So, I decided to automate parts of this process, because what better way to spend your time than writing a program that takes even more time to write than it will likely end up saving. What this script does is it reads entries from a Google Form sheet and generates a CSV file that can be used to bulk update / create new users on the Admin Console. 
 <br><br><br>
 
 # What you will need to change
