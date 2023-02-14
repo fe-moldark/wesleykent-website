@@ -30,6 +30,8 @@
       link: /scripts/rpi_and_dilbert/
     - name: Cipher
       link: /scripts/creating_my_own_cipher/
+    - name: Google Admin Console
+      link: /scripts/google_admin_console/
   
 - name: Raspberry Pi Projects
   link: /raspberrypi/
