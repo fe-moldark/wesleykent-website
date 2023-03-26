@@ -24,7 +24,7 @@ void setup() {
   lcd.begin(16, 2);
   lcd.print("    WELCOME    ");
   lcd.setCursor(0, 1);
-  lcd.print("      WES      ");
+  lcd.print("    <NAME>    ");
 }
 
 void loop() {
