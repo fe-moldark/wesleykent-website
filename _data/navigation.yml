@@ -33,7 +33,7 @@
     - name: Google Admin Console
       link: /scripts/google_admin_console/
   
-- name: Raspberry Pi Projects
+- name: RPi Projects
   link: /raspberrypi/
   dropdown:
     - name: Dashcam
