@@ -12,3 +12,5 @@ My name is Wesley Kent, I am currently studying Cybersecurity at American Milita
 This site was made using Jekyll and is hosted through GitHub Pages. All images are taken by myself or obtained through royalty-free sites. If something is not credited that should be, please let me know. Any exploited flags from CTFs will be blurred out.
 <br><br><br>
 <img width="150" src="/assets/SecurityPlus Logo Certified CE.png" alt=""> <img width="150" src="/assets/NetworkPlus Logo Certified CE.png" alt=""> <img width="150" src="/assets/Aplus Logo Certified CE.png" alt="">
+<br>
+
