@@ -18,7 +18,7 @@ This project took a good chunk of time, but now runs RetroPie perfectly, sound i
 <br><br>
 
 # Home NAS and VPN Server
-I finally got my NAS up and running, it uses a simple file sharing service I can use in conjunction with the VPN for remote access, and conveniently works with both my phone and laptop. The NAS is now running off a Pi3 B+ for better performance than the Zero could ever offer and I'm using a 256Gb SSD instead of the 16Gb USB stick. I might also hook up my home printer to the samba service, although that seems like unnecessary work right now and I would need another raspberry pi to act as a print server. VPN is running PiVPN with wire guard (via freedns).<br>
+I finally got my NAS up and running, it uses a simple file sharing service I can use in conjunction with the VPN for remote access, and conveniently works with both my phone and laptop. The NAS is now running off a Pi3 B+ for better performance than the Zero could ever offer, and I'm using a 256Gb SSD instead of the 16Gb USB stick. I might also hook up my home printer to the samba service, although that seems like unnecessary work right now and I would need another raspberry pi to act as a print server. VPN is running PiVPN with wire guard (via freedns).<br>
 <p align="center"><img width="850" src="/assets/rpi/nasvpn.jpg"></p>
 <br><br><br>
 
