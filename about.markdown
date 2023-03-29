@@ -13,4 +13,3 @@ This site was made using Jekyll and is hosted through GitHub Pages. All images a
 <br><br><br>
 <img width="150" src="/assets/SecurityPlus Logo Certified CE.png" alt=""> <img width="150" src="/assets/NetworkPlus Logo Certified CE.png" alt=""> <img width="150" src="/assets/Aplus Logo Certified CE.png" alt="">
 <br>
-
