@@ -23,7 +23,7 @@ There are several controls here for the dashcam's storage, to actually start and
 Adafruit has 90% of these materials and I got the camera module off Amazon:<br>
 - <a href="https://www.adafruit.com/product/3400" target="_blank" rel="noopener noreferrer">1x Pi Zero (wireless or not, but wireless is easier to work with)</a>
 - <a href="https://www.adafruit.com/product/3221" target="_blank" rel="noopener noreferrer">2x SPST/SPDT switches</a>
-- <a href="https://www.adafruit.com/product/3220" target="_blank" rel="noopener noreferrer">1x DPDT switches</a>
+- <a href="https://www.adafruit.com/product/3220" target="_blank" rel="noopener noreferrer">1x DPDT switch</a>
 - <a href="https://www.adafruit.com/product/4203" target="_blank" rel="noopener noreferrer">2x LEDs</a>
 - <a href="https://www.adafruit.com/product/2892" target="_blank" rel="noopener noreferrer">2x 220-330 Ohm Resistors</a>
 - <a href="https://www.adafruit.com/product/367" target="_blank" rel="noopener noreferrer">2x 6mm 'Click' Button</a>
@@ -124,7 +124,7 @@ I won't cover what the script is doing line by line since I have more or less al
 
 ### Meaning of the LEDs
 - When the script first starts both LEDs will turn on for a second, then back off to let you know it has started.
-- The orange LED will then flash between 1-4 times, indicating roughly how much storage is left on the device. Think of each blink as representing roughly 25% of the storage - a lower number of blinks means a lower amount of storage remaining.
+- The orange LED will then flash between 1-4 times, indicating roughly how much storage is left on the device. Think of each blink as representing 25% of the storage - a lower number of blinks means a lower amount of storage remaining.
 - If the LEDs ever begin alternating blinks this means you have reached maximum storage and you must delete old recordings before you can start a new one. I chose to not auto-delete recordings because the laws of nature dictate that the second you would get into an accident it would reach that threshold and delete your recordings. We all know that would happen.
 - On normal operation a steady LED turned on will indicate that one of the switches have been flipped up. It is worth noting that only ONE of those can be on at once - there are reasons for this, but they don't matter here.
 <br><br><br>
