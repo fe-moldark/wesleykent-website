@@ -22,7 +22,7 @@ import datetime
 
 
 
-def getStorage(): #this function simply returns the amouint of free space in gigabytes
+def getStorage(): #this function simply returns the amount of free space in gigabytes
     
     path = '/'
     bytes_avail = psutil.disk_usage(path).free
