@@ -36,7 +36,7 @@ So - putting all this together and knowing the syntax from above we get the foll
 It's as simple as that. Even more simple is an ssh brute force, which I will cover below.<br><br>
 Quick note: To clarify the `:F=failed` scenario, basically if after attempting a login if that word (in this scenario "failed") appears on the screen that indicates an `F`, or failure, so it will try again until it does not get the word "failed" on the page - i.e. a successful login.
 <br><br><br>
-#### Example: Using hydra against a ssh port
+#### Example: Using hydra against ssh
 I forget the name of this CTF, but you'll see how much more straightforward of an exploit this was.<br><br>
 What I knew going into this: the username was `lin` and I had obtained a possible password file named `locks.txt` anonymously from their ftp server.
 <br><br>
