@@ -40,6 +40,6 @@ void loop() {
   DigiKeyboard.delay(700);
   DigiKeyboard.sendKeyStroke(KEY_Q , MOD_CONTROL_LEFT | MOD_SHIFT_LEFT); //close out the terminal
   DigiKeyboard.delay(700);
-  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER)
 
 }
