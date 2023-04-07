@@ -25,7 +25,7 @@ This will likely work on at least a couple other Dell keyboards as well. I also 
 <br>
 
 <center>
-  <img width="1000" src=""/assets/Other_3D_Designs/dellkeyboard1.jpg"><br>
+  <img width="1000" src="/assets/Other_3D_Designs/dellkeyboard1.jpg"><br>
   <img width="1000" src="/assets/Other_3D_Designs/dellkeyboard2.jpg"><br>
   <img width="1000" src="/assets/Other_3D_Designs/dellkeyboard3.jpg"><br>
   <img width="1000" src="/assets/Other_3D_Designs/dellkeyboard4.jpg"><br>
