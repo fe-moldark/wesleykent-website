@@ -71,7 +71,8 @@ If needed it will then send an email alerting me to the RPi board(s) now in stoc
 
 
 ## Who doesn't need more Dilbert in their lives?
-_**EDIT: As of early 2023 Dilbert is now behind a paywall and this script no longer works as it once did. The code itself is fine, however, and can be applied to other sources and websites.**_<br>
+_**EDIT: As of early 2023 Dilbert is now behind a paywall and this script no longer works as it was once did. The code itself is fine, however, and can be applied to other sources and websites.**_<br><br>
+
 My thought process behind this - 1) Dilbert is an amusing comic strip, 2) Oh, they're still putting out daily comics, 3) Okay, I can automate this. Clearly I'm a genius ahead of my time. Link to the full script can be found <a href="https://raw.githubusercontent.com/fe-moldark/wesleykent-website/gh-pages/assets/scripts/daily_dilbert.py" target="_blank" rel="noopener noreferrer">here</a>, but I will go over the important parts down below.<br><br>
 First to identify the date and corresponding url from the dilbert site, then to pull the html data from it using BeautifulSoup (bs4):<br>
 ```python
