@@ -1,3 +1,9 @@
+#Credit to this guy for the rotary encoder / volume control
+#https://gist.github.com/shivasiddharth/6aba5fa187c8ce463259f18eb7171a1f
+
+
+
+
 #***************************************************************************************
 #               Code for Controlling Pi Volume Using Rotary Encoder
 #                     Original Code: https://bit.ly/2OcaQGq
