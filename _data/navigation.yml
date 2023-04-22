@@ -36,11 +36,14 @@
 - name: RPi Projects
   link: /raspberrypi/
   dropdown:
-    - name: Dashcam
-      link: /raspberrypi/dashcam/
-
-- name: USB Injectors
-  link: /usb_injectors/
+  - name: Dashcam
+    link: /raspberrypi/dashcam/
+  - name: RetroPie
+    link: /raspberrypi/retropie/
+  - name: 3D Printer
+    link: /raspberrypi/3dprinter/
+  - name: GameConsole
+    link: /femoldark/gameconsole/
   
 - name: FE Moldark
   link: /femoldark/
@@ -51,6 +54,9 @@
       link: /femoldark/circuit_diagram/
     - name: STL Files for Download
       link: /femoldark/stls_for_download/
+  
+- name: USB Injectors
+  link: /usb_injectors/
   
 - name: Contact
   link: /contact/
