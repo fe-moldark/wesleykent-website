@@ -15,15 +15,15 @@ permalink: /raspberrypi/retropie/
 # Intro
 This project runs the RetroPie software with a case I made out of wood. When I first made it back in ~2019 all I had was a hacksaw and drill, so it didn't come out perfect but I still like the look and feel of it. Recently I needed to use the RPi board inside of it for another project and when I finally got a replacement (thanks chip shortage), I decided to upgrade parts of the design and capture how it is all put together for this website. These upgrades include adding volume control, alternating power supplies, and a switch for toggling the stereo output to either the onboard speaker or an external 3.5mm jack for headphones. Since there is only one speaker in this design I also decided to convert that audio to mono after the switch, and I used a different audio amplifier to reflect that change as well. Here are a couple images of it:<br>
 <center>
-  <img src="/assets/rpi/retropie/retropie_front.jpg" alt="" width=1050><br>
-  <img src="/assets/rpi/retropie/retropie_back.jpg" alt="" width=1050><br>
+  <img src="/assets/rpi/retropie/retropie_front.jpg" alt="" width=950><br>
+  <img src="/assets/rpi/retropie/retropie_back.jpg" alt="" width=950><br>
 </center>
 <br><br><br>
 
 # Circuit Diagram
 These are the final pinouts for all the different components, outside of the power. If you see something different in the video breakdown down below, stick with what you see here - I may have changed a couple things as I was assembling it:<br>
 <center>
-  <img src="/assets/rpi/retropie/retropie_circuit_v3.png" alt="" width=1050><br>
+  <img src="/assets/rpi/retropie/retropie_circuit_v3.png" alt="" width=950><br>
 </center>
 <br><br><br>
 
