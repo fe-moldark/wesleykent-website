@@ -96,7 +96,7 @@ MCX backup file for this can be downloaded <a href="https://github.com/fe-moldar
 </center>
 <br><br>
 
-I've also adopted this same design to work as a solder fume extractor. Design uses the exact same hardware except for an altered case to shift where the filters are in relation to the fan. Hardware requirements are the same, and links to that model can be found <a href="https://sketchfab.com/3d-models/fan-filter-case-for-3d-printer-enclosure-3079421cb01249a38283ea86fecf6124" target="_blank" rel="noopener noreferrer">here</a>.
+I adopted this same design to work as a solder fume extractor as well. It uses the exact same hardware except for an altered case to shift where the filters are in relation to the fan. Hardware requirements are the same, and links to that model can be found <a href="https://sketchfab.com/3d-models/fan-filter-case-for-3d-printer-enclosure-3079421cb01249a38283ea86fecf6124" target="_blank" rel="noopener noreferrer">here</a>.
 
 <center>
   <div id="content">
