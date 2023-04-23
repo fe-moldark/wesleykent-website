@@ -18,3 +18,4 @@ Can't say I'm one for social media, but you can find me on the following sites:<
 - <a href="https://github.com/fe-moldark" target="_blank" rel="noopener noreferrer">Github</a>
 - <a href="https://sketchfab.com/femoldark" target="_blank" rel="noopener noreferrer">Sketchfab</a>
 - <a href="https://vimeo.com/user186074646" target="_blank" rel="noopener noreferrer">Vimeo</a>
+- <a href="https://www.youtube.com/@femoldark6141" target="_blank" rel="noopener noreferrer">YouTube</a>
