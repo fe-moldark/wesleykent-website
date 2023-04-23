@@ -51,6 +51,14 @@ _*Note: If you don't want to shell out money for the LCD an alternative I though
 I'm considering adding more sensors in time, but for now the Arduino is only acting as a temperature monitor. To set this up yourself you'll need the same hardware as I just described or at least similar enough. The `.ino` script I wrote that interacts with the sensor and LCD can be found <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/3d_printer_stuff/temp_monitor.ino" target="_blank" rel="noopener noreferrer">here</a>.
 <br><br>
 
+##### 3D Model
+<center>
+  <div id="content">
+    <iframe id="content" title="Temperature Monitor Case" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/899e236515304c5583b6eaf6474ab7ad/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/temperature-monitor-case-899e236515304c5583b6eaf6474ab7ad?utm_medium=embed&utm_campaign=share-popup&utm_content=899e236515304c5583b6eaf6474ab7ad" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Temperature Monitor Case </a> by <a href="https://sketchfab.com/femoldark?utm_medium=embed&utm_campaign=share-popup&utm_content=899e236515304c5583b6eaf6474ab7ad" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> femoldark </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=899e236515304c5583b6eaf6474ab7ad" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
+  </div>
+</center>
+<br><br>
+
 ##### Circuit diagram:
 <center>
 <img src="/assets/3d_printer_stuff/arduino circuit.png" alt="" width=750><br>
