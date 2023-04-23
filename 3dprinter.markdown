@@ -100,10 +100,9 @@ MCX backup file for this can be downloaded <a href="https://github.com/fe-moldar
 <br><br><br>
 
 ## OctoPrint
-I've gotten OctoPrint OS more or less set up and configured, all I need to do now is print off a case for the RPi and to hold the camera for time lapse captures. It also looks like I will need to flash the Ender's firmware with a few slight changes to allow OctoPrint to work as intended. I'm also setting up OctoDash with a 3.5" touch screen for more control.<br>
-<center>
-  <img src="/assets/rpi/3dprinter/printer_3.png" alt="" width=1050><br>
-</center>
+I've gotten OctoPrint more or less set up and configured, all I need to do now is print off a case for the RPi and to hold the camera for time lapse captures. It also looks like I will need to flash the Ender's firmware with a few slight changes to allow OctoPrint to fully work as intended. I'm also setting up OctoDash with a 3.5" touch screen for more control.
+<br><br>
+I will update this in time, provided I don't forget...
 <br><br>
 
 ## Print settings
