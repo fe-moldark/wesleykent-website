@@ -42,7 +42,7 @@
     link: /raspberrypi/retropie/
   - name: 3D Printer
     link: /raspberrypi/3dprinter/
-  - name: GameConsole
+  - name: Game Console
     link: /femoldark/gameconsole/
   
 - name: FE Moldark
