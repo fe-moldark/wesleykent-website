@@ -57,8 +57,10 @@ I needed to redesign the backside anyway, so I decided to do so with MatterContr
 </center>
 <br><br><br>
 
-# Video breakdown
-_Video Pending_
+# Video breakdown (for the hardware)
+<center>
+  <iframe id="content" src="https://player.vimeo.com/video/820186976?h=af78c68d9e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
 <br><br><br>
 
 # Software
