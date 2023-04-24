@@ -120,3 +120,6 @@ After the transfer reboot the Pi and then try playing the game - this will confi
 #### Shutdown button
 If you want to create a clean shutdown button (besides just pulling the power or flipping the switch), you can write a quick script that monitors button input and install it to the crontab.
 <br><br><br>
+
+# Final thoughts
+This is a fun project to give a try, and there plenty of other tutorials and designs you can follow as well. If you are looking for a more structured overview on how to put together a game console then give <a href="https://learn.adafruit.com/pigrrl-2/overview" target="_blank" rel="noopener noreferrer">Adafruit</a> a look.
