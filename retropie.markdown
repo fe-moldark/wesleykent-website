@@ -17,6 +17,8 @@ This project runs the RetroPie software with a case I made out of wood. When I f
 <center>
   <img src="/assets/rpi/retropie/retropie_front.jpg" alt="" width=950><br>
   <img src="/assets/rpi/retropie/retropie_back.jpg" alt="" width=950><br>
+  <img src="/assets/rpi/retropie/retropie_backcover.jpg" alt="" width=950><br>
+  <img src="/assets/rpi/retropie/retropie_top.jpg" alt="" width=950><br>
 </center>
 <br><br><br>
 
@@ -112,15 +114,9 @@ There are many ways to move ROMs to the RPi, the simplest method (although a lit
 - Copy over your ROMs directly to the appropriate subfolders under the `roms` directory
 <br>
 
-A good test I used is Mario Kart - Super Circuit for the GBA. The ROM is only 4MB so it transfers very quickly. Once more, reboot the Pi and then try playing the game - this will confirm if the buttons are laid out as expected and that the volume is working.
+After the transfer reboot the Pi and then try playing the game - this will confirm if the buttons are laid out as expected and that the volume is working.
 <br><br>
 
 #### Shutdown button
-To create a clean shutdown button (besides just pulling the power), create a file titled `shutdown.py` with `sudo nano shutdown.py` and then copy the code from this website <a href="https://linuxhint.com/set-up-shutdown-button-raspberry-pi-python/" target="_blank" rel="noopener noreferrer">here</a> . All that you will need to change from that script is which button should be the "shutdown" button - for me that was BCM 15. Make this file executable with `sudo chmod 750 shutdown.py`.
-<br><br>
-Configure the crontab with `crontab -e`, then add the following line of code: `@reboot python3 /home/pi/shutdown.py`. That is all for the software.
+If you want to create a clean shutdown button (besides just pulling the power or flipping the switch), you can write a quick script that monitors button input and install it to the crontab.
 <br><br><br>
-
-# Final product
-_Video Pending_
-<br><br>
