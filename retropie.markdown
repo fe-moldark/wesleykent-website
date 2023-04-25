@@ -99,13 +99,16 @@ And call another reboot just to be safe.
 Now configure the gamepad settings again, this time using the actual buttons after RetroPie has fully loaded.
 <br><br>
 
+#### LCD
+In the event RetroPie boots up and does not fill up the entire screen (which happened to me), edit the `/boot/config.txt` and UNcomment this line: `#disable_overscan=1`. That solved my issue, hopefully it works for you as well.
+<br><br>
+
 #### Audio and Volume Control
 You may need to force audio through HDMI to pull from the on-board stereo jack there, to do so enter `sudo raspi-config` at the terminal, and then select `System>Audio` and force audio to HDMI (or elsewhere depending on your setup).
 <br><br>
 To test the audio (especially the Left and Right channels for the external 3.5mm jack) use this command to alternate audio between the two: `speaker-test -c2 -twav -l20`. That will give you roughly one minute for testing, stop whenever with Control+C.
 <br><br>
-I am still working on volume control with the rotary encoder. The script I am trying to write is not working the same as I have set it up in the past on the Raspbian OS. Will update in time.<br>
---> Okay, I think I've figured out a way to control this. Looks like I'll need to execute `amixer sset HDMI <x>%` commands to control the audio, but I still need to adopt this into the existing script. Will update with the new script for this later on. For the time being you can change the volume in the Retroarch settings or if you ssh in execute the above command directly.
+I finally figured out volume control with the rotary encoder. It took a while and a good amount of trial and error, but now it works and I've installed it to the crontab for every reboot. To download the script to your machine use: `curl https://raw.githubusercontent.com/fe-moldark/wesleykent-website/gh-pages/assets/rpi/retropie/rotaryEncoder.py > rotaryEncoder.py`. To install this to your crontab use `crontab -e`, then insert: `@reboot python /home/pi/rotaryEncoder.py`. This script assumes you are pulling audio from the audio jack on the LCD and that the rotary encoder is connected in the same way as the above circuit diagram. Credit to <a href="https://gist.github.com/shivasiddharth/6aba5fa187c8ce463259f18eb7171a1f" target="_blank" rel="noopener noreferrer">this guy</a> for the script on getting data from the rotary encoder, I had to deviate quite a bit from how he handled the volume control but still built on what he wrote.
 <br><br>
 
 #### ROMs
