@@ -35,7 +35,7 @@ These are the final pinouts for all the different components, outside of the pow
 - <a href="https://www.adafruit.com/product/2130" target="_blank" rel="noopener noreferrer">Mono 2.5W Class D Audio Amplifier - PAM8302</a>
 - 1x speaker <a href="https://www.adafruit.com/product/1890" target="_blank" rel="noopener noreferrer"> (it's either this one or close enough to it)</a>
 - <a href="https://www.amazon.com/gp/product/B0111HRJT0" target="_blank" rel="noopener noreferrer">Mini HDMI to Standard HDMI Adapter</a>
-- (Not currently needed) 1x Rotary Encoder that looks something like <a href="https://www.amazon.com/Taiss-KY-040-Encoder-15%C3%9716-5-Arduino/dp/B07F26CT6B" target="_blank" rel="noopener noreferrer">these</a>
+- 1x Rotary Encoder that looks something like <a href="https://www.amazon.com/Taiss-KY-040-Encoder-15%C3%9716-5-Arduino/dp/B07F26CT6B" target="_blank" rel="noopener noreferrer">these</a>
 - <a href="https://www.adafruit.com/product/328" target="_blank" rel="noopener noreferrer">Lithium Ion Polymer Battery - 3.7v 2500mAh</a>
 - <a href="https://www.adafruit.com/product/1944" target="_blank" rel="noopener noreferrer">PowerBoost 500 Charger</a> (consider the 1000 board)
 - <a href="https://www.adafruit.com/product/2934" target="_blank" rel="noopener noreferrer">2x PiGrrl Zero Custom Gamepad PCB</a>
@@ -105,6 +105,7 @@ You may need to force audio through HDMI to pull from the on-board stereo jack t
 To test the audio (especially the Left and Right channels for the external 3.5mm jack) use this command to alternate audio between the two: `speaker-test -c2 -twav -l20`. That will give you roughly one minute for testing, stop whenever with Control+C.
 <br><br>
 I am still working on volume control with the rotary encoder. The script I am trying to write is not working the same as I have set it up in the past on the Raspbian OS. Will update in time.
+--> Okay, I think I've figured out a way to control this. Looks like I'll need to execute `amixer sset HDMI <x>%` commands to control the audio, but I still need to adopt this into the existing script. Will update with the new script for this later on. For the time being you can change the volume in the Retroarch settings or if you ssh in execute the above command directly.
 <br><br>
 
 #### ROMs
@@ -118,7 +119,7 @@ After the transfer reboot the Pi and then try playing the game - this will confi
 <br><br>
 
 #### Shutdown button
-If you want to create a clean shutdown button (besides just pulling the power or flipping the switch), you can write a quick script that monitors button input and install it to the crontab.
+If you want to create a clean shutdown button (besides just pulling the power or flipping the switch), you can write a quick script that monitors button input and install it to the crontab. Otherwise just use the escape button to exit the current game, then press start and navigate to the 'Shutdown' option.
 <br><br><br>
 
 # Final thoughts
