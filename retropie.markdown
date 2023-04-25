@@ -104,7 +104,7 @@ You may need to force audio through HDMI to pull from the on-board stereo jack t
 <br><br>
 To test the audio (especially the Left and Right channels for the external 3.5mm jack) use this command to alternate audio between the two: `speaker-test -c2 -twav -l20`. That will give you roughly one minute for testing, stop whenever with Control+C.
 <br><br>
-I am still working on volume control with the rotary encoder. The script I am trying to write is not working the same as I have set it up in the past on the Raspbian OS. Will update in time.
+I am still working on volume control with the rotary encoder. The script I am trying to write is not working the same as I have set it up in the past on the Raspbian OS. Will update in time.<br>
 --> Okay, I think I've figured out a way to control this. Looks like I'll need to execute `amixer sset HDMI <x>%` commands to control the audio, but I still need to adopt this into the existing script. Will update with the new script for this later on. For the time being you can change the volume in the Retroarch settings or if you ssh in execute the above command directly.
 <br><br>
 
