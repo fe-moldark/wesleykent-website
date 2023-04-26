@@ -70,7 +70,7 @@ If needed, you can follow along Adafruit's guide for setting up the software sid
 <br><br>
 
 #### RetroPie
-Use the RPi Imager and select the RetroPie image under Emulation. At first boot exit the the startup screen with F4, then enter `sudo raspi-config` at the terminal. From there connect it to Wi-Fi and enable SSH under "System".
+Use the RPi Imager and select the RetroPie image under Emulation. At first boot exit the startup screen with F4, then enter `sudo raspi-config` at the terminal. From there connect it to Wi-Fi and enable SSH under "System".
 <br><br>
 After a reboot, ssh in and enter the following commands: `curl https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/retrogame.sh > retrogame.sh` then `sudo bash retrogame.sh`. Select option 1, or the "PiGRRL 2 controls", and allow it to reboot once more.
 <br><br>
@@ -118,7 +118,7 @@ There are many ways to move ROMs to the RPi, the simplest method (although a lit
 - Copy over your ROMs directly to the appropriate subfolders under the `roms` directory
 <br>
 
-After the transfer reboot the Pi and then try playing the game - this will confirm if the buttons are laid out as expected and that the volume is working.
+After the transfer, reboot the Pi and then try playing the game - this will confirm if the buttons are laid out as expected and that the volume is working.
 <br><br>
 
 #### Shutdown button
@@ -126,4 +126,4 @@ If you want to create a clean shutdown button (besides just pulling the power or
 <br><br><br>
 
 # Final thoughts
-This is a fun project to give a try, and there plenty of other tutorials and designs you can follow as well. If you are looking for a more structured overview on how to put together a game console then give <a href="https://learn.adafruit.com/pigrrl-2/overview" target="_blank" rel="noopener noreferrer">Adafruit</a> a look.
+This is a fun project to give a try, and there are plenty of other tutorials and designs you can follow as well. If you are looking for a more structured overview on how to put together a game console then give <a href="https://learn.adafruit.com/pigrrl-2/overview" target="_blank" rel="noopener noreferrer">Adafruit</a> a look.
