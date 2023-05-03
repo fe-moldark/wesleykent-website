@@ -24,7 +24,7 @@ To start off, here is what my enclosure looks like:<br>
   <img src="/assets/3d_printer_stuff/enclosure1_new.jpg" alt="" width=950><br>
 </center>
 <br>
-As you can tell, this is far from any kind of "official" enclosure, rather it is just some pieces of wood that keeps the temperature high enough inside for those annoying filaments like ABS. With the fan / filter running the enclosure reaches a maximum temperature of around 105° F from what I've observed. I've also brought out some power and ground wires from the printer's PSU that is running the LED strip you can see in the image. The power wire is first routed through a toggle switch on the side for easy on / off control.
+As you can tell, this is far from any kind of "official" enclosure, rather it is just some pieces of wood that keeps the temperature high enough inside for those annoying filaments like ABS. With the fan / filter running the enclosure reaches a maximum temperature of around 108° F from what I've observed. I've also brought out some power and ground wires from the printer's PSU that is running the LED strip you can see in the image. The power wire is first routed through a toggle switch on the side for easy on / off control.
 <br><br>
 Something I am looking to eventually change about this enclosure is buying some plexiglass for the front piece instead of the wood that is currently there. That will just make it easier to check if a print is warped or not sticking to the bed. OctoPrint does allow for some monitoring this way with the camera I have set up, but at the same time I would like to be able to look at it directly.
 <br><br>
