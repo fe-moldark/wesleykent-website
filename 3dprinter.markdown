@@ -61,7 +61,7 @@ I'm considering adding more sensors in time, but for now the Arduino is only act
 
 ##### Circuit diagram:
 <center>
-<img src="/assets/3d_printer_stuff/arduino circuit.png" alt="" width=750><br>
+  <img src="/assets/3d_printer_stuff/arduino circuit.png" alt="" width=750><br>
 </center>
 <br><br><br>
 
@@ -73,12 +73,12 @@ When I first started printing with ABS I learned that a) you need a higher ambie
 </center>
 <br>
 ##### Hardware used:
-- 1x Dell Server Fan (Model PFC0612DE)
-- 1x DC12V Manual Four-Wire PWM Fan Speed Motor Controller Board
-- 1x SPST Toggle Switch
+- 1x Dell Server Fan Model PFC0612DE (I got mine from an old server, but they can be purchased individually as well)
+- <a href="https://www.aliexpress.us/item/3256804358897430.html" target="_blank" rel="noopener noreferrer">1x DC12V Manual Four-Wire PWM Fan Speed Motor Controller Board</a>
+- <a href="https://www.adafruit.com/product/3221" target="_blank" rel="noopener noreferrer">1x SPST Toggle Switch</a>
 - 1x DC Power Jack Socket
 - 1x 12V 2A DC Power Supply
-- Carbon filters (~3/8” thick)
+- <a href="https://www.amazon.com/gp/product/B07RNGMXYG" target="_blank" rel="noopener noreferrer">Carbon filters (~3/8” thick)</a>
 - Wire, solder, soldering iron, some screws, etc.
 <br><br>
 
