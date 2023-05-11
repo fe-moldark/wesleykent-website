@@ -20,7 +20,7 @@ So, I decided to automate this with a script (several actually), and since I've 
 <br>
 ## 1st Script - compare and hash files against known good hashes
 _**EDIT: parts of this script have been modified, so below may be a bit outdated.**_<br><br>
-For this part I'll be highlighting the important parts while ignoring the rest of the steps like importing random modules. For the script in its entirety, click <a href="https://raw.githubusercontent.com/fe-moldark/wesleykent-website/gh-pages/assets/scripts/downloadzip_wk.py" target="_blank" rel="noopener noreferrer">here</a>.
+For this part I'll be highlighting the important parts while ignoring the rest of the steps like importing random modules. For the script in its entirety, click <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/scripts/downloadzip_wk.py" target="_blank" rel="noopener noreferrer">here</a>.
 <br><br>
 First, I needed to get the zipped file off the repository, save it locally, and then unzip the file:
 ```python
