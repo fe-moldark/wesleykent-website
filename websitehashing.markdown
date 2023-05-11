@@ -19,7 +19,7 @@ As I started off at the beginning of this page, I was mainly worried about the i
 So, I decided to automate this with a script (several actually), and since I've already got a raspbbery pi running a file sharing service back home, why not add this on there as a cronjob to run every hour or every day? I ended up breaking this into two separate scripts - the first to compare and hash the files against known good copies, and the second to send me an alert via email if any anomalies are detected.
 <br>
 ## 1st Script - compare and hash files against known good hashes
-_**EDIT: parts of this script have been modified, so below may be a bit outdated.**_<br><br>
+_**EDIT: Parts of this script have been modified, so below may be a bit outdated.**_<br><br>
 For this part I'll be highlighting the important parts while ignoring the rest of the steps like importing random modules. For the script in its entirety, click <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/scripts/downloadzip_wk.py" target="_blank" rel="noopener noreferrer">here</a>.
 <br><br>
 First, I needed to get the zipped file off the repository, save it locally, and then unzip the file:
