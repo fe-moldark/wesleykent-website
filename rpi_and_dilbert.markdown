@@ -9,8 +9,10 @@ permalink: /scripts/rpi_and_dilbert/
 I've got a couple other scripts that I find both entertaining and useful, so I thought I would throw them up here as well. If you genuinely want to be put on one or more of these email lists by all means let me know. I think that would be hilarious and I've already got these running for myself anyways.<br><br>
 <br>
 ## Raspberry Pi Stock Notification
-Well it would seem the chip shortage is coming to gradual end, unfortunately Raspberry Pis still come in short supply. After having a Pi Zero and 3B+ just die on me after many years for no apparent reason, I needed to restock. So I learned a little bit about web scraping which was new to me and put together the following script. Currently it only collects data from Adafruit's website, as the other ones I found were either over-priced or more sketchy than I was comfortable buying from.<br>
-<br>
+Well it would seem the chip shortage is coming to gradual end, unfortunately Raspberry Pis still come in short supply. After having a Pi Zero and 3B+ just die on me after many years for no apparent reason, I needed to restock. So I learned a little bit about web scraping which was new to me and put together the following script. Currently it only collects data from Adafruit's website, as the other ones I found were either over-priced or more sketchy than I was comfortable buying from.
+<br><br>
+I am happy to say that this script has worked for me personally, although fair warning I recieved my email and after noticing it within one minute and ordering within another minute after that they were already out of stock. Either I had purchased the last one or they truly went out of stock that fast, and that was in May of 2023.
+<br><br>
 Link to the full script can be found <a href="https://raw.githubusercontent.com/fe-moldark/wesleykent-website/gh-pages/assets/scripts/adafruit_stock.py" target="_blank" rel="noopener noreferrer">here</a>, and I will break down how it works below. There are two different types of product pages that I had to look at, one that listed different versions of the same product (RPi4 with varying amounts of RAM) and the other type that only showed a single product type.
 <br><br>
 That first type for RPi4 was identified with the following:
