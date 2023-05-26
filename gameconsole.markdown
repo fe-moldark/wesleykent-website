@@ -32,6 +32,26 @@ There's something genuinely fun about writing the software behind the game, asse
 _(Newer updates will appear at the top here, older ones at the bottom)_
 <br><br><br>
 
+#### Update, May '23:
+"You know, there's probably a good reason we use circuit boards and not wires." _-Wesley Kent, May 2023, R.I.P._
+<br>
+<center>
+  <img src="/assets/femoldark/gameconsole/chaos.jpg" alt="" width=950><br>
+</center>
+<br><br>
+Audio has been fixed as far as the speakers go, the external audio jack is still experiencing some white noise / static. I'll link an image of the circuit and maybe someone can see where I am going wrong. I have tried wiring that ground to the initial ground input from the audio jack, I have also tried the L- / R- output from the audio amplifier, and just a random ground from the Pi board itself. Each scenario results in that white noise, so no luck thus far, although the audio does still get through (just poor quality of course). Here is what that circuit currently looks like, and keep in mind what I've already tried with the different grounds:<br>
+<center>
+  <img src="/assets/femoldark/gameconsole/badAudio.png" alt="" width=750><br>
+</center>
+If anyone sees my issue by all means shoot me an email and let me know. If this is in fact an issue with the ground maybe I need a need a **Triple-Pole** Double-Throw instead of the DPDT?? That way I could cycle the ground through there as well and keep it contained to solely the speakers or external jack. I don't know, I'll do some more experimentation but I don't want to spend too much more time on it.
+<br><br>
+Something new is the analog joystick I decided to use instead of the 4-button gamepad. While this is more annoying to work with it does offer a better feel your up/down/left/right movements. Since this is an analog device I did need to purchase the MCP3008 to convert it to a digital signal that the Pi board can work with. Surprisingly, Adafruit's site was one of the cheaper places to purchase that converter from. I'll show the wiring for it down the road.
+<br><br>
+<center>
+  <iframe id="content" src="https://www.youtube.com/embed/JZiUZJI2KBc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</center>
+<br><br>
+
 #### Update, January '23:
 The backside is complete as far as the 3d-model goes, all that's left is to begin to wire everything together and make sure it all works as expected.
 <br><br>
