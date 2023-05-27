@@ -50,6 +50,7 @@ Something new is the analog joystick I decided to use instead of the 4-button ga
 <center>
   <iframe id="content" src="https://www.youtube.com/embed/JZiUZJI2KBc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   <iframe id="content" src="https://www.youtube.com/embed/Ngg87T8IEqQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe id="content" src="https://www.youtube.com/embed/lFSGUvg3xLI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </center>
 <br><br>
 
