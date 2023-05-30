@@ -23,7 +23,7 @@ If you want to download these and manipulate them yourself I will share those li
 <br><br><br>
 
 # Preview
-_Note: At this point these models are very outdated, I will hopefully get around to updating them soon._<br>
+_Note: At this point these models are very outdated, I will hopefully get around to updating them soon._<br><br>
 I would recommend viewing this page on a larger screen, i.e. not your mobile. The frames should adjust properly now, but you still won't be able to get a good look at the 3d models on a small screen. All the below are current as of January '23, but still require some minor adjustments here and there.
 <br><br>
 
