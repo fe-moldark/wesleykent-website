@@ -29,7 +29,7 @@ As you can tell, this is far from any kind of "official" enclosure, rather it is
 Something I am looking to eventually change about this enclosure is buying some plexiglass for the front piece instead of the wood that is currently there. That will just make it easier to check if a print is warped or not sticking to the bed. OctoPrint does allow for some monitoring this way with the camera I have set up, but at the same time I would like to be able to look at it directly.
 <br><br>
 <center>
-  <iframe id="content" src="https://player.vimeo.com/video/820163332?h=c4199368c1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe id="content" src="https://www.youtube.com/embed/LqsQZrKemFo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </center>
 <br><br><br>
 ## Arduino for monitoring temperature
@@ -92,7 +92,7 @@ The case I designed to house all of that can be seen here:<br>
 
 MCX backup file for this can be downloaded <a href="https://github.com/fe-moldark/wesleykent-website/raw/gh-pages/assets/3d_files/fan_case/fan_design_final_v3.mcx" target="_blank" rel="noopener noreferrer">here</a>. I've also made an easy to follow assembly guide / what wires connect where in the video below. This should simplify things if you want to replicate this on your own:<br>
 <center>
-  <iframe id="content" src="https://player.vimeo.com/video/811832169?h=dff157a591&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe id="content" src="https://www.youtube.com/embed/duUfCbCGNUE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </center>
 <br><br>
 
