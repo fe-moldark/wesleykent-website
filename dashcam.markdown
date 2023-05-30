@@ -69,7 +69,7 @@ What this looks like all put together is:<br>
 
 Here's a step-by-step assembly:<br>
 <center>
-  <iframe id="content" "https://www.youtube.com/embed/K2i6sSA_oIA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe id="content" src="https://www.youtube.com/embed/K2i6sSA_oIA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
 </center>
 
 <br><br><br>
