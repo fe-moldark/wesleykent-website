@@ -61,15 +61,10 @@ I am also working on a new design for the front side pieces that will allow for 
 <br><br>
 _*Note: Part 2 of this is me explaining a fix for what I thought would work for the audio in the last few minutes of Part 1 but did not play out as expected. Sound is now working, and I also decided to include a DPDT switch and a spare audio jack for multiple forms of outputting audio besides just the speakers._
 <br><br>
-##### Part 1:
-<center>
-  <iframe id="content" src="https://player.vimeo.com/video/785796279?h=21cc2bd0a7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</center>
-<br><br>
 
-##### Part 2:
 <center>
-  <iframe id="content" src="https://player.vimeo.com/video/790294544?h=19f914211c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe id="content" src="https://www.youtube.com/embed/jlRkTo17ALg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe id="content" src="https://www.youtube.com/embed/sG-sF4u9m1A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </center>
 <br><br>
 
@@ -77,21 +72,17 @@ _*Note: Part 2 of this is me explaining a fix for what I thought would work for 
 Back side pieces are nearly complete, just need to perfect the track and better secure the piece holding the spring to the main board. I'm hoping to start doing some final prints in the near future so I can begin wiring everything together and actually test it out.
 <br>
 <center>
-  <iframe id="content" src="https://player.vimeo.com/video/781238023?h=c7e9db3e8f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe id="content" src="https://www.youtube.com/embed/UcL7RUsIXoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </center>
 <br><br>
 
 #### Update, November '22:
 The side pieces are now both complete and the center pieces (front and back) both nearly finalized. Every piece so far has taken at least one test print to identify some very minor adjustments (usually just a millimeters or so), after that everything prints off as expected. The downside is the time it takes to print - the side piece you see in the first video below took 5 hrs to print, so it's never a "quick" fix. I'm also paranoid that the 3D printer will catch on fire, so I never run it while I'm away. Check out the two updates below:
 <br><br>
-##### Part 1:
+
 <center>
-  <iframe id="content" src="https://player.vimeo.com/video/765484157?h=6da0820cfa&amp;badge=0&amp;autopause=0&amp;autoplay=0;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</center>
-<br><br>
-##### Part 2:
-<center>
-  <iframe id="content" src="https://player.vimeo.com/video/767171969?h=ca6b97c298&amp;badge=0&amp;autopause=0&amp;autoplay=0;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe id="content" src="https://www.youtube.com/embed/cEdRSuFe3a0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe id="content" src="https://www.youtube.com/embed/0gOxJbf7B4c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </center>
 <br><br>
 
@@ -99,6 +90,6 @@ The side pieces are now both complete and the center pieces (front and back) bot
 One issue I am working through right now is redesigning how the battery is going to work, which actually has more layers to it than you might think. What I've currently settled on should work, however based on some measurements it likely means I will have to heavily redesign the backside as the RPi board and the Battery case may end up switching places and rotating. The issues only compounded once I realized that some of the specific components I had bought (like the hdmi ribbon cable) were tailored to a very specific length, and now that everything is shifting I've got to reorder a longer one. Not the end of the world, but something that will set me back time-wise. Check out the update below:
 <br>
 <center>
-  <iframe id="content" src="https://player.vimeo.com/video/756628586?h=9c7c184f0b&amp;badge=0&amp;autopause=0&amp;autoplay=0;player_id=0&amp;app_id=58479" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe id="content" src="https://www.youtube.com/embed/dS94gV_TF-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </center>
 <br><br>
