@@ -32,6 +32,17 @@ There's something genuinely fun about writing the software behind the game, asse
 _(Newer updates will appear at the top here, older ones at the bottom)_
 <br><br><br>
 
+#### Update, June '23:
+Not a great update. Long story short, any image BPi provides has the resolution locked into only one option it would seem. This is not a new issue apparently, and all of the troubleshooting steps and file modifications did not work. Normally something as simple as the screen resolution would not be an issue, however, my pygame window is 720x480, so being unable to set the display's resolution to match this means I need to include the pygame.SCALED flag. This changed a normally running 30-40 fps display to somewhere around 5-10 fps. I ssh'ed in and htop revealed that, sure enough, all of the CPU cores were maxed out. Just trying to scale that window used up all of the board's processing power.
+<br><br>
+So, now I need to replace the BPI M5 board with a RPi Model 4 (4 GB Ram), rewire everything, and purchase a micro HDMI to HDMI adapter. On the software side of things this means an entirely new image, reinstalling modules / libraries, and adopting all of my scripts to now work with either digitalio, RPi.GPIO, or gpiozero instead of the wiringpi library for BPi boards.
+<br><br>
+<center>
+  <iframe id="content" src="https://www.youtube.com/embed/o5cftey2dTM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</center>
+<br><br>
+
+
 #### Update, May '23:
 "You know, there's probably a good reason we use circuit boards and not wires." _-Wesley Kent, May 2023, R.I.P._
 <br>
