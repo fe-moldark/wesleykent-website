@@ -2,7 +2,7 @@
 layout: page
 title: Designing the Game Console
 subtitle: A work in progress...
-permalink: /femoldark/gameconsole/
+permalink: /femoldark/gameconsole_updates/
 ---
 
 <head>
