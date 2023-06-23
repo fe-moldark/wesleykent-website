@@ -84,9 +84,9 @@ For instructions on how to assemble all of this you have two options. The first 
 ### Configuring the basics
 Let's start at the very beginning with the OS. Download the RPi Imager tool and use the most up-to-date Raspbian Desktop version and flash the sd card.
 <br><br>
-After the initial install and boot run the typical `sudo apt-get update` and `sudo apt-get upgrade` - this will take some time. From the raspi-config settings enable the following interfaces: `SSH`, `VNC`, `SPI`, `I2C`. While still in the raspi-config settings go to "Advanced" and choose the expand filesystem option. Assign a static IP address for the system or assign one to it from your router based on the MAC and then go through the setup process for VNC.
+After the initial install and boot run the typical `sudo apt-get update` and `sudo apt-get upgrade` - this will take some time. From the raspi-config settings enable the following interfaces: `SSH`, `VNC`, `SPI`, `I2C`. While still in the raspi-config settings go to "Advanced" and choose the expand filesystem option. Assign a static IP address for the system or assign one to it from your router based on the MAC address and then go through the setup process for VNC.
 <br><br>
-Set the resolution to 720x400 using preferences > screen configuration. Alternatively, you can use the `/boot/config.txt` file to manually assign this using whatever `hdmi_group` and `hdmi_mode` that resolution falls under. Lastly, depending on your screen you may need to uncomment the `disable_overscan=1` line in order to use the entire screen and remove any black borders. Under raspi-config force audio through the 3.5mm on-board jack. If you choose to connect the stereo channels from the LCD you will need to force that audio output to the HDMI option there.
+Set the resolution to 720x400 using preferences > screen configuration. Alternatively, you can use the `/boot/config.txt` file to manually assign this using whatever `hdmi_group` and `hdmi_mode` that resolution falls under. Lastly, depending on your screen you may need to uncomment the `disable_overscan=1` line in order to use the entire screen and remove any black borders. Under raspi-config force audio through the 3.5mm on-board jack. If you choose to connect the stereo channels from the LCD you will need to force that audio output to the HDMI option instead.
 <br><br>
 
 ### Modules / libraries to install
@@ -157,7 +157,7 @@ python3 INA219.py
 ```
 <br>
 Unless you are lucky this script will not work out of the box and you will need to change a few things:
-- Install a new version of smbus with `pip install smbus2`. From what I've read the old version only works with Python 3.5.x and as of right now new installations of Linux come with 3.9.x.
+- Install the new version of smbus with `pip install smbus2`. From what I've read the old version only works with Python 3.5.x and as of right now new installations of Linux come with 3.9.x.
 - Discover which file that I2C device is associated with using `ls -la /dev/ | grep i2c`. In my case, this resulted in only `i2c-0`, NOT `i2c-1`.
 - Modify the `INA219.py` script you downloaded with the following:
 1. Replace the `import smbus` to `import smbus2 as smbus`. This will use the newer version of smbus but not require any further modification of the script.
