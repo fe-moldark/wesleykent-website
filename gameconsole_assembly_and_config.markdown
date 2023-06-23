@@ -25,7 +25,7 @@ To begin, these notes are as much for myself if I ever need to set this up again
 # Video breakdown
 I have a feeling the following wall of text might scare some people off, so here is a video breakdown of everything you are about to hear about which showcases the various features of the game console. <br>
 <center>
-  
+  <iframe id="content" src="https://www.youtube.com/embed/SFpL1r2WjeI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </center>
 <br><br>
 
