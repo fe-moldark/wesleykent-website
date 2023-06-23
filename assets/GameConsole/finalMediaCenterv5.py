@@ -89,8 +89,17 @@ def readChannel(channel):
 
 #this assumes ONLY one USB device, which is my case
 #otherwise it'll just grab the first one, so best of luck to you
+
+#now adopted to select non-empty directory --> it spawns two empty ones for some reason? idk, this fixed the issue
 getConnectedMedia=os.listdir('/media/pi/')
-main='/media/pi/'+str(getConnectedMedia[0])
+
+#some are empty
+useThisDir=''
+for possibleDir in getConnectedMedia:
+    if len(os.listdir('/media/pi/'+str(possibleDir)))!=0:
+        useThisDir=str(possibleDir)
+
+main='/media/pi/'+useThisDir
 tracking=''
 
 listDir=os.listdir(main+tracking)
