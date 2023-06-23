@@ -48,10 +48,10 @@
 - name: FE Moldark
   link: /femoldark/
   dropdown:
-    - name: Game Console
+    - name: Game Console Assembly and Configuration
       link: /femoldark/gameconsole/
-    - name: Circuit Diagram & Wiring
-      link: /femoldark/circuit_diagram/
+    - name: Game Console Updates
+      link: /femoldark/gameconsole_updates/
     - name: STL Files for Download
       link: /femoldark/stls_for_download/
   
