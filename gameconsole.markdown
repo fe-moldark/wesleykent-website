@@ -32,7 +32,7 @@ There's something genuinely fun about writing the software behind the game, asse
 _(Newer updates will appear at the top here, older ones at the bottom)_
 <br><br><br>
 
-#### (Final) Update
+#### Final Update
 The game console is done! After replacing the BPi M5 with the RPi 4, rewiring everytihng and rewriting a good amount of the software, everything is working. You can read how to assemble and configure this yourself on [this page here](/femoldark/gameconsole/).
 <br><br>
 <center>
