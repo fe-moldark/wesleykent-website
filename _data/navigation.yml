@@ -48,9 +48,9 @@
 - name: FE Moldark
   link: /femoldark/
   dropdown:
-    - name: Game Console Assembly and Configuration
+    - name: Game Console - Assembly and Configuration
       link: /femoldark/gameconsole/
-    - name: Game Console Updates
+    - name: Game Console - Updates
       link: /femoldark/gameconsole_updates/
     - name: STL Files for Download
       link: /femoldark/stls_for_download/
