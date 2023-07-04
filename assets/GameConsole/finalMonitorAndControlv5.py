@@ -123,8 +123,10 @@ def getLatestScript():
                 os.system('cp '+str(latestFilename)+' '+str(cachedFileAt))
                 messageBegin='Program has been updated with a more recent file from mounted NAS called '+str(allFiles[-1])
             else:
-                messageBegin='File is up to date, using cached version last edited: '+str(time.strftime('%m/%d/%Y',time.gmtime(lastModified)))
-
+                try:
+                    messageBegin='File is up to date, using cached version last edited: '+str(time.strftime('%m/%d/%Y',time.gmtime(lastModified)))
+                except AttributeError:
+                    messageBegin="Idk, something funky is going on here. Rarely throws out this error and never back to back. And I'm tired rn."
             
         else: #current version is more recent
             messageBegin='Local file is more up to date than anything in the shared drive.'
