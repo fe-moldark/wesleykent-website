@@ -14,6 +14,8 @@
       link: /tipsandtricks/webstuff/
     - name: Using Nmap
       link: /tipsandtricks/usingnmap/
+    - name: Kismet and the Aircrack-ng suite
+      link: /attacking_wireless_networks/
     - name: Steganography
       link: /tipsandtricks/steganography/
     - name: Resources
@@ -54,6 +56,9 @@
       link: /femoldark/gameconsole_updates/
     - name: STL Files for Download
       link: /femoldark/stls_for_download/
+      
+- name: Kismet and the Aircrack-ng suite
+  link: /attacking_wireless_networks/
   
 - name: USB Injectors
   link: /usb_injectors/
