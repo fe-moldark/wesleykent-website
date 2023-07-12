@@ -27,6 +27,9 @@ Web enumeration, starting a web server, and uses of curl.
 [**Using Nmap**](/tipsandtricks/usingnmap/)<br>
 Brief overview of Nmap, flags to be aware of, and using specific scripts.
 <br><br>
+[**Kismet and the Aircrack-ng suite**](/attacking_wireless_networks/)<br>
+Case study in attacking a wireless network with several tools.
+<br><br>
 [**Steganography**](/tipsandtricks/steganography/)<br>
 What is steganography, how is it used and how to counter it.
 <br><br>
