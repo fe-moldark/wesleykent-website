@@ -195,7 +195,7 @@ Your interface should be in the standard managed mode and the interface must be 
 <br><br>
 Now run `wpa_supplicant` to view possible drivers you can use with the wireless interface, for me the `wext` one worked. To connect to the network you need the following command: `wpa_supplicant -i wlx9cefd5f994c7 -c /etc/wpa_supplicant.conf -D wext -B`, where the `-B` will exit out and let you keep working. 
 <br><br>
-We are NOT done yet. Even though the network I set up has a DHCP server set up, connecting this way will not automatically assign us an ip address and all that info. You can confirm that with a quick `ifconfig`. Run `sudo dhclient wlx9cefd5f994c7` and after a couple of seconds run `ifconfig` again to check for that info.
+We are NOT done yet. Even though the network I set up has a DHCP server, connecting this way will not automatically assign us an ip address and all that info. You can confirm that with a quick `ifconfig`. Run `sudo dhclient wlx9cefd5f994c7` and after a couple of seconds run `ifconfig` again to check for that info.
 <br><br>
 
 # Conclusion
