@@ -174,7 +174,7 @@ Just for practice I took the hash through the password cracking process with has
 </center>
 <br>
 ## John the Ripper
-I then placed the hash into a file called `crackThisHash.txt`. Seeing the possibly hash types let's see what matches John gives:<br>
+I then placed the hash into a file called `crackThisHash.txt`. Seeing the possible hash types let's see what matches John gives:<br>
 ```
 john --list=formats | grep md5crypt
 descrypt, bsdicrypt, md5crypt, md5crypt-long, bcrypt, scrypt, LM, AFS, 
