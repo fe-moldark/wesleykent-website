@@ -140,6 +140,9 @@ Since this page is all about my printer, here are the settings I've been using w
 - Enable print cooling: `False`
 <br><br>
 
+Also, set the Build Plate Adhesion Type to 'None' - leaving this at the default 'Skirt' does not allow you to use the full print bed of 220mmx220mm for the Ender 3 Pro.
+<br><br>
+
 _Anything else not mentioned is using the default settings for the Ender 3 Pro printer._
 <br><br><br>
 
