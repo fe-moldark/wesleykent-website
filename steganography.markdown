@@ -24,5 +24,5 @@ A companion tool to `stegosuite` is `steghide` can be used to both embed and ext
 <br><br>
 
 # A Challenge
-If you want a challenge with decryption reference <a href="https://raw.githubusercontent.com/fe-moldark/wesleykent-website/gh-pages/assets/cipher/encrypted_image.jpg" target="_blank" rel="noopener noreferrer">here</a> for a go at a cipher I wrote a while back. This was well before I had done any reading at all about cryptography, steganography, ciphers, etc. but I had fun making it. I have a full break down on how this works [here](https://wesleykent.com/creating_my_own_cipher/).
+If you want a challenge with decryption reference <a href="https://raw.githubusercontent.com/fe-moldark/wesleykent-website/gh-pages/assets/cipher/encrypted_image.jpg" target="_blank" rel="noopener noreferrer">here</a> for a go at a cipher I wrote a while back. This was well before I had done any reading at all about cryptography, steganography, ciphers, etc. but I had fun making it. I have a full break down on how this works [here](https://wesleykent.com/scripts/creating_my_own_cipher/).
 <br><br>
