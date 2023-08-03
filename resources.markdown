@@ -64,5 +64,7 @@ wget -c https://github.com/danielmiessler/SecLists/archive/master.zip -O SecList
 If you want to go the Kali Linux route or with another virtualization software, go for it. All I can say is that I've had good experiences with this combination thus far, so-
 <br>
 <br>
-<img src="/assets/palps.png" alt="">
+<center>
+  <img src="/assets/palps.png" alt="">
+</center>
 <!-- img src: https://imgflip.com/memetemplate/304517785/Star-Wars-Palpatine-Use-my-knowledge-I-beg-you--->
