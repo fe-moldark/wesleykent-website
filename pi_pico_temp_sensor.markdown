@@ -10,7 +10,7 @@ permalink: /raspberrypi/pi_pico_temp_sensor/
 # Overview
 This was a simple enough project using a microcontroller, temperature sensor, and display. I made this after moving into my new apartment and it did not have a way to view the inside temp - there was to turn on / adjust the heat, yes, but not view what it was currently at. So I ordered a pair of DS18B20 sensors off ebay for around 5 bucks and a week later made this. Thankfully there were already plenty of resources out there on how to get started with the <a href="https://www.raspberrypi.com/documentation/microcontrollers/micropython.html" target="_blank" rel="noopener noreferrer">Pi Pico</a> since it is completely different from the Pi Zero, 3 B+, and 4 I have worked with in the past, as well as the libraries for interacting with the <a href="https://docs.micropython.org/en/latest/esp8266/tutorial/ssd1306.html" target="_blank" rel="noopener noreferrer">OLED display</a> and the <a href="https://www.tomshardware.com/how-to/monitor-temperature-raspberry-pi-pico" target="_blank" rel="noopener noreferrer">sensor</a>. You can power this over the pins (which I am doing) or by simply using the micro usb port, and the end result looks something like this (sorry for how shaky it is):<br>
 <center>
-  <img src="/assets/temp_sensor/sensor_mod.gif" alt="" width=400><br>
+  <img src="/assets/temp_sensor/sensor_mod.gif" alt="" width=375><br>
 </center>
 <br><br>
 
@@ -32,28 +32,28 @@ _Some of these links might go bad in the future, but I'm confident you can find 
 ### Assembly
 Here's a quick circuit diagram before getting started:<br>
 <center>
-  <img src="/assets/temp_sensor/tempsensor_circuitdiagram.png" alt="" width=800><br>
+  <img src="/assets/temp_sensor/tempsensor_circuitdiagram.png" alt="" width=750><br>
 </center>
 <br><Br>
 
 Using a perf board mount the two male pin headers and solder them on, the pico board on top:<br>
 <center>
-  <img src="/assets/temp_sensor/tempsensor1.png" alt="" width=1000><br>
+  <img src="/assets/temp_sensor/tempsensor1.png" alt="" width=800><br>
 </center>
 <center>
-  <img src="/assets/temp_sensor/tempsensor2.png" alt="" width=1000><br>
+  <img src="/assets/temp_sensor/tempsensor2.png" alt="" width=800><br>
 </center>
 <br><br>
 
 After that get the OLED display wired up and attach it to the perf board (I used a couple of braces so it hovers over the Pi Pico, but anything works). `GND` to any ground, `VCC` to pin 36 (3V3 OUT), and `SDA` and `SCL` to pins 1 and 2, respectively. The pins for the DS18B20 sensor connect according to the circuit diagram which does look kind of weird at first glance, so make sure you double check the wiring.<br>
 <center>
-  <img src="/assets/temp_sensor/tempsensor3.png" alt="" width=1250><br>
+  <img src="/assets/temp_sensor/tempsensor3.png" alt="" width=1200><br>
 </center>
 <br><br>
 
 After that I just wired up the switch in between the power line to the Pico board and then used a dremel to trim up the perf board a bit:<br>
 <center>
-  <img src="/assets/temp_sensor/tempsensor4.png" alt="" width=900><br>
+  <img src="/assets/temp_sensor/tempsensor4.png" alt="" width=850><br>
 </center>
 <br><br>
 
