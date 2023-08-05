@@ -46,6 +46,8 @@
     link: /raspberrypi/3dprinter/
   - name: Game Console
     link: /femoldark/gameconsole/
+  - name: Temp sensor
+    link: /raspberrypi/pi_pico_temp_sensor/
   
 - name: FE Moldark
   link: /femoldark/
