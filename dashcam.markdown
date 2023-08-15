@@ -80,7 +80,7 @@ Here's a step-by-step assembly:<br>
 ### OS
 Just go with the default Raspbian Desktop - you can easily flash the SD card with their tool <a href="https://www.raspberrypi.com/software/" target="_blank" rel="noopener noreferrer">here</a>. This is obviously very compatible with the Pi board and has most things you will need already pre-installed.
 <br><br>
-If needed, update the software with `sudo apt-get update` and `sudo apt-get upgrade`.
+Update the OS with `sudo apt-get update` and `sudo apt-get upgrade`.
 <br><br>
 At the terminal enter `sudo raspi-config`, navigate to `interfaces`, then enable legacy support for the camera. This will require a reboot and the camera should then be working. If the camera does not work for you the issue is likely user error - i.e. check the cables and ensure the metal connectors are oriented in the right direction. This has been the cause of 90% of my issues when using the camera module.
 <br><br>
