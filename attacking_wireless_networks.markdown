@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Case Study in Attacking a Wireless Network
+title: Case Study on Attacking a Wireless Network
 subtitle: Using tools including Kismet, the aircrack-ng suite, nmap, and hydra to send deauthentication frames, monitor network traffic, brute force web interfaces, and crack passwords
 permalink: /attacking_wireless_networks/
 description: Example case study of compromising a wireless network using deauthentication frames, monitor traffic, crack passwords, and more. Uses the aircrack-ng suite and Kismet for most of the work.
