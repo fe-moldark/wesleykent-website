@@ -61,9 +61,9 @@
       
 - name: Attacking Wireless Networks
   link: /attacking_wireless_networks/
-
-- name: RPi Packet Sniffer
-  link: /rpi_packetsniffer/
+  dropdown:
+    - name: RPi Packet Sniffer
+      link: /rpi_packetsniffer/
   
 - name: USB Injectors
   link: /usb_injectors/
