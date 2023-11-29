@@ -1,3 +1,11 @@
+/* Fair warning - I threw this together from a couple different sources so it 
+may be all over the place. That being said - it works. Upload this to your Uno,
+place a 3.5" TFT LCD Module with the ILI9488 Controller on top. Format the 
+MicroSD card to Fat32, and upload any number 16-bit bitmap images at 320x480 
+resolution on there. Easy day. (I'm kidding. This felt more complex than it 
+should have been. FML.)
+*/
+
 #define LCD_CS 33 // Chip Select goes to Analog 3
 #define LCD_CD 15 // Command/Data goes to Analog 2
 #define LCD_WR 4 // LCD Write goes to Analog 1
@@ -7,8 +15,8 @@
 #include <SD.h>
 #define sd_cs  10
 
-#include <SPI.h>          // f.k. for Arduino-1.5.2
-#include "Adafruit_GFX.h"// Hardware-specific library
+#include <SPI.h>
+#include "Adafruit_GFX.h"
 #include <MCUFRIEND_kbv.h>
 MCUFRIEND_kbv tft;
 
@@ -23,11 +31,8 @@ void setup(void);
 void loop(void);
 unsigned long FillScreen();
 
-
 uint16_t g_identifier;
-
 extern const uint8_t hanzi[];
-
 
 void setup(void) {
     Serial.begin(9600);
@@ -74,12 +79,6 @@ void loop(void) {
     tft.invertDisplay(false);
 }
 
-typedef struct {
-    PGM_P msg;
-    uint32_t ms;
-} TEST;
-TEST result[12];
-
 unsigned long FillScreen() {
 
     File root = SD.open("/");
@@ -87,7 +86,7 @@ unsigned long FillScreen() {
       Serial.println("Failed to open sd card / its directory");
       return;
     } else {
-      Serial.print("NO ERRORS");
+      Serial.print("NO ERRORS, thank god");
     }
 
     while (true) {
@@ -100,9 +99,9 @@ unsigned long FillScreen() {
         drawBMP(entry.name());
       }
       entry.close();
+      delay(50);
     }
     root.close();
-    delay(2000);
 }
 
 
@@ -127,11 +126,10 @@ void drawBMP(const char *filename) {
   // Draw BMP image pixel by pixel
   for (int y = 0; y < imgHeight; y++) {
     for (int x = 0; x < imgWidth; x++) {
-      bmpFile.seek(imgOffset + (x + (imgHeight - 1 - y) * imgWidth) * 3);  // 3 bytes per pixel (BGR)
+      bmpFile.seek(imgOffset + (x + (imgHeight - 1 - y) * imgWidth) * 3); 
       uint8_t blue = bmpFile.read();
       uint8_t green = bmpFile.read();
       uint8_t red = bmpFile.read();
-      
       uint16_t color = tft.color565(red, green, blue);
       tft.drawPixel(startX + x, startY + y, color);
     }
