@@ -67,9 +67,6 @@
   
 - name: USB Injectors
   link: /usb_injectors/
-  
-- name: Contact
-  link: /contact/
 
 - name: About
   link: /about/
