@@ -17,7 +17,7 @@ Have you ever taken a long, hard look in the mirror and wondered what is wrong w
   <img width="1200" src="/assets/usb_hid.jpg">
 </center>
 <center>
-  <iframe id="content" src="https://www.youtube.com/embed/bCFhI2NDRQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
+  <iframe id="content" src="https://www.youtube.com/embed/bCFhI2NDR2Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
 </center>
 <br><br>
 
