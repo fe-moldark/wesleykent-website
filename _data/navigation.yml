@@ -48,6 +48,14 @@
     link: /femoldark/gameconsole/
   - name: Temp sensor
     link: /raspberrypi/pi_pico_temp_sensor/
+
+- name: Electronics
+  link: /electronics/a_stupid_and_expensive_mouse/
+  dropdown:
+    - name: USB HID Mouse
+      link: /electronics/a_stupid_and_expensive_mouse/
+    - name: Arduino Uno w/ 3.5" TFT LCD Module
+      link: /electronics/arduino_uno_tft_lcd_module/
   
 - name: FE Moldark
   link: /femoldark/
