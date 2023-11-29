@@ -1,7 +1,7 @@
 - name: CTF Exploits
   link: /blog
   
-- name: Tips and Tricks
+- name: Tips & Tricks
   link: /tipsandtricks/
   dropdown:
     - name: Brute forcing
