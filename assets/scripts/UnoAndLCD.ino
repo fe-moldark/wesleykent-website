@@ -6,11 +6,11 @@ resolution on there. Easy day. (I'm kidding. This felt more complex than it
 should have been. FML.)
 */
 
-#define LCD_CS 33 // Chip Select goes to Analog 3
-#define LCD_CD 15 // Command/Data goes to Analog 2
-#define LCD_WR 4 // LCD Write goes to Analog 1
-#define LCD_RD 2 // LCD Read goes to Analog 0
-#define LCD_RESET 32 // Can alternately just connect to Arduino's reset pin
+#define LCD_CS 33
+#define LCD_CD 15
+#define LCD_WR 4
+#define LCD_RD 2
+#define LCD_RESET 32
 
 #include <SD.h>
 #define sd_cs  10
