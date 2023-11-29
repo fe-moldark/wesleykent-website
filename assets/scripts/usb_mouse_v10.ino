@@ -78,7 +78,7 @@ Y - normal: 457-490
   512 is (or supposed to be) center / average
   375-512-649 will qualify as no movement - the 'normal' values fluctuate, so keep the range as is for now
   
-  Anything above or below should return a vlaue that will modify the mouse position
+  Anything above or below should return a value that will modify the mouse position
   */
 
   
