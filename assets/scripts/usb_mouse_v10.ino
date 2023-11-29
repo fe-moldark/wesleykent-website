@@ -91,7 +91,7 @@ Y - normal: 457-490
   int mouseX;
   if (joyXValue <= base-threshold) { //left
     mouseX = -1*mouseMoveRate;
-  } else if (joyXValue > base+threshold) { //right
+  } else if (joyXValue > base+threshold && joyXValue != 1023) { //right
     mouseX = 1*mouseMoveRate;
   } else { //pass
     mouseX = 0;
@@ -100,7 +100,7 @@ Y - normal: 457-490
   int mouseY;
   if (joyYValue <= base-threshold) { //up
     mouseY = -1*mouseMoveRate;
-  } else if (joyYValue > base+threshold) { //down
+  } else if (joyYValue > base+threshold && joyYValue != 1023) { //down
     mouseY = 1*mouseMoveRate;
   } else { //pass
     mouseY = 0;
