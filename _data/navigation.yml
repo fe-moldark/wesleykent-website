@@ -23,17 +23,15 @@
     - name: The Basics
       link: /tipsandtricks/thebasics/
 
-- name: Scripts
-  link: /scripts/
+- name: Network Intrusion
+  link: /network_intrusion/attacking_wireless_networks/
   dropdown:
-    - name: Website hashing
-      link: /scripts/websitehashing/
-    - name: RPi and Dilbert
-      link: /scripts/rpi_and_dilbert/
-    - name: Cipher
-      link: /scripts/creating_my_own_cipher/
-    - name: Google Admin Console
-      link: /scripts/google_admin_console/
+    - name: Attacking Wireless Networks
+      link: /network_intrusion/attacking_wireless_networks/
+    - name: RPi Packet Sniffer
+      link: /network_intrusion/rpi_packetsniffer/
+    - name: USB Injectors
+      link: /network_intrusion/usb_injectors/
   
 - name: RPi Projects
   link: /raspberrypi/
@@ -67,15 +65,17 @@
     - name: STL Files for Download
       link: /femoldark/stls_for_download/
       
-- name: Network Intrusion
-  link: /network_intrusion/attacking_wireless_networks/
+- name: Scripts
+  link: /scripts/
   dropdown:
-    - name: Attacking Wireless Networks
-      link: /network_intrusion/attacking_wireless_networks/
-    - name: RPi Packet Sniffer
-      link: /network_intrusion/rpi_packetsniffer/
-    - name: USB Injectors
-      link: /network_intrusion/usb_injectors/
+    - name: Website hashing
+      link: /scripts/websitehashing/
+    - name: RPi and Dilbert
+      link: /scripts/rpi_and_dilbert/
+    - name: Cipher
+      link: /scripts/creating_my_own_cipher/
+    - name: Google Admin Console
+      link: /scripts/google_admin_console/
 
 - name: About
   link: /about/
