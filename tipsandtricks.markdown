@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Tips and Tricks
-subtitle: Useful notes and commands used for exploits, and other tools and methods that have proven helpful
+title: Tips & tricks when getting started with CTFs
+subtitle: Useful notes, tools, and commands that have proven helpful
 image: /assets/fe.ico
 description: Useful notes for commands and common exploit tools, methods that have proven useful.
 permalink: /tipsandtricks/
