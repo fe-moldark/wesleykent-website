@@ -29,7 +29,7 @@ Basically I wanted to use an Arduino Uno with a TFT LCD Shield and the on-board 
 <br><br>
 
 # Image format and storage
-The way this script works is it reads bitmap files from the MicroSD card reader on-board the LCD module. First off, format the MicroSD card to Fat32 - on Windows this can be done by using the "Format" option after right clicking on the drive or go the `diskpart` route using the command prompt. The images need to be saved in bitmap (.bmp) format, as 24-bit, and the images should be 480x320 in size. This is done easily enough with Gimp, just make sure you expand the Advanced Options to select the correct 24-bit option.
+The way this script works is it reads bitmap files from the MicroSD card reader on-board the LCD module. First off, format the MicroSD card to Fat32 - on Windows this can be done by using the "Format" option after right clicking on the drive or go the `diskpart` route using the command prompt. The images need to be saved in bitmap (.bmp) format, as 24-bit, and the images should be 480x320 in size. This is done easily enough with Gimp, just make sure you expand the Advanced Options to select the correct 24-bit option. If you need a working example of some images to test against, reference this directory <a href="https://github.com/fe-moldark/wesleykent-website/tree/gh-pages/assets/backup_bmp" target="_blank" rel="noopener noreferrer">here</a>.
 <br><br>
 
 # Modifying the script
