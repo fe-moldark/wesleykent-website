@@ -2,7 +2,7 @@
 layout: page
 title: Remotely Capturing Wireless Traffic with a Raspberry Pi
 subtitle: And configuring an ad hoc network for control / management of the device
-permalink: /rpi_packetsniffer/
+permalink: /network_intrusion/rpi_packetsniffer/
 description: Remotely Capturing Wireless Traffic with a RPi 4, an Ad Hoc Network, a battery pack, and a Dual-Band USB Antenna.
 ---
 
