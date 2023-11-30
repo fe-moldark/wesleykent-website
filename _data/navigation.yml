@@ -67,14 +67,15 @@
     - name: STL Files for Download
       link: /femoldark/stls_for_download/
       
-- name: Attacking Wireless Networks
-  link: /attacking_wireless_networks/
+- name: Network Intrusion
+  link: /network_intrusion/attacking_wireless_networks/
   dropdown:
+    - name: Attacking Wireless Networks
+      link: /network_intrusion/attacking_wireless_networks/
     - name: RPi Packet Sniffer
-      link: /rpi_packetsniffer/
-  
-- name: USB Injectors
-  link: /usb_injectors/
+      link: /network_intrusion/rpi_packetsniffer/
+    - name: USB Injectors
+      link: /network_intrusion/usb_injectors/
 
 - name: About
   link: /about/
