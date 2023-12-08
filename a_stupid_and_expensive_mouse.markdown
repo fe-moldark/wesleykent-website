@@ -45,7 +45,7 @@ I just drew this out instead of finding something more professional, sorry. Here
 <br><br>
 
 # Software
-Okay, this part is relatively straight forward. Assuming the hardware is connected correctly that is. Using the Arduino IDE select the Teensy 4.0 as your board and designate the USB type as "Serial, Keyboard, Mouse, Joystick". If you are missing any of the boards / libraries you can find resources online on how to install them. Link to script is <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/scripts/usb_mouse_v10.ino" target="_blank" rel="noopener noreferrer">here</a>, otherwise just copy below directly:<br>
+Okay, this part is relatively straight forward. Assuming the hardware is connected correctly that is. Using the Arduino IDE select the Teensy 4.0 as your board and designate the USB type as "Serial, Keyboard, Mouse, Joystick". If you are missing any of the boards / libraries you can find resources online on how to install them. Link to script is <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/Zenith/usb_mouse_v10.ino" target="_blank" rel="noopener noreferrer">here</a>, otherwise just copy below directly:<br>
 ```cpp
 /*This script uses the Teensy 4.0 to emulate a mouse
  * 
