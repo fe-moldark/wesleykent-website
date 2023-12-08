@@ -10,7 +10,7 @@ The only function key that I programmed is Print Screen at F1. The rest are old 
 While the key matrix for this laptop model will work for anyone else with the same laptop, the Teensy I/O pins will no doubt be different
 for you. Just follow the instructions from the link listed above to set this up yourself.
 
-Using the Arduino IDE use the Teensy 4.0 as the board, Keyboard layout as US English, and USB Type as Keyboard.
+Using the Arduino IDE use the Teensy 4.0 as the board, Keyboard layout as US - English, and USB Type as Keyboard.
 */
 
 
