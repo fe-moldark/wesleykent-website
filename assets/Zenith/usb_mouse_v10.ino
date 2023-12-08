@@ -4,7 +4,7 @@ A rotary encoder mimicks the scroll function, two buttons mimick the Left and
 Right button clicks, and PSP joystick controls mouse movement.
 
 From the Arduino IDE use the Teensy 4.0 as the Board and USB Type as "Serial,
-keyboard, Mouse, Joystick*/
+Keyboard, Mouse, Joystick*/
 
 
 #include <Bounce.h>
