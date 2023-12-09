@@ -52,6 +52,8 @@
   dropdown:
     - name: USB HID Mouse
       link: /electronics/a_stupid_and_expensive_mouse/
+    - name: USB Keyboard Controller
+      link: /electronics/usb_keyboard_controller/
     - name: Arduino Uno w/ 3.5" TFT LCD Module
       link: /electronics/arduino_uno_tft_lcd_module/
   
