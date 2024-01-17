@@ -74,6 +74,8 @@
       link: /scripts/websitehashing/
     - name: RPi and Dilbert
       link: /scripts/rpi_and_dilbert/
+    - name: Automating Work Stuff
+      link: /scripts/automated_clicker_program/
     - name: Cipher
       link: /scripts/creating_my_own_cipher/
     - name: Google Admin Console
