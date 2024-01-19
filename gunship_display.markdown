@@ -55,7 +55,7 @@ _*Disclaimer here: my brother said I actually messed up a bit and the studs need
 # Software
 
 ### Configuring and interfacing with the microcontroller
-Here is where I sort of dropped the ball. I'm writing this page a couple months after I first set this up and did not document my steps. I do know the Pico board is using CircuitPython, and there are more than enough tutorials out there to get that installed. I had to go through four micro usb cables until I found one that had the data pins wired, so don't be worried the Pico board is broken until you are using the right cable.
+Here is where I sort of dropped the ball. I'm writing this page a couple months after I first set this up and I did not document my steps. I do know the Pico board is using CircuitPython, and there are more than enough tutorials out there to get that installed. I had to go through four micro usb cables until I found one that had the data pins wired, so don't be worried the Pico board is broken until you are using the right cable.
 <br><br>
 I do remember when you get that installed you can interface with it by going to your device manager, find which COM port it is loaded under, then use some software like PuTTY to open a serial connection with it.
 <br><br>
