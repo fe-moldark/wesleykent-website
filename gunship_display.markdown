@@ -16,6 +16,10 @@ Well, my younger brother bought the new Lego Gunship and I had a spare microcont
   <img width="1150" src="/assets/gunship/gunship4.jpg">
   <img width="1050" src="/assets/gunship/gunship3.jpg">
 </center>
+<center>
+  <iframe id="content" src="https://player.vimeo.com/video/903906991?h=ea4db1a0e6" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+  <p><a href="https://vimeo.com/903906991">Gunship Display Electronics</a> from <a href="https://vimeo.com/user186074646">Wesley Kent</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+</center>
 <br><br>
 
 # Hardware
