@@ -42,6 +42,8 @@
     link: /raspberrypi/retropie/
   - name: 3D Printer
     link: /raspberrypi/3dprinter/
+  - name: Gunship Display
+    link: /raspberrypi/gunship_display/
   - name: Game Console
     link: /femoldark/gameconsole/
   - name: Temp sensor
