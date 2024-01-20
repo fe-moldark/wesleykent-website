@@ -13,8 +13,8 @@ from Printer_MX_4070N import main as MX_4070N
 from Printer_MX_4141N import main as MX_4141N
 from Printer_MX_5141N import main as MX_5141N
 from Printer_HP_LaserJet_MFP_Mxxx import main as HP_LaserJet_MFP_Mxxx
-from Printer_TopAccess_MFPxxxxxxxx import main as TopAccess_MFP
-from Printer_KYOCERA_CS_4501i import main as KYOCERA_CS_4501i
+#from Printer_TopAccess_MFPxxxxxxxx import main as TopAccess_MFP
+#from Printer_KYOCERA_CS_4501i import main as KYOCERA_CS_4501i
 
 
 current_time = datetime.now()
