@@ -55,10 +55,13 @@ camera.framerate=24
 
 
 def startNewRecording():
-    count_file=open("/home/pi/Desktop/count.txt","r") #this file easily tracks the number for the recording
-    getVideoFileNumber = int(count_file.readlines()[0])
-    count_file.close()
-    
+    try:
+        count_file=open("/home/pi/Desktop/count.txt","r") #this file easily tracks the number for the recording
+        getVideoFileNumber = int(count_file.readlines()[0])
+        count_file.close()
+    except IndexError:
+        getVideoFileNumber=0
+        
     count_file2=open("/home/pi/Desktop/count.txt","w") #adjust +=1
     count_file2.write(str(getVideoFileNumber+1))
     count_file2.close()
@@ -255,8 +258,8 @@ while True:
 
         #button has been pressed
         if GPIO.input(buttonDelete)==GPIO.LOW:
-            if readyForRemoval is True: #ie status switch is up
-                delete_recordings()
+            #if readyForRemoval is True: #ie status switch is up
+            delete_recordings()
                 
                 
         #web server check
