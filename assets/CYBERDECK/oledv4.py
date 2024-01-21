@@ -48,7 +48,7 @@ psutil.cpu_percent()
 
 def get_ip_address(interface):
     try:
-        result = subprocess.run(["ifconfig", interface], capture_output=True, text=True)
+        result = subprocess.run(["/usr/sbin/ifconfig", interface], capture_output=True, text=True) #must define full path when run from the crontab
         ip_match = re.search(r"inet (\d+\.\d+\.\d+\.\d+)", result.stdout)
         if ip_match:
             return ip_match.group(1)
