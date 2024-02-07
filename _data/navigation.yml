@@ -15,7 +15,7 @@
     - name: Using Nmap
       link: /tipsandtricks/usingnmap/
     - name: Kismet and the Aircrack-ng suite
-      link: /attacking_wireless_networks/
+      link: /network_intrusion/attacking_wireless_networks/
     - name: Steganography
       link: /tipsandtricks/steganography/
     - name: Resources
