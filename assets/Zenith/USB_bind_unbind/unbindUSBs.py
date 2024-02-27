@@ -33,7 +33,7 @@ for device in usbdevices: #vendorID, prodID, bus#, dev#
     index=str(device[4]).rfind('/')
     substring=str(device[4])[index+1:]
 
-    if (device[0],device[1]) not in whiteListed and str(substring) not in ['1-0:1.0','1-0:1.0','3-0:1.0','4-0:1.0','usb1','usb2','usb3','usb4']: #The rest of these are the "root" hubs that MUST stay active - they are not individual devices
+    if (device[0],device[1]) not in whiteListed and str(substring) not in ['1-0:1.0','2-0:1.0','3-0:1.0','4-0:1.0','usb1','usb2','usb3','usb4']: #The rest of these are the "root" hubs that MUST stay active - they are not individual devices
         device_identifier = str(device[2])+"-"+str(device[3])
 
         #print('Device: ',device[0],device[1],' not found in white list. Bus# and dev#: ',device[2],device[3],' --basefolder at: ',device[4])
