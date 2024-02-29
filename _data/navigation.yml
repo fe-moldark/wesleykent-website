@@ -34,7 +34,7 @@
       link: /network_intrusion/usb_injectors/
   
 - name: RPi Projects
-  link: /raspberrypi/
+  link: /raspberrypi/web_kiosk/
   dropdown:
   - name: Web kiosk
     link: /raspberrypi/web_kiosk/
@@ -72,7 +72,7 @@
       link: /femoldark/stls_for_download/
       
 - name: Scripts
-  link: /scripts/
+  link: /scripts/websitehashing/
   dropdown:
     - name: Website hashing
       link: /scripts/websitehashing/
