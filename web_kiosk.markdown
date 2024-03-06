@@ -44,7 +44,7 @@ _Note: in many cases you do NOT want to schedule automatic updates and upgrades 
 <br>
 
 ### Management of the Web Kiosk
-In my situation the end goal is to have other users managing this kiosk themselves and that requires the ability for them to be able to edit the web page (or other media) being displayed. I configured this in two different ways, the first being more secure but not as user friendly and the latter being more user friendly but less secure.
+In my situation the end goal is to have other users managing this kiosk themselves and that requires the ability for them to be able to edit the web page (or other media) being displayed. I configured this in three different ways, the first being more secure but not as user friendly and the latter being more user friendly but less secure.
 <br><br>
 ##### Method 1: Configuring remote access and a custom shell
 This is by far my favorite and the more secure option because of how their login shell works. For those that don't know you can customize a user's bash shell to something other than, well, a standard bash shell. What this looked like was creating the user and the following file `sudo nano /usr/local/bin/edit_only.sh` (and later making the file executable with `sudo chmod +x /usr/local/bin/edit_only.sh`). The contents of it should be the following:
@@ -79,7 +79,10 @@ I wouldn't change much about the permissions. Keep things read and writable, but
 Assign a password for the smb login, which I kept the same as the `editURL` user mentioned previously. Restart the smb service with `sudo systemctl restart smbd` and try to navigate to the share from your Windows (or whatever) computer. Enter the username / password you configured and ensure you are able to edit and move files to the share.
 <br><br>**Note: this took me 20 seconds to figure out, but the username you use there needs to start with "IPADDRESS\then_username". Just like logging into a local (non-domain) account on Windows and you need to use ".\username" you will need to include the IP address before the username to use that local login for authentication, else it defaults to your domain.**
 <br><br>
-##### (Method 3: Just do it yourself)
+##### Method 3: Configure the VNC server
+This is a secure and very dynamic option, especially if you'll be displaying different types of content and want easy access to the desktop. This also allows you to entirely disable the USB ports since you'll be able to use a keyboard and mouse solely over VNC. There are plenty of tutorials on how to configure this that are already out there - I won't go over it here.
+<br><br>
+##### (Method 4: Just do it yourself)
 This shouldn't really count, but you can always just not give anyone else access to the web kiosk and manage it yourself. It's more work for you and doesn't scale well, but if you're anything like me you are not very trusting anyway.
 <br><br>
 
