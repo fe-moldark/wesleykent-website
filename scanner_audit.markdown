@@ -23,6 +23,7 @@ So far I have built profiles for the following printers:
 - <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/MFP_program/Printer_MX_5070N.py" target="_blank" rel="noopener noreferrer">SHARP MX 5070N</a>
 - <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/MFP_program/Printer_MX_4141N.py" target="_blank" rel="noopener noreferrer">SHARP MX 4141N</a>
 - <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/MFP_program/Printer_MX_5141N.py" target="_blank" rel="noopener noreferrer">SHARP MX 5141N</a>
+- <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/MFP_program/Printer_MX_5070N.py" target="_blank" rel="noopener noreferrer">SHARP BP 70C55</a>
 - Profiles I am still working on: KYOCERA CS 4501i, two TopAccess MFP models, and one other I forget the name of
 <br><br>
 
