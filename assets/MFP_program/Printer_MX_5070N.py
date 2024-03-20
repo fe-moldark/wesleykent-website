@@ -1,3 +1,5 @@
+#note: this profile also works for SHARP BP 70C55
+
 import getpass
 import csv
 import requests
