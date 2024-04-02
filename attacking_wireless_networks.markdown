@@ -77,7 +77,7 @@ And there is further info about these devices if you want to review them within 
 # Performing the deauthentication attack
 Now that we have both MAC addresses of the AP and client we can send the deauthentication frames to the client. We will do this with the following command:<br>
 `aireplay-ng -0 5 -a 00:24:A5:B3:D6:98 -c 68:94:23:AD:E1:1A wlx9cefd5f994c7`<br>
-Where the "5" represents how many times you want to perform the deauthentication attack, the "-a" definees the MAC address of the access point, and "-c" of the client. As I mentioned earlier if you start airmon-ng on the wrong channel you will get an error stating the mismatch between your interface and the channel the target network is using. To correct this, restart airmon-ng using `airmon-ng start wlx9cefd5f994c7 <channel #>`.
+Where the "5" represents how many times you want to perform the deauthentication attack, the "-a" defines the MAC address of the access point, and "-c" of the client. As I mentioned earlier if you start airmon-ng on the wrong channel you will get an error stating the mismatch between your interface and the channel the target network is using. To correct this, restart airmon-ng using `airmon-ng start wlx9cefd5f994c7 <channel #>`.
 <br><br>
 If you want a neat visual of the deauthentication attack as it happens you can run a continuous ping scan on the wireless client against the target router using `ping -t 192.168.1.1` (or whatever the default gateway is), and you'll see the packets start timing out.
 <br><br>
