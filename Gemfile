@@ -10,6 +10,8 @@ source "https://rubygems.org"
 
 #gem "github-pages", group: :jekyll_plugins
 
+gem "bundler", "~> 2.3.13"
+
 
 gem "jekyll", "~> 4.2.2"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
