@@ -40,7 +40,7 @@ theme: bulma-clean-theme
 
 plugins:
   - github-pages
-  - jekyll-feed
+  # - jekyll-feed
   - remote_theme
   - jekyll-redirect-from
   # - jekyll-sitemap
