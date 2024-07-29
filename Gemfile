@@ -11,8 +11,10 @@ source "https://rubygems.org"
 # troubleshooting below... cmon now...
 gem "github-pages", group: :jekyll_plugins
 
+# troubleshooting below... cmon now... #2
+gem "jekyll", "= 3.9.5"
 
-gem "jekyll", "~> 4.2.2"
+
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "bulma-clean-theme"
 # gem "jekyll-theme-midnight"
