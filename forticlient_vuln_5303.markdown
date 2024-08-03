@@ -3,7 +3,7 @@ layout: page
 title: Fix for FortiClient Vuln 5303 // CVE-2023-29328 Remote Code Execution Vulnerability
 subtitle: 
 description: Fix for FortiClient Vuln 5303 // CVE-2023-29328 Remote Code Execution Vulnerability
-permalink: /FortiClient_CVEs/CVE_2023_29328
+permalink: /FortiClient_CVEs/CVE_2023_29328/
 ---
 
 
