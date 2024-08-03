@@ -6,6 +6,7 @@ description: Fix for FortiClient Vuln 5303 // CVE-2023-29328 Remote Code Executi
 permalink: /FortiClient_CVEs/CVE_2023_29328
 ---
 
+
 # Fix for FortiClient Vuln 5303 // CVE-2023-29328 Remote Code Execution Vulnerability
 This vulnerability appeared for nearly a hundred devices on our FortiClient EMS - 93 to be exact. Looking into some of these computers showed it was an old Teams directory in the user's `AppData` folder, and nearly all of these accounts had only been logged into once to set up the computer and join it to the domain. Now, getting rid of this is fairly simple and takes three steps:
 1. Run the python script or package it into an executable like I did and deploy via PDQ
