@@ -14,7 +14,7 @@ This vulnerability appeared for nearly a hundred devices on our FortiClient EMS 
 3. Wait for the daily scan or force a rescan over the FortiClient EMS and you'll see it go away
 <br><br>
 
-If you want to avoid downloading a sketchy executable from some guy on internet (I get it) you can convert the <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/FortiClient_CVEs/CVE-2023-29328.py" target="_blank" rel="noopener noreferrer">python file</a> yourself, otherwise here is the <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/FortiClient_CVEs/CVE-2023-29328.exe" target="_blank" rel="noopener noreferrer">executable</a>. Here's what it looks like from both the EMS server and directly on the device:
+If you want to avoid downloading a sketchy executable from some guy on the internet (I get it) you can convert the <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/FortiClient_CVEs/CVE-2023-29328.py" target="_blank" rel="noopener noreferrer">python file</a> yourself, otherwise here is the <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/FortiClient_CVEs/CVE-2023-29328.exe" target="_blank" rel="noopener noreferrer">executable</a>. Here's what it looks like from both the EMS server and directly on the device:
 <center>
   <img src="/assets/FortiClient_CVEs/forticlientems.png" alt="" width=1100><br>
 </center>
