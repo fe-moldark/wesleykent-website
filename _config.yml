@@ -36,7 +36,7 @@ github_username:  fe-moldark
 
 # Build settings
 #theme: bulma-clean-theme
-remote_theme: chrisrhymes/bulma-clean-theme
+remote_theme: chrisrhymes/bulma-clean-theme@v0.14.0
 
 plugins:
   - github-pages
