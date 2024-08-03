@@ -40,10 +40,10 @@ remote_theme: chrisrhymes/bulma-clean-theme@v0.14.0
 
 plugins:
   - github-pages
-  # - jekyll-feed
+  - jekyll-feed
   - remote_theme
   - jekyll-redirect-from
-  # - jekyll-sitemap
+  - jekyll-sitemap
 
 
 defaults:
