@@ -10,7 +10,6 @@ description: Remotely Capturing Wireless Traffic with a RPi 4, an Ad Hoc Network
   <link rel="stylesheet" type="text/css" href="/styles/embedded_videos_and_stls.css">
 </head>
 
-
 # Introduction
 This page explores a combination of two ideas I had - the first was capturing wireless traffic over a wireless interface and the second to be able to _remotely_ manage and access the packet capture files that are generated. This is naturally done using a Raspberry Pi powered using a UPS so it can be left on its own for a short period.
 <br><br>
