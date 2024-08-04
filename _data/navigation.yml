@@ -30,7 +30,7 @@
       link: /network_intrusion/attacking_wireless_networks/
     - name: RPi Network Tap
       link: /network_intrusion/network_tap/
-    - name: RPi Packet Sniffer
+    - name: Capturing Wireless Traffic
       link: /network_intrusion/rpi_packetsniffer/
     - name: USB Injectors
       link: /network_intrusion/usb_injectors/
