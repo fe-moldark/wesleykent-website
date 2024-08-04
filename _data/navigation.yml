@@ -28,6 +28,8 @@
   dropdown:
     - name: Attacking Wireless Networks
       link: /network_intrusion/attacking_wireless_networks/
+    - name: RPi Network Tap
+      link: /network_intrusion/network_tap/
     - name: RPi Packet Sniffer
       link: /network_intrusion/rpi_packetsniffer/
     - name: USB Injectors
