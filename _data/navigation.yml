@@ -84,6 +84,8 @@
       link: /scripts/automated_clicker_program/
     - name: Automating Work Stuff (Part 2)
       link: /scripts/scanner_audit/
+    - name: Remediate CVE-2023-29328
+      link: /FortiClient_CVEs/CVE_2023_29328/
     - name: Cipher
       link: /scripts/creating_my_own_cipher/
     - name: Google Admin Console
