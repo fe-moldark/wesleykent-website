@@ -7,7 +7,7 @@ permalink: /network_intrusion/network_tap/
 ---
 
 # Introduction
-I was working on a personal project that required a network tap of sorts. Now, proper ones cost too much for my pride to let me purchase outright, so I designed my own active, PoE powered Network Tap using a Raspberry Pi 4, a PoE+ hat, one or two USB ethernet adapters, and a USB stick. Total cost for me comes out to under $100, and given the hardware I already had it was much less than that. It's about a half or third the price of ones you can buy online, which is not to say mine is as good, but certainly cheaper.
+I was working on a personal project that required a network tap of sorts. Now, proper ones cost too much for my pride to let me purchase outright, so I designed my own. It's a PoE powered Network Tap using a Raspberry Pi 4, a PoE+ hat, one or two USB ethernet adapters, and a USB stick. Total cost for me came out to under $100, and given the hardware I already had, it was actually much less than that. It's about a half or third the price of ones you can buy online, which is not to say mine is as good, but it certainly is cheaper.
 <br><br>
 
 
@@ -57,7 +57,7 @@ iface wlan0 inet static
     dns-nameservers 8.8.8.8 8.8.4.4
 ```
 <br>
-Another configuration I also played around with was using the `wlan0` interface as an ad hoc network that you could remotely connect to and download the pcap files from. I cover how to do that on [this page](/network_intrusion/rpi_packetsniffer/') somewhere if you're interested in that alternative. The only downside is that you need to be close enough to the device to be able to connect, and the scenario I was working in I already knew the network's password which made accessing the files a lot quicker over ssh / scp.
+Another configuration I also played around with was using the `wlan0` interface as an ad hoc network that you could remotely connect to and download the pcap files from. I cover how to do that on [this page](/network_intrusion/rpi_packetsniffer/) somewhere if you're interested in that alternative. The only downside is that you need to be close enough to the device to be able to connect, and the scenario I was working in I already knew the network's password which made accessing the files a lot quicker over ssh / scp.
 <br>
 
 ## Storing the captured network data
@@ -106,7 +106,7 @@ A couple of notes from this script are the flags used in the `sudo mount [...]` 
 @reboot sleep 60 && sudo /home/pi/startup.sh >> /home/pi/youHadBetterHaveAGoodReasonForAnError.log 2>&1
 ```
 <br>
-The sleep function is needed for all of the interfaces to be brought online, the USB device to load in, etc. Also, a quick note on the USB device itself - the file system needs to work with linux, so I'd recommend something like ext4, especially for a larger storage capacity. If you're on Windows I'll typically do this via `cmd > diskpart > list disk > select disk x > clean > create partition primary > format fs=exfat quick`.
+The sleep function is needed for all of the interfaces to be brought online, the USB device to load in, etc. Also, a quick note on the USB device itself - the file system needs to work with linux, so I'd recommend something like exfat, especially for a larger storage capacity. If you're on Windows I'll typically do this via `cmd > diskpart > list disk > select disk x > clean > create partition primary > format fs=exfat quick`.
 <br>
 
 ### Scenario 2: Output to a second USB to ethernet adapter
