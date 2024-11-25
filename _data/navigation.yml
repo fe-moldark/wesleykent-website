@@ -28,7 +28,9 @@
   dropdown:
     - name: Attacking Wireless Networks
       link: /network_intrusion/attacking_wireless_networks/
-    - name: RPi Network Tap
+    - name: RPi Network Tap (Version 2)
+      link: /network_intrusion/network_tapv2/
+    - name: RPi Network Tap (old)
       link: /network_intrusion/network_tap/
     - name: Capturing Wireless Traffic
       link: /network_intrusion/rpi_packetsniffer/
