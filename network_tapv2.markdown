@@ -89,7 +89,7 @@ Edit the crontab with `crontab -e` and add the following entries:
 @reboot /bin/bash /home/ntap/mountUSB_and_startNTap.sh >> /home/ntap/log.log 2&>1
 
 # Configure a consistent baud rate for the serial connection
-@reboot stty -F /dev/serial0 11520
+@reboot stty -F /dev/serial0 115200
 ```
 <br><br>
 
