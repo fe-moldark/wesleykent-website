@@ -14,7 +14,7 @@ permalink: /network_intrusion/network_tapv2/
 # Introduction
 This is an updated version of the previous network tap, better in multiple ways and with a proper case this time around. Name basically says it all, but here is some more information on how this works. It runs in three different modes, controlled by a 'cycle mode' button on the outside of the case.
 - Mode 1: Network tap that copies traffic to the connected usb drive
-- Mode 2: Network tap that functions more as a port mirror by coping all traffic of the bridged interface to a second USB/ethernet adapter, which you can then capture using tcpdump, Wireshark, etc
+- Mode 2: Network tap that functions more as a port mirror by copying all traffic of the bridged interface to a second USB/ethernet adapter, which you can then capture using tcpdump, Wireshark, etc
 - Mode 3: Essentially turns the device into an IP phone. The eth0 interface can receive a dhcp address (assuming a dhcp server is running on the network) and the bridged interface from eth0>eth1 stays open, allowing a second device to connect to the network with its own IP address (sorta like a mini-switch)
 <br>
 
