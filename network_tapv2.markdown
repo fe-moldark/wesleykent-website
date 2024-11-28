@@ -14,7 +14,7 @@ permalink: /network_intrusion/network_tapv2/
 # Introduction
 This is an updated version of the previous network tap, better in multiple ways and with a proper case this time around. Name basically says it all, but here is some more information on how this works. It runs in three different modes, controlled by a 'cycle mode' button on the outside of the case.
 - Mode 1: Network tap that copies traffic to the connected usb drive
-- Mode 2: Network tap that function more as a port mirror by coping all traffic of the bridged interface to a second USB/ethernet adapter, which you can then capture using tcpdump, Wireshark, etc
+- Mode 2: Network tap that functions more as a port mirror by coping all traffic of the bridged interface to a second USB/ethernet adapter, which you can then capture using tcpdump, Wireshark, etc
 - Mode 3: Essentially turns the device into an IP phone. The eth0 interface can receive a dhcp address (assuming a dhcp server is running on the network) and the bridged interface from eth0>eth1 stays open, allowing a second device to connect to the network with its own IP address (sorta like a mini-switch)
 <br>
 
@@ -91,6 +91,7 @@ Edit the crontab with `crontab -e` and add the following entries:
 # Configure a consistent baud rate for the serial connection
 @reboot stty -F /dev/serial0 115200
 ```
+That baud rate setting for `/dev/serial0` is needed because it was acting really weird, practically every time it booted up it would select a random (but still valid) baud rate. Not a clue where it was pulling that from, so the cronjob sets it manually at boot.
 <br><br>
 
 ## Adhoc network stuff
@@ -101,7 +102,7 @@ dhcp-range=169.254.1.2,169.254.255.254,255.255.0.0,24h
 ```
 Then `sudo systemctl enable dnsmasq`.
 <br><br>
-Edit the file at `/etc/hostapd/hostapd.conf` to be:<br>
+Keeping in mind you should choose your own password and ssid, edit the file at `/etc/hostapd/hostapd.conf` to be:<br>
 ```bash
 interface=wlan0
 driver=nl80211
@@ -171,8 +172,14 @@ Now, execute a one time copy of `sudo cp /etc/network/interfaces.dhcp /etc/netwo
 Every file listed in <a href="https://github.com/fe-moldark/wesleykent-website/tree/gh-pages/assets/ntap" target="_blank" rel="noopener noreferrer">this folder</a> should be downloaded and saved to the `/home/ntap/` directory, and made executable with `chmod +x <filename>`. These control the LCD, start the adhoc network, conduct the initial load of the USB media, and configure the mirrored bridged interface when in mode 2.
 <br>
 
-You can play around with those files as you want, they do make some assumptions about your system like where the USB media loads to by default (/dev/sda1) and the filters that are applied to the tcpdump capture, so you'll likely want to adjust them. They should be relatively straight-forward to read. Also keep in mind that the receiving interface when in mode 2 will need to be set to promiscuous mode to work properly. Otherwise you'll just see stuff like ARP traffic.
+You can play around with those files as you want, they do make some assumptions about your system like where the USB media loads to by default (/dev/sda1) and the filters that are applied to the tcpdump capture, so you'll likely want to adjust them. They should be relatively straight-forward to understand. Also keep in mind that the receiving interface when in mode 2 will need to be set to promiscuous mode to work properly. Otherwise you'll just see stuff like ARP traffic.
 <br><br>
+
+# Random thoughts
+- If you are planning on _keeping_ the second usb/ethernet adapter plugged in for mode 2, look into configuring a udev rule to ensure it is assigned the correct interface name (`eth2`). I didn't consider this on a reboot of the Pi and suddenly my port mirroring was all messed up, turns out the adapters had loaded in backwards that time around and `eth1` was `eth2`, and `eth2` was `eth1`. Bah.
+- Unfortunately my internet speeds and the 10/100 ethernet adapter I used didn't allow me to do any real stress tests on the device, but let me know how it handles Gigabyte speeds if you ever try it out. It was handling ~70 Mbps down w/out stressing out system resources, _or_ slowing download speeds by more than 1-3% compared to a direct connection to the network.
+- You can modify what information the OLED displays, I just chose what I thought would be most useful but it can really be anything you want. Same goes for the mode - if you want to boot into a different default mode for the network tap, modify the `mode` variable in the `main.py` file.
+<br>
 
 # Conclusion
 Well, that's all folks. A simple enough network tap that's a lot cheaper than anything you can buy online. Great for monitoring any unencrypted traffic like telnet, http, etc. Any questions feel free to reach out and I'll get back to you when I can.
