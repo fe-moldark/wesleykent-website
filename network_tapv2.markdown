@@ -179,7 +179,7 @@ You can play around with those files as you want, they do make some assumptions 
 - If you are planning on _keeping_ the second usb/ethernet adapter plugged in for mode 2, look into configuring a udev rule to ensure it is assigned the correct interface name (`eth2`). I didn't consider this on a reboot of the Pi and suddenly my port mirroring was all messed up, turns out the adapters had loaded in backwards that time around and `eth1` was `eth2`, and `eth2` was `eth1`. Bah.
 - Unfortunately my internet speeds and the 10/100 ethernet adapter I used didn't allow me to do any real stress tests on the device, but let me know how it handles Gigabyte speeds if you ever try it out. It was handling ~70 Mbps down w/out stressing out system resources, _or_ slowing download speeds by more than 1-3% compared to a direct connection to the network.
 - You can modify what information the OLED displays, I just chose what I thought would be most useful but it can really be anything you want. Same goes for the mode - if you want to boot into a different default mode for the network tap, modify the `mode` variable in the `main.py` file.
-<br>
+<br><br>
 
 # Conclusion
 Well, that's all folks. A simple enough network tap that's a lot cheaper than anything you can buy online. Great for monitoring any unencrypted traffic like telnet, http, etc. Any questions feel free to reach out and I'll get back to you when I can.
