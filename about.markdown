@@ -24,6 +24,6 @@ Can't say I'm one for social media, but you can find me on the following sites:<
 This site was made using Jekyll and is hosted through GitHub Pages. All images are original and taken by myself. Any exploited flags from CTFs will be blurred out.
 <br><br>
 <center>
-  <img width="150" src="/assets/amu.jpg" alt=""> <img width="150" src="/assets/CySAPlusce certified logo.png" <img width="150" src="/assets/SecurityPlus Logo Certified CE.png" alt=""> <img width="150" src="/assets/NetworkPlus Logo Certified CE.png" alt=""> <img width="150" src="/assets/Aplus Logo Certified CE.png" alt=""> <img width="150" src="/assets/isc2_cc.png" alt="">
+  <img width="150" src="/assets/amu.jpg" alt=""> <img width="150" src="/assets/CySAPlusce certified logo.png" alt=""> <img width="150" src="/assets/SecurityPlus Logo Certified CE.png" alt=""> <img width="150" src="/assets/NetworkPlus Logo Certified CE.png" alt=""> <img width="150" src="/assets/Aplus Logo Certified CE.png" alt=""> <img width="150" src="/assets/isc2_cc.png" alt="">
 </center>
 <br>
