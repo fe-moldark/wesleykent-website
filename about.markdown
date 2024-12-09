@@ -1,12 +1,12 @@
 ---
 layout: page
 title: About
-description: My name is Wesley Kent, I am currently studying Cybersecurity at American Military University, with a concentration in Wireless and Mobile Security. I've begun working through the CompTIA certifications and as of the Fall '22 I have obtained my Security+, Network+, and A+ certifications, with the Linux+ and CySA+ in the works. Right now I am working as IT Support getting some hands-on experience before I transition to the security side of IT. I am using this site to showcase some projects that I work on for fun in my free time.
+description: My name is Wesley Kent. I’m a former Marine now working in IT. I hold a degree in Cybersecurity from American Military University with a concentration in Wireless and Mobile Security. I am certified in CompTIA’s CySA+, Security+, Network+, and A+, with additional certifications in the works. Currently, I work in Computer Operations at a local manufacturing company, gaining hands-on experience as I prepare to transition to the security side of IT. This site serves as a platform to showcase projects I enjoy working on in my free time.
 permalink: /about/
 ---
 
 ## Who I am
-My name is Wesley Kent, I am currently studying Cybersecurity at American Military University, with a concentration in Wireless and Mobile Security. I've begun working through the CompTIA certifications and as of the Fall '22 I have obtained my Security+, Network+, and A+ certifications, with the Linux+ and CySA+ in the works. Right now I am working as IT Support getting some hands-on experience before I transition to the security side of IT. I am using this site to showcase some projects that I work on for fun in my free time.
+My name is Wesley Kent. I’m a former Marine now working in IT. I hold a degree in Cybersecurity from American Military University with a concentration in Wireless and Mobile Security. I am certified in CompTIA’s CySA+, Security+, Network+, and A+, with additional certifications in the works. Currently, I work in Computer Operations at a local manufacturing company, gaining hands-on experience as I prepare to transition to the security side of IT. This site serves as a platform to showcase projects I enjoy working on in my free time.
 <br><br>
 
 ## Contact
