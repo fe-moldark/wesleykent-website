@@ -1,7 +1,7 @@
 ---
 layout: page
 title: The time I created my own cipher for fun
-subtitle: And as I've added more layers to it, the more secure I see it being
+subtitle: And while I've found ways to break it since, I did write a version 2 that I can't see being broken
 description: Creating a custom cipher by encoding text into an image with Python 2.7, PIL, and Numpy
 permalink: /scripts/creating_my_own_cipher/
 ---
@@ -14,8 +14,8 @@ What this script does is accept text entered in manually, line by line, or as a 
 I will break down how the scripts work down below if you want to manipulate it yourself, or just for those that are curious. To view the entire scripts, reference <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/scripts/Final_Encrypt.py" target="_blank" rel="noopener noreferrer">here for the encrypt file</a> and <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/scripts/Final_Decrypt.py" target="_blank" rel="noopener noreferrer">here for the decrypt file</a>.
 <br><br><br>
 
-# Quick note on v2
-Before diving into this I will say I have thought of several ways I want to improve the cipher. I have already begun reworking the code but this next version is much more complex - instead of what you are about to read down below, a single password will be hashed using several algorithms. The first of these will generate three numbers that will designate the locations for the pixels with a 4x4 grid (and those three values when combined will match the targeted index value from the PSK), and the other two will act as the first row and column in a large grid. From that row and column it will generate values for the entire grid and use them to shift around individual pixels within a set space, easiest right now has been only 100x100 pixels blocks at a time but I want to increase that. I've already written part of this code and as far as I can tell it fully removes any trace of any pattern whatsoever, so outside of brute forcing the password I don't see how this could be reconstructed. But I think we all overestimate our intelligence, so I am more than likely missing something. Moving on to the current, working, version...
+# Quick note on v2 (2025)
+Before diving into this I will say I have found ways to break it if you know how the program is written. So, I rewrote this recently and went in a similar (yet completely different) direction with it. I do not see any way in which the new encryption could be broken outside of brute forcing the password, which, according to how I wrote it, will take time. A very, very long time. Since I am actively using this as my own personal password wallet I won’t be distributing it. In addition to wrapping the program into its own executable it also offers ways to manipulate the data, remove/add rows, and then export those changes to a new KEF file. Hope you enjoy reading through all the below text.
 <br><br><br>
 
 # How it works
