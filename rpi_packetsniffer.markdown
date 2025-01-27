@@ -193,7 +193,7 @@ Recovering the physical RPi device will of course allow for direct access to the
 <br><br>
 
 ### Analyzing the traffic
-THe tool I am using to analyze the traffic is of course Wireshark. No doubt there will be traffic from other networks as well and since I am only interested in my own `MoldarkNet` network, let's introduce the following filter: `wlan.addr==xx.xx.xx.xx.xx.xx` (adjust the MAC address of course). Alternatively you can use `wlan.bssid==xx.xx.xx.xx.xx.xx`. Reviewing this traffic can help paint a picture of the type of traffic being sent across the network and the actions of particular hosts.br>
+The tool I am using to analyze the traffic is of course Wireshark. No doubt there will be traffic from other networks as well and since I am only interested in my own `MoldarkNet` network, let's introduce the following filter: `wlan.addr==xx.xx.xx.xx.xx.xx` (adjust the MAC address of course). Alternatively you can use `wlan.bssid==xx.xx.xx.xx.xx.xx`. Reviewing this traffic can help paint a picture of the type of traffic being sent across the network and the actions of particular hosts.br>
 <center>
   <img width="1300" src="/assets/wireshark.png">
 </center>
