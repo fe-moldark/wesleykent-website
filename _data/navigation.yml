@@ -80,6 +80,8 @@
   dropdown:
     - name: Website hashing
       link: /scripts/websitehashing/
+    - name: Kent Encryption Standard
+      link: /scripts/kent_encryption_standard/
     - name: RPi and Dilbert
       link: /scripts/rpi_and_dilbert/
     - name: Automating Work Stuff
@@ -88,7 +90,7 @@
       link: /scripts/scanner_audit/
     - name: Remediate CVE-2023-29328
       link: /FortiClient_CVEs/CVE_2023_29328/
-    - name: Cipher
+    - name: Cipher (old)
       link: /scripts/creating_my_own_cipher/
     - name: Google Admin Console
       link: /scripts/google_admin_console/
