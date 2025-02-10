@@ -15,7 +15,7 @@ I will break down how the scripts work down below if you want to manipulate it y
 <br><br><br>
 
 # Quick note on v2 (2025)
-Before diving into this I will say I have found ways to break it if you know how the program is written. So, I rewrote this recently and went in a similar (yet completely different) direction with it. I do not see any way in which the new encryption could be broken outside of brute forcing the password, which, according to how I wrote it, will take time. A very, very long time. Since I am actively using this as my own personal password wallet I won’t be distributing it. In addition to wrapping the program into its own executable it also offers ways to manipulate the data, remove/add rows, and then export those changes to a new KEF file. Hope you enjoy reading through all the below text.
+Before diving into this I will say I have found ways to break it if you know how the program is written. So, I rewrote this recently and went in a similar (yet completely different) direction with it. I do not see any way in which the new encryption could be broken outside of brute forcing the password, which, according to how I wrote it, will take time. A very, very long time. Feel free to take a look at the new version [here](/scripts/kent_encryption_standard/).
 <br><br><br>
 
 # How it works
