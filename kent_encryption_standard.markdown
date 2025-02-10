@@ -17,19 +17,22 @@ Going over this by line or by section in the code sounds exhausting since it's j
 <center>
   <img src="/assets/KEF/search_example.png" alt="" width=950><br>
 </center>
+<center>
+  <img src="/assets/KEF/kef_example.png" alt="" width=1300><br>
+</center>
 <br><br>
 
 # High level overview of how the encryption works
-- Step 1: Using a SHA512 hash of the given password a unique 128x128 hash array will be created
-- Step 2: Each character in the cleartext file will use a unique hash using a `hash(original hash + thatRow[0:index of that character being encoded in the array's row]`
-- Step 3: A random 16x16 array will be created using hexadecimal values for each character to be encoded
-- Step 4: Using four of the first unique pairs in the character-specific hash, four locations to encode the data will be selected
-- Step 5: The hex value of the character will be assigned, for instance `?` would be equal to `3f`
-- Step 6: A random hexadecimal value will be chosen, and the second must "add" to create the target. For example, to encode the `3` let's say the first randomly chosen hex value was a `0`, so the second would be a `2` (positions of 1 + 3 == 4, or `3`)
-- Step 7: This will be done for the `f` value as well, and each of the four unique locations will be selected to host each of the 4 unique values that make up the single hex-encoded character
-- Step 8: This is done for each and every character, and at the very end all of the 16x16 arrays are combined "horizontally"
-- Step 9: The (now very long) 16 rows are then shifted x number of characters using elements of the original hash
-- Step 10: Export the data in an xml-based format to a KEF wallet
+- **Step 1:** Using a SHA512 hash of the given password a unique 128x128 hash array will be created
+- **Step 2:** Each character in the cleartext file will use a unique hash using a `hash(original hash + thatRow[0:index of that character being encoded in the array's row]`
+- **Step 3:** A random 16x16 array will be created using hexadecimal values for each character to be encoded
+- **Step 4:** Using four of the first unique pairs in the character-specific hash, four locations to encode the data will be selected
+- **Step 5:** The hex value of the character will be assigned, for instance `?` would be equal to `3f`
+- **Step 6:** A random hexadecimal value will be chosen, and the second must "add" to create the target. For example, to encode the `3` let's say the first randomly chosen hex value was a `0`, so the second would be a `2` (positions of 1 + 3 == 4, or `3`)
+- **Step 7:** This will be done for the `f` value as well, and each of the four unique locations will be selected to host each of the 4 unique values that make up the single hex-encoded character
+- **Step 8:** This is done for each and every character, and at the very end all of the 16x16 arrays are combined "horizontally"
+- **Step 9:** The (now very long) 16 rows are then shifted x number of characters using elements of the original hash
+- **Step 10:** Export the data in an xml-based format to a KEF wallet
 <br><br>
 
 
