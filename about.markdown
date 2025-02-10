@@ -6,7 +6,7 @@ permalink: /about/
 ---
 
 ## Who I am
-My name is Wesley Kent. I’m a former Marine now working in IT. I hold a degree in Cybersecurity from American Military University with a concentration in Wireless and Mobile Security. I am certified in CompTIA’s CySA+, Security+, Network+, and A+, with additional certifications in the works. Currently, I work in Computer Operations at a local manufacturing company, gaining hands-on experience as I prepare to transition to the security side of IT. This site serves as a platform to showcase projects I enjoy working on in my free time.
+My name is Wesley Kent. I’m a former Marine now working in IT. I hold a degree in Cybersecurity from American Military University with a concentration in Wireless and Mobile Security. I am certified in CompTIA’s CySA+, Security+, Network+, and A+, and ISC2's SSCP and CC. Currently, I work in Computer Operations at a local manufacturing company, gaining hands-on experience as I prepare to transition to the security side of IT. This site serves as a platform to showcase projects I enjoy working on in my free time.
 <br><br>
 
 ## Contact
