@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-description: My name is Wesley Kent. I’m a former Marine now working in IT. I hold a degree in Cybersecurity from American Military University with a concentration in Wireless and Mobile Security. I am certified in CompTIA’s CySA+, Security+, Network+, and A+, with additional certifications in the works. Currently, I work in Computer Operations at a local manufacturing company, gaining hands-on experience as I prepare to transition to the security side of IT. This site serves as a platform to showcase projects I enjoy working on in my free time.
+description: My name is Wesley Kent. I’m a former Marine now working in IT. I hold a degree in Cybersecurity from American Military University with a concentration in Wireless and Mobile Security. I am certified in CompTIA’s CySA+, Security+, Network+, and A+, and ISC2's SSCP and CC. Currently, I work in Computer Operations at a local manufacturing company, gaining hands-on experience as I prepare to transition to the security side of IT. This site serves as a platform to showcase projects I enjoy working on in my free time.
 permalink: /about/
 ---
 
@@ -10,7 +10,7 @@ My name is Wesley Kent. I’m a former Marine now working in IT. I hold a degree
 <br><br>
 
 ## Contact
-You can reach out to me via email at [wesley.kent98@gmail.com](mailto:contact@wesleykent.com) for any general queries or, hey, any job opportunities too. For questions regarding my side project please use my email at [femoldark@gmail.com](mailto:femoldark@gmail.com). My LinkedIn account can be found <a href="https://www.linkedin.com/in/wesley-kent" target="_blank" rel="noopener noreferrer">here</a>, feel free to reach out and connect.
+You can reach out to me via email at [contact@wesleykent.com](mailto:contact@wesleykent.com) for any general queries or, hey, any job opportunities too. For questions regarding my side project please use my email at [femoldark@gmail.com](mailto:femoldark@gmail.com). My LinkedIn account can be found <a href="https://www.linkedin.com/in/wesley-kent" target="_blank" rel="noopener noreferrer">here</a>, feel free to reach out and connect.
 <br><br>
 
 ## Other places you can find me
