@@ -10,7 +10,7 @@ My name is Wesley Kent. I’m a former Marine now working in IT. I hold a degree
 <br><br>
 
 ## Contact
-You can reach out to me via email at [wesley.kent98@gmail.com](mailto:wesley.kent98@gmail.com) for any general queries or, hey, any job opportunities too. For questions regarding my side project please use my email at [femoldark@gmail.com](mailto:femoldark@gmail.com). My LinkedIn account can be found <a href="https://www.linkedin.com/in/wesley-kent" target="_blank" rel="noopener noreferrer">here</a>, feel free to reach out and connect.
+You can reach out to me via email at [wesley.kent98@gmail.com](mailto:contact@wesleykent.com) for any general queries or, hey, any job opportunities too. For questions regarding my side project please use my email at [femoldark@gmail.com](mailto:femoldark@gmail.com). My LinkedIn account can be found <a href="https://www.linkedin.com/in/wesley-kent" target="_blank" rel="noopener noreferrer">here</a>, feel free to reach out and connect.
 <br><br>
 
 ## Other places you can find me
