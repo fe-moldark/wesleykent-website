@@ -1,6 +1,6 @@
 This is the matrix for the Nimble NBK-2104-5/S DIN 5 Keyboard
 
-This assumes the fpc connectors ordered from left to right (1-26) are all wired to respective Teensy 4.0 I/O pin (1-26)
+This assumes the fpc connectors ordered from left to right (1-26) are all wired to their respective Teensy 4.0 I/O pin (1-26)
   
 
 int Row_IO[rows_max] = {3, 4, 6, 8, 10, 11, 12, 13, 14, 16, 18, 20, 21, 22, 23, 25};
