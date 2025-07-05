@@ -53,6 +53,11 @@ In the end you are able to directly plug in the keyboard to your device over USB
 </center>
 
 
+# Nimble NBK-2104-5/S DIN 5 Keyboard
+I also did this for an old Goodwill-find keyboard, complete with a usb-c breakout board and cable. Reference <a href="https://github.com/fe-moldark/wesleykent-website/tree/gh-pages/assets/Zenith/Alt-Nimble" target="_blank" rel="noopener noreferrer">this folder</a> for the key mappings.
+<br><br>
+
+
 # Conclusion
 Well, another part of this laptop modernization project is done. Next will be the audio which should be fairly straight forward - the LCD module has L +/- and R +/- output, so that will be going through a 3P3T switch. That throws your 3 channels L+, R+ and combined grounds to three options - mute (goes nowhere), a speaker, or an audio jack. If that is as simple as I expect the next step will be using a cheap microcontroller that will measure the voltage coming off the battery to estimate remaining battery capacity and use Adafruit's <a href="https://www.adafruit.com/product/3106" target="_blank" rel="noopener noreferrer">4-Digit 7-Segment FeatherWing</a> to display that as a percentage for the user. If you look at the first image on this page, it will be replacing the old LCD there on the top left next to the power button. And that's all for now. Thanks for reading this far.
 <br><br>
