@@ -47,6 +47,10 @@ Let's cover some brief limitations:
 
 <br>
 
+# Version 3.12
+<a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/KEF/KES_v3-12.py" target="_blank" rel="noopener noreferrer">This version</a> is designed to work directly in a bash shell with no prompts and you can add an alias for it like `alias wallet='clear && python /home/<user>/System/Scripts/KES_v3-12.py --file /home/<user>/System/Files/wallet.kef && clear'`. Some notable improvements include time-based lockouts for security and a bug fix to the matrix generation that will never, ever happen in a million years (but theoretically could).
+<br><br>
+
 # Conclusion
 This was a very fun project once I got it working, everything up until that point was just soul-crushing hours trying to figure out where the problems were. Built-in to the encryption program is the decryption side of it as well, which offers a very nice UI for you to interact with and manipulate the data once decoded. I also added a function to check if a particular string is found in the decrypted file, which once found after decryption can send an email to a target address pulling the username and public IP of whoever ran the program.
 <br><br>
