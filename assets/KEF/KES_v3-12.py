@@ -664,7 +664,7 @@ elif program_choice=='1': # Choice '1' is to decrypt a file
                 '   + \033[32mhelp\033[0m              |  Shows this menu',
                 '   + \033[31mexit\033[0m              |  Quits the program\n']
         for line in scroll:
-            time.sleep(0.3)
+            time.sleep(0.15)
             print(line)
 
     show_help()
