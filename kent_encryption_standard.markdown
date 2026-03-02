@@ -10,7 +10,7 @@ permalink: /scripts/kent_encryption_standard/
 # <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/KEF/KES_v3-11.py" target="_blank" rel="noopener noreferrer">The Kent Encryption Standard</a>
 This is a complete overhaul of the [original cipher](/scripts/creating_my_own_cipher/) I had written many years ago, but this one is actually secure. Which means I have been unable to break it no matter what way I look at it, but I welcome anyone to prove me wrong. The only method I can see is to brute-force the password. What this encryption does is convert a six column csv file delimited by a semicolon into an encrypted file. Within the program you can add, delete, and modify entries, save those changes, and change the password used to encrypt the data if you so choose.
 <br><br>
-Going over this by line or by section in the code sounds exhausting since it's just shy of 1,000 lines of code, so I will just break down the broader steps it takes so you can understand what the code is doing. Link to the script can be found <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/KEF/KES_v3-11.py" target="_blank" rel="noopener noreferrer">here</a>.
+Going over this by line or by section in the code sounds exhausting since it's just shy of 1,000 lines of code, so I will just break down the broader steps it takes so you can understand what the code is doing. Link to the script can be found <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/KEF/KES_v3-13.py" target="_blank" rel="noopener noreferrer">here</a>.
 <center>
   <img src="/assets/KEF/welcome_menu.png" alt="" width=900><br>
 </center>
@@ -49,6 +49,10 @@ Let's cover some brief limitations:
 
 # Version 3.12
 <a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/KEF/KES_v3-12.py" target="_blank" rel="noopener noreferrer">This version</a> is designed to work directly in a bash shell with no prompts and you can add an alias for it like `alias wallet='clear && python /home/<user>/System/Scripts/KES_v3-12.py --file /home/<user>/System/Files/wallet.kef && clear'`. Some notable improvements include time-based lockouts for security and a bug fix to the matrix generation that will never, ever happen in a million years (but theoretically could).
+<br><br>
+
+# Version 3.13
+<a href="https://github.com/fe-moldark/wesleykent-website/blob/gh-pages/assets/KEF/KES_v3-13.py" target="_blank" rel="noopener noreferrer">This version</a> fixes a bug that allows you to overwrite your KEF wallet with bad data after the decryption process appears to go through fine, but actually returns gibberish. I do not want to discuss how it was I discovered this bug...
 <br><br>
 
 # Conclusion
