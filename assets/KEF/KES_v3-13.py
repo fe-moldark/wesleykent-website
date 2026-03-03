@@ -168,7 +168,7 @@ def lockout_overwrite_function(message):
 
     if message!='':
         print(' + Exiting now due to timeout restrictions placed on this program.')
-    time.sleep(5)
+        time.sleep(5)
     
     #sys.exit(0)
     os._exit(os.EX_OK)
