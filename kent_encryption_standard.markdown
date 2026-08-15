@@ -2,7 +2,7 @@
 layout: page
 title: The Kent Encryption Standard
 subtitle: Yes, I am vain enough to name it after myself
-description: Encrypts a six column csv file delimited by a semicolon into an encrpyted password wallet.
+description: Encrypts a six column csv file delimited by a semicolon into an encrypted password wallet.
 permalink: /scripts/kent_encryption_standard/
 ---
 
